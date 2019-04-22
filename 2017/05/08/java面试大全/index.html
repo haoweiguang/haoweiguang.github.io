@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="语言基础Java的数据结构相关的类实现原理一、 集合框架 以下简单模拟一个数据结构的连环炮。比如，面试官先问你HashMap是不是有序的？你肯定回答说，不是有序的。那面试官就会继续问你，有没有有顺序的Map实现类？你如果这个时候说不知道的话，那这个问题就到此结束了。如果你说有TreeMap和LinkedHashMap。  那么面试官接下来就可能会问你，TreeMap和LinkedHashMap是如">
+<meta name="keywords" content="java,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面试大全">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/java面试大全/index.html">
+<meta property="og:site_name" content="郝伟光的Notes">
+<meta property="og:description" content="语言基础Java的数据结构相关的类实现原理一、 集合框架 以下简单模拟一个数据结构的连环炮。比如，面试官先问你HashMap是不是有序的？你肯定回答说，不是有序的。那面试官就会继续问你，有没有有顺序的Map实现类？你如果这个时候说不知道的话，那这个问题就到此结束了。如果你说有TreeMap和LinkedHashMap。  那么面试官接下来就可能会问你，TreeMap和LinkedHashMap是如">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14797982324386.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14797984644613.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14877607182644.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14792126802620.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14842126315727.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14829846806064.png">
+<meta property="og:updated_time" content="2017-07-02T03:00:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java面试大全">
+<meta name="twitter:description" content="语言基础Java的数据结构相关的类实现原理一、 集合框架 以下简单模拟一个数据结构的连环炮。比如，面试官先问你HashMap是不是有序的？你肯定回答说，不是有序的。那面试官就会继续问你，有没有有顺序的Map实现类？你如果这个时候说不知道的话，那这个问题就到此结束了。如果你说有TreeMap和LinkedHashMap。  那么面试官接下来就可能会问你，TreeMap和LinkedHashMap是如">
+<meta name="twitter:image" content="http://oo501cyv7.bkt.clouddn.com/14797982324386.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/08/java面试大全/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>java面试大全 | 郝伟光的Notes</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">郝伟光的Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">梦想是要有的，万一实现了呢</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/java面试大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="light">
+      <meta itemprop="description" content="关于技术、个人感悟等的记录">
+      <meta itemprop="image" content="/uploads/2578.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="郝伟光的Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java面试大全
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-08 14:50:46" itemprop="dateCreated datePublished" datetime="2017-05-08T14:50:46+08:00">2017-05-08</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/08/java面试大全/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/08/java面试大全/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/08/java面试大全/" class="leancloud_visitors" data-flag-title="java面试大全">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h1><h2 id="Java的数据结构相关的类实现原理"><a href="#Java的数据结构相关的类实现原理" class="headerlink" title="Java的数据结构相关的类实现原理"></a>Java的数据结构相关的类实现原理</h2><h3 id="一、-集合框架"><a href="#一、-集合框架" class="headerlink" title="一、 集合框架"></a>一、 <strong>集合框架</strong></h3><ul>
+<li>以下简单模拟一个数据结构的连环炮。<br>比如，面试官先问你HashMap是不是有序的？<br>你肯定回答说，不是有序的。那面试官就会继续问你，有没有有顺序的Map实现类？<br>你如果这个时候说不知道的话，那这个问题就到此结束了。如果你说有TreeMap和LinkedHashMap。</li>
+</ul>
+<p>那么面试官接下来就可能会问你，TreeMap和LinkedHashMap是如何保证它的顺序的？</p>
+<ul>
+<li>TreeMap是通过红黑树（一种自平衡二叉查找树），这是一个，详细的解释如下：<br><a href="http://yikun.github.io/2015/04/06/Java-TreeMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/" target="_blank" rel="noopener">Java TreeMap工作原理及实现</a></li>
+<li>LinkedHashMap是Hash表和链表的实现，并且依靠着双向链表保证了迭代顺序是插入的顺序。<br><a href="http://yikun.github.io/2015/04/02/Java-LinkedHashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/" target="_blank" rel="noopener">Java LinkedHashMap工作原理及实现</a></li>
+</ul>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14797982324386.jpg" alt=""></p>
+<ul>
+<li>Vector和ArrayList有什么不同？<br>Vector和ArrayList在使用上非常相似,都可用来表示一组数量可变的对象应用的集合,并且可以随机地访问其中的元素。 Vector的方法都是同步的(Synchronized),是线程安全的(thread-safe)，而ArrayList的方法不是，由于线程的同步必然要影响性能，因此,ArrayList的性能比Vector好。 当Vector或ArrayList中的元素超过它的初始大小时,Vector会将它的容量翻倍(如果没有指定增加系数),而ArrayList只增加50%的大小，这样,ArrayList就有利于节约内存空间。</li>
+</ul>
+<ul>
+<li>hashtable和hashmap的区别，hashmap的内部实现机制，hash是怎样实现的，什么时候rehash？<br>HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。<br>HashMap的数据结构：HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。<br><img src="http://oo501cyv7.bkt.clouddn.com/14797984644613.jpg" alt=""></li>
+</ul>
+<p><a href="http://blog.csdn.net/vking_wang/article/details/14166593" target="_blank" rel="noopener">HashMap实现原理分析</a></p>
+<p><a href="http://blog.csdn.net/clam_clam/article/details/6802237" target="_blank" rel="noopener">解决hashmap的冲突</a> </p>
+<ul>
+<li>HashMap遍历的几种方法</li>
+</ul>
+<h3 id="二、-string、stringbuilder、stringbuffer区别"><a href="#二、-string、stringbuilder、stringbuffer区别" class="headerlink" title="二、 string、stringbuilder、stringbuffer区别"></a>二、 <strong>string、stringbuilder、stringbuffer区别</strong></h3><ul>
+<li>String、StringBuffer和StringBuilder的原理以及区别？<br>StringBuffer 字符串变量（线程安全）<br>StringBuilder 字符串变量（非线程安全）<br><a href="http://wiki.jikexueyuan.com/project/java-collection/linkedhashmap.html" target="_blank" rel="noopener">http://wiki.jikexueyuan.com/project/java-collection/linkedhashmap.html</a></li>
+</ul>
+<blockquote>
+<p><strong>StringBuffer</strong><br>Java.lang.StringBuffer线程安全的可变字符序列。一个类似于String的字符串缓冲区，但不能修改。虽然在任意时间点上它都包含某种特定的字符序列，但通过某些方法调用可以改变该序列的长度和内容。</p>
+<p>可将字符串缓冲区安全地用于多个线程。可以在必要时对这些方法进行同步，因此任意特定实例上的所有操作就好像是以串行顺序发生的，该顺序与所涉及的每个线程进行的方法调用顺序一致。</p>
+<p>StringBuffer 上的主要操作是 append 和 insert 方法，可重载这些方法，以接受任意类型的数据。每个方法都能有效地将给定的数据转换成字符串，然后将该字符串的字符追加或插入到字符串缓冲区中。append 方法始终将这些字符添加到缓冲区的末端；而 insert 方法则在指定的点添加字符。</p>
+<p>例如，如果 z 引用一个当前内容是“start”的字符串缓冲区对象，则此方法调用 z.append(“le”) 会使字符串缓冲区包含“startle”，而 z.insert(4, “le”) 将更改字符串缓冲区，使之包含“starlet”。</p>
+<p>简要的说，String类型和 StringBuffer类型的主要性能区别其实在于 String是不可变的对象, 因此在每次对 String 类型进行改变的时候其实都等同于生成了一个新的 String 对象，然后将指针指向新的 String 对象，所以经常改变内容的字符串最好不要用String ，因为每次生成对象都会对系统性能产生影响，特别当内存中无引用对象多了以后,JVM的GC就会开始工作，那速度是一定会相当慢的。</p>
+<p>而如果是使用StringBuffer类则结果就不一样了，每次结果都会对StringBuffer对象本身进行操作，而不是生成新的对象，再改变对象引用。所以在一般情况下我们推荐使用 StringBuffer ，特别是字符串对象经常改变的情况下。而在某些特别情况下，String对象的字符串拼接其实是被JVM解释成了StringBuffer对象的拼接，所以这些时候String对象的速度并不会比StringBuffer对象慢，而特别是以下的字符串对象生成中，String效率是远要比StringBuffer快的：</p>
+<p>String S1 = “This is only a” + “ simple” + “ test”;</p>
+<p>StringBuffer Sb = new StringBuilder(“This is only a”).append(“ simple”).append(“ test”); 你会很惊讶的发现，生成 String S1 对象的速度简直太快了，而这个时候 StringBuffer 居然速度上根本一点都不占优势。其实这是 JVM 的一个把戏，在 JVM 眼里，这个 String S1 = “This is only a” + “ simple” + “test”; 其实就是： String S1 = “This is only a simple test”; 所以当然不需要太多的时间了。但大家这里要注意的是，如果你的字符串是来自另外的 String 对象的话，速度就没那么快了，譬如： String S2 = “This is only a”; String S3 = “ simple”; String S4 = “ test”; String S1 = S2 +S3 + S4; 这时候 JVM 会规规矩矩的按照原来的方式去做</p>
+<p>在大部分情况下 StringBuffer &gt; String</p>
+<p><strong>StringBuilder</strong><br>java.lang.StringBuilder一个可变的字符序列是5.0新增的。此类提供一个与 StringBuffer 兼容的 API，但不保证同步。该类被设计用作 StringBuffer 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 StringBuffer 要快。两者的方法基本相同</p>
+<p>在大部分情况下 StringBuilder &gt; StringBuffer</p>
+</blockquote>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><ul>
+<li>有关泛型的问题（java中那些地方用到泛型，泛型的好处，举例说出泛型的好处）<br>答：java 泛型是java SE 1.5的新特性，泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。这种参数类型可以用在类、接口和方法的创建中，分别称为泛型类、泛型接口、泛型方法</li>
+</ul>
+<p>范型好处：<br>类型安全。 泛型的主要目标是提高 Java 程序的类型安全。通过知道使用泛型定义的变量的类型限制，编译器可以在一个高得多的程度上验证类型假设。没有泛型，这些假设就只存在于程序员的头脑中（或者如果幸运的话，还存在于代码注释中）。</p>
+<p>消除强制类型转换。 泛型的一个附带好处是，消除源代码中的许多强制类型转换。这使得代码更加可读，并且减少了出错机会。</p>
+<p>潜在的性能收益。 (编译器优化)</p>
+<p>泛型为较大的优化带来可能。在泛型的初始实现中，编译器将强制类型转换（没有泛型的话，程序员会指定这些强制类型转换）插入生成的字节码中。但是更多类型信息可用于编译器这一事实，为未来版本的 JVM 的优化带来可能。由于泛型的实现方式，支持泛型（几乎）不需要 JVM 或类文件更改。所有工作都在编译器中完成，编译器生成类似于没有泛型（和强制类型转换）时所写的代码，只是更能确保类型安全而已。</p>
+<p>equals和hashcode这些方法怎么使用的<br><a href="http://blog.csdn.net/tiantiandjava/article/details/46988461" target="_blank" rel="noopener">http://blog.csdn.net/tiantiandjava/article/details/46988461</a></p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul>
+<li>关于java中的作用域（public、protected、default、private、）<br><img src="http://oo501cyv7.bkt.clouddn.com/14877607182644.jpg" alt=""><br><a href="https://dongchuan.gitbooks.io/java-interview-question/content/java/working_zone.html" target="_blank" rel="noopener">https://dongchuan.gitbooks.io/java-interview-question/content/java/working_zone.html</a></li>
+</ul>
+<h1 id="java开发框架"><a href="#java开发框架" class="headerlink" title="java开发框架"></a>java开发框架</h1><h2 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h2><ul>
+<li><p><strong>spring中类加载机制？</strong></p>
+</li>
+<li><p>Spring ioc你的理解,ioc容器启动的过程是什么样的,什么是ioc,aop 你个人的理解是什么</p>
+</li>
+<li><p>spring里面的action 默认是单列的,怎么配置成多列?</p>
+</li>
+</ul>
+<h2 id="spring-mvc"><a href="#spring-mvc" class="headerlink" title="spring mvc"></a>spring mvc</h2><p><a href="http://edu.51cto.com/lesson/id-76468.html" target="_blank" rel="noopener">视频教程</a></p>
+<h2 id="servlet"><a href="#servlet" class="headerlink" title="servlet"></a>servlet</h2><p>servlet 默认是线程安全的吗，为什么不是线程安全的<br><a href="http://westlifesz.iteye.com/blog/49511" target="_blank" rel="noopener">http://westlifesz.iteye.com/blog/49511</a><br><a href="http://jsjxqjy.iteye.com/blog/1563249" target="_blank" rel="noopener">http://jsjxqjy.iteye.com/blog/1563249</a><br><a href="http://developer.51cto.com/art/200907/133827.htm" target="_blank" rel="noopener">http://developer.51cto.com/art/200907/133827.htm</a></p>
+<p>Servlet生命周期<br><a href="http://blog.csdn.net/luwei42768/archive/2008/10/31/3191455.aspx" target="_blank" rel="noopener">http://blog.csdn.net/luwei42768/archive/2008/10/31/3191455.aspx</a></p>
+<p>jsp里边的对象，以及常用的方法</p>
+<h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><h2 id="多线程-1"><a href="#多线程-1" class="headerlink" title="多线程"></a>多线程</h2><ol>
+<li><p>多线程，高并发怎么结合业务来讲？</p>
+</li>
+<li><p>线程的几种状态？</p>
+</li>
+<li><p>线程池的实现原理，用到的数据结构，如何调度池内资源</p>
+</li>
+<li><p>线程池是怎么配置的，怎么用的，要注意哪些，说下个人的理解</p>
+</li>
+<li><p>并发问题，锁，怎么处理死锁，脏数据处理?</p>
+</li>
+<li><p>sychronized 机制加了static方法的同步异同,A 调用 B,A执行完了,B没执行完，怎么解决这个同步问题</p>
+</li>
+<li><p>进程间通信的题目？<br><a href="http://blog.sina.com.cn/s/blog_4e2e15fd0100rjtn.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_4e2e15fd0100rjtn.html</a></p>
+</li>
+</ol>
+<ol>
+<li>什么导致线程阻塞（58、美团）</li>
+</ol>
+<p>线程的阻塞</p>
+<p>为了解决对共享存储区的访问冲突，Java 引入了同步机制，现在让我们来考察多个线程对共享资源的访问，显然同步机制已经不够了，因为在任意时刻所要求的资源不一定已经准备好了被访问，反过来，同一时刻准备好了的资源也可能不止一个。为了解决这种情况下的访问控制问题，Java 引入了对阻塞机制的支持.</p>
+<p>阻塞指的是暂停一个线程的执行以等待某个条件发生（如某资源就绪），学过操作系统的同学对它一定已经很熟悉了。Java 提供了大量方法来支持阻塞，下面让我们逐一分析。</p>
+<p>sleep() 方法：sleep() 允许 指定以毫秒为单位的一段时间作为参数，它使得线程在指定的时间内进入阻塞状态，不能得到CPU 时间，指定的时间一过，线程重新进入可执行状态。 典型地，sleep() 被用在等待某个资源就绪的情形：测试发现条件不满足后，让线程阻塞一段时间后重新测试，直到条件满足为止。<br>suspend() 和 resume() 方法：两个方法配套使用，suspend()使得线程进入阻塞状态，并且不会自动恢复，必须其对应的resume() 被调用，才能使得线程重新进入可执行状态。典型地，suspend() 和 resume() 被用在等待另一个线程产生的结果的情形：测试发现结果还没有产生后，让线程阻塞，另一个线程产生了结果后，调用 resume() 使其恢复。<br>yield() 方法：yield() 使得线程放弃当前分得的 CPU 时间，但是不使线程阻塞，即线程仍处于可执行状态，随时可能再次分得 CPU 时间。调用 yield() 的效果等价于调度程序认为该线程已执行了足够的时间从而转到另一个线程.<br>wait() 和 notify() 方法：两个方法配套使用，wait() 使得线程进入阻塞状态，它有两种形式，一种允许 指定以毫秒为单位的一段时间作为参数，另一种没有参数，前者当对应的 notify() 被调用或者超出指定时间时线程重新进入可执行状态，后者则必须对应的 notify() 被调用.<br>初看起来它们与 suspend() 和 resume() 方法对没有什么分别，但是事实上它们是截然不同的。区别的核心在于，前面叙述的所有方法，阻塞时都不会释放占用的锁（如果占用了的话），而这一对方法则相反。</p>
+<p>上述的核心区别导致了一系列的细节上的区别。</p>
+<p>首先，前面叙述的所有方法都隶属于 Thread 类，但是这一对却直接隶属于 Object 类，也就是说，所有对象都拥有这一对方法。初看起来这十分不可思议，但是实际上却是很自然的，因为这一对方法阻塞时要释放占用的锁，而锁是任何对象都具有的，调用任意对象的 wait() 方法导致线程阻塞，并且该对象上的锁被释放。而调用 任意对象的notify()方法则导致因调用该对象的 wait() 方法而阻塞的线程中随机选择的一个解除阻塞（但要等到获得锁后才真正可执行）。</p>
+<p>其次，前面叙述的所有方法都可在任何位置调用，但是这一对方法却必须在 synchronized 方法或块中调用，理由也很简单，只有在synchronized 方法或块中当前线程才占有锁，才有锁可以释放。同样的道理，调用这一对方法的对象上的锁必须为当前线程所拥有，这样才有锁可以释放。因此，这一对方法调用必须放置在这样的 synchronized 方法或块中，该方法或块的上锁对象就是调用这一对方法的对象。若不满足这一条件，则程序虽然仍能编译，但在运行时会出现IllegalMonitorStateException 异常。</p>
+<p>wait() 和 notify() 方法的上述特性决定了它们经常和synchronized 方法或块一起使用，将它们和操作系统的进程间通信机制作一个比较就会发现它们的相似性：synchronized方法或块提供了类似于操作系统原语的功能，它们的执行不会受到多线程机制的干扰，而这一对方法则相当于 block 和wakeup 原语（这一对方法均声明为 synchronized）。它们的结合使得我们可以实现操作系统上一系列精妙的进程间通信的算法（如信号量算法），并用于解决各种复杂的线程间通信问题。</p>
+<p>关于 wait() 和 notify() 方法最后再说明两点：</p>
+<p>第一：调用 notify() 方法导致解除阻塞的线程是从因调用该对象的 wait() 方法而阻塞的线程中随机选取的，我们无法预料哪一个线程将会被选择，所以编程时要特别小心，避免因这种不确定性而产生问题。</p>
+<p>第二：除了 notify()，还有一个方法 notifyAll() 也可起到类似作用，唯一的区别在于，调用 notifyAll() 方法将把因调用该对象的 wait() 方法而阻塞的所有线程一次性全部解除阻塞。当然，只有获得锁的那一个线程才能进入可执行状态。</p>
+<p>谈到阻塞，就不能不谈一谈死锁，略一分析就能发现，suspend() 方法和不指定超时期限的 wait() 方法的调用都可能产生死锁。遗憾的是，Java 并不在语言级别上支持死锁的避免，我们在编程中必须小心地避免死锁。</p>
+<p>以上我们对 Java 中实现线程阻塞的各种方法作了一番分析，我们重点分析了 wait() 和 notify() 方法，因为它们的功能最强大，使用也最灵活，但是这也导致了它们的效率较低，较容易出错。实际使用中我们应该灵活使用各种方法，以便更好地达到我们的目的。</p>
+<ol>
+<li>关于多线程锁问题<br>最近在学习Java多线程设计的时候，在网上看到一个面试题目的讨论，虽然楼主所说有些道理，但感觉还是有些问题，故此在和同事讨论以后还是有了若干收获，在此略作总结。</li>
+</ol>
+<p>首先，来看看这个面试题目吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class MyStack &#123; </span><br><span class="line">    private List&lt;String&gt; list = new ArrayList&lt;String&gt;(); </span><br><span class="line"></span><br><span class="line">    public synchronized void push(String value) &#123; </span><br><span class="line">        synchronized (this) &#123; </span><br><span class="line">            list.add(value); </span><br><span class="line">            notify(); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    public synchronized String pop() throws InterruptedException &#123; </span><br><span class="line">        synchronized (this) &#123; </span><br><span class="line">            if (list.size() &lt;= 0) &#123; </span><br><span class="line">                wait(); </span><br><span class="line">            &#125; </span><br><span class="line">            return list.remove(list.size() - 1); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>问题： 这段代码大多数情况下运行正常，但是某些情况下会出问题。什么时候会出现什么问题？如何修正？</p>
+<p>代码分析：</p>
+<p>从整体上，在并发状态下，push和pop都使用了synchronized的锁，来实现同步，同步的数据对象是基于List的数据；大部分情况下是可以正常工作的。</p>
+<p>问题描述：</p>
+<p>状况1：</p>
+<p>假设有三个线程： A,B,C. A 负责放入数据到list,就是调用push操作， B,C分别执行Pop操作，移除数据。</p>
+<p>首先B先执行，于pop中的wait()方法处，进入waiting状态，进入等待队列，释放锁。</p>
+<p>A首先执行放入数据push操作到List，在调用notify()之前； 同时C执行pop()，由于synchronized，被阻塞，进入Blocked状态，放入基于锁的等待队列。注意，这里的队列和2中的waiting等待队列是两个不同的队列。</p>
+<p>A线程调用notify()，唤醒等待中的线程A。</p>
+<p>如果此时， C获取到基于对象的锁，则优先执行，执行pop方法，获取数据，从list移除一个元素。</p>
+<p>然后，A获取到竞争锁，A中调用list.remove(list.size() - 1)，则会报数据越界exception。</p>
+<p>状况2：</p>
+<p>相同于状况1</p>
+<p>B、C都处于等待waiting状态，释放锁。等待notify()、notifyAll()操作的唤醒。</p>
+<p>存在被虚假唤醒的可能。</p>
+<p>何为虚假唤醒？</p>
+<p>虚假唤醒就是一些obj.wait()会在除了obj.notify()和obj.notifyAll()的其他情况被唤醒，而此时是不应该唤醒的。</p>
+<p>解决的办法是基于while来反复判断进入正常操作的临界条件是否满足</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">synchronized (obj) &#123; </span><br><span class="line">        while (&lt;condition does not hold&gt;) </span><br><span class="line">            obj.wait(); </span><br><span class="line">        ... // Perform action appropriate to condition </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>如何修复问题？</p>
+<p>使用可同步的数据结构来存放数据，比如LinkedBlockingQueue之类。由这些同步的数据结构来完成繁琐的同步操作。</p>
+<p>双层的synchronized使用没有意义，保留外层即可。</p>
+<p>将if替换为while，解决虚假唤醒的问题。</p>
+<ol>
+<li>实战<br>Java并发包当中的类，它们都有哪些作用，以及它们的实现原理，这些类就是java.concurrent包下面的。与上面一样，咱们也简单的模拟一个并发包的连环炮。</li>
+</ol>
+<p>比如面试官可能会先问你，如果想实现所有的线程一起等待某个事件的发生，当某个事件发生时，所有线程一起开始往下执行的话，有什么好的办法吗？</p>
+<p>这个时候你可能会说可以用栅栏（Java的并发包中的CyclicBarrier），那么面试官就会继续问你，你知道它的实现原理吗？</p>
+<p>如果你继续回答的话，面试官可能会继续问你，你还知道其它的实现方式吗？</p>
+<p>如果你还能说出很多种实现方式的话，那么继续问你，你觉得这些方式里哪个方式更好？</p>
+<p>如果你说出来某一个方式比较好的话，面试官依然可以继续问你，那如果让你来写的话，你觉得还有比它更好的实现方式吗？</p>
+<p>如果你这个时候依然可以说出来你自己更好的实现方式，那么面试官肯定还会揪着这个继续问你。</p>
+<h1 id="jvm相关"><a href="#jvm相关" class="headerlink" title="jvm相关"></a>jvm相关</h1><h2 id="jvm"><a href="#jvm" class="headerlink" title="jvm"></a>jvm</h2><ol>
+<li>jvm性能调优都做了什么</li>
+<li>写代码分别使得JVM的堆、栈和持久代发生内存溢出（栈溢出）</li>
+<li>java的内存管理</li>
+<li>画了jvm体系结构，讲解了jvm各个组件和组件的交互、GC算法、各种垃圾收集器、运行期优化、产品中遇到的与jvm相关的问题如oom、ClassLoader问题等，并针对HotSpot VM的实现讲解了堆、非堆内存划分</li>
+<li>介绍GC，并且问是否有手动垃圾回收方法？</li>
+</ol>
+<h2 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h2><p>一个GC部分简单的连环炮。</p>
+<p>面试官可以先问你什么时候一个对象会被GC？</p>
+<p>接着继续问你为什么要在这种时候对象才会被GC？</p>
+<p>接着继续问你GC策略都有哪些分类？</p>
+<p>你如果说出来了，继续问你这些策略分别都有什么优劣势？都适用于什么场景？</p>
+<p>你继续说出来了以后，给你举个实际的场景，让你选择一个GC策略？</p>
+<p>你如果选出来了，继续问你，为什么要选择这个策略</p>
+<p>答：<br><img src="http://oo501cyv7.bkt.clouddn.com/14792126802620.jpg" alt=""></p>
+<p>将应用程序可用的堆空间分为分为年轻代（Young Generation）和老年代（Old Generation），又将年轻代分为Eden区（Eden Space）、From区和To区，新建对象总是在Eden区中被创建，当Eden区空间已满，就触发一次Young GC（Garbage Collection，垃圾回收），将还被使用的对象复制到From区，这样整个Eden区都是未被使用的空间，可供继续创建对象，当Eden区再次用完，再触发一次Young GC，将Eden区和From区还在被使用的对象复制到To区，下次Young GC则是将Eden区和To区还被使用的对象复制到From区。因此，经过多次Young GC，某些对象会在From区和To区多次复制，如果超过某个阀值对象还未被释放，则将该对象复制到Old Generation。如果Old Generation空间也已用完，那么就会触发Full GC（全量回收），全量回收会对系统性能产生较大影响。</p>
+<p>GC是在什么时候，对什么东西，做了什么事情？</p>
+<p>第一个问题：“什么时候？”<br>能说明minor gc/full gc的触发条件、OOM的触发条件，降低GC的调优的策略。<br>    分析：列举一些我期望的回答：eden满了minor gc，升到老年代的对象大于老年代剩余空间full gc，或者小于时被HandlePromotionFailure参数强制full gc；gc与非gc时间耗时超过了GCTimeRatio的限制引发OOM，调优诸如通过NewRatio控制新生代老年代比例，通过MaxTenuringThreshold控制进入老年前生存次数等……能回答道这个阶段就会给我带来比较高的期望了，当然面试的时候正常人都不会记得每个参数的拼写，我自己写这段话的时候也是翻过手册的。回答道这部分的小于2%。</p>
+<p>第二个问题：“对什么东西？”<br>从gc root搜索不到，而且经过第一次标记、清理后，仍然没有复活的对象。<br>当一个对象到GC Roots不可达时，在下一个垃圾回收周期中尝试回收该对象，如果该对象重写了finalize()方法，并在这个方法中成功自救(将自身赋予某个引用)，那么这个对象不会被回收。但如果这个对象没有重写finalize()方法或者已经执行过这个方法，也自救失败，该对象将会被回收。</p>
+<p>第三个问题：“做什么事情？”<br>新生代做的是复制清理、from survivor、to survivor是干啥用的、老年代做的是标记清理、标记清理后碎片要不要整理、复制清理和标记清理有有什么优劣势等。<br>还能讲清楚串行、并行（整理/不整理碎片）、CMS等搜集器可作用的年代、特点、优劣势，并且能说明控制/调整收集器选择的方式。 </p>
+<h2 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h2><p>下面是关于类加载机制的简单连环炮。</p>
+<p>首先肯定是先问你Java的类加载器都有哪些？</p>
+<p>回答了这些以后，可能会问你每个类加载器都加载哪些类？</p>
+<p>说完以后，可能会问你这些类加载之间的父子关系是怎样的？</p>
+<p>你在回答的时候可能会提到双亲委派模型，那么可以继续问你什么是双亲委派模型？</p>
+<p>你解释完了以后，可能会继续问你，为什么Java的类加载器要使用双亲委派模型？</p>
+<p>你回答完以后，可能会继续问你如何自定义自己的类加载器，自己的类加载器和Java自带的类加载器关系如何处理？</p>
+<h2 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h2><p>来一个关于内存的连环炮。</p>
+<p>首先肯定就是问你内存分为哪几部分，这些部分分别都存储哪些数据？</p>
+<p>然后继续问你一个对象从创建到销毁都是怎么在这些部分里存活和转移的？</p>
+<p>接着可能会问你，内存的哪些部分会参与GC的回收？</p>
+<p>完事以后，可能还会问你Java的内存模型是怎么设计的？</p>
+<p>你回答了以后，还会继续问你为什么要这么设计？</p>
+<p>问完以后，还可能会让你结合内存模型的设计谈谈volatile关键字的作用？</p>
+<p>你在谈的时候，肯定会提到可见性，那么接着可见性这三个字，还可以继续问你并发的内容。</p>
+<h2 id="面试问题"><a href="#面试问题" class="headerlink" title="面试问题"></a>面试问题</h2><ul>
+<li><p>gc机制？<br>Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被划分成不同的世代，对象根据其存活的时间被保存在对应世代的区域中。一般的实现是划分成3个世代：年轻、年老和永久。内存的分配是发生在年轻世代中的。当一个对象存活时间足够长的时候，它就会被复制到年老世代中。对于不同的世代可以使用不同的垃圾回收算法。进行世代划分的出发点是对应用中对象存活时间进行研究之后得出的统计规律。一般来说，一个应用中的大部分对象的存活时间都很短。比如局部变量的存活时间就只在方法的执行过程中。基于这一点，对于年轻世代的垃圾回收算法就可以很有针对性。</p>
+</li>
+<li><p>介绍GC，并且问是否有手动垃圾回收方法？<br>GC是垃圾收集的意思(Gabage Collection), 内存处理是编程人员容易出现问题的地方, 忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃, Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的, Java语言没有提供释放已分配内存的显示操作方法.</p>
+</li>
+</ul>
+<p>程序员可以手动执行System.gc(),通知GC运行,但是Java语言规范并不保证GC一定会执行. </p>
+<h3 id="一个GC部分简单的连环炮。"><a href="#一个GC部分简单的连环炮。" class="headerlink" title="一个GC部分简单的连环炮。"></a>一个GC部分简单的连环炮。</h3><ul>
+<li><p>面试官可以先问你什么时候一个对象会被GC？<br>通常，GC采用有向图的方式记录和管理堆（heap）中的所有对象。通过这种方式确定哪些对象是”可达的”， 哪些对象是”不可达的”.当GC确定一些对象为”不可达”时(比如设置为 null)，GC就有责任回收这些内存空间</p>
+</li>
+<li><p>接着继续问你为什么要在这种时候对象才会被GC？</p>
+</li>
+<li><p>接着继续问你GC策略都有哪些分类？</p>
+</li>
+<li><p>你如果说出来了，继续问你这些策略分别都有什么优劣势？都适用于什么场景？</p>
+</li>
+<li><p>你继续说出来了以后，给你举个实际的场景，让你选择一个GC策略？</p>
+</li>
+<li><p>你如果选出来了，继续问你，为什么要选择这个策略？</p>
+</li>
+</ul>
+<h3 id="下面是关于类加载机制的简单连环炮。"><a href="#下面是关于类加载机制的简单连环炮。" class="headerlink" title="下面是关于类加载机制的简单连环炮。"></a>下面是关于类加载机制的简单连环炮。</h3><p>首先肯定是先问你Java的类加载器都有哪些？</p>
+<p>回答了这些以后，可能会问你每个类加载器都加载哪些类？</p>
+<p>说完以后，可能会问你这些类加载之间的父子关系是怎样的？</p>
+<p>你在回答的时候可能会提到双亲委派模型，那么可以继续问你什么是双亲委派模型？</p>
+<p>你解释完了以后，可能会继续问你，为什么Java的类加载器要使用双亲委派模型？</p>
+<p>你回答完以后，可能会继续问你如何自定义自己的类加载器，自己的类加载器和Java自带的类加载器关系如何处理？</p>
+<h3 id="再来一个关于内存的连环炮。"><a href="#再来一个关于内存的连环炮。" class="headerlink" title="再来一个关于内存的连环炮。"></a>再来一个关于内存的连环炮。</h3><p>首先肯定就是问你内存分为哪几部分，这些部分分别都存储哪些数据？</p>
+<p>然后继续问你一个对象从创建到销毁都是怎么在这些部分里存活和转移的？</p>
+<p>接着可能会问你，内存的哪些部分会参与GC的回收？</p>
+<p>完事以后，可能还会问你Java的内存模型是怎么设计的？</p>
+<p>你回答了以后，还会继续问你为什么要这么设计？</p>
+<p>问完以后，还可能会让你结合内存模型的设计谈谈volatile关键字的作用？</p>
+<p>你在谈的时候，肯定会提到可见性，那么接着可见性这三个字，还可以继续问你并发的内容。</p>
+<p>jvm性能调优都做了什么?</p>
+<ul>
+<li><p>in-jvm（必考）以及jmm缓存模型如何调优 ?</p>
+</li>
+<li><p>熟练掌握jvm（sun hotspot和ibm j9）内存模型、gc垃圾回收调优等技能</p>
+</li>
+<li><p>java虚拟机的特性（百度、乐视）<br>Java语言的一个非常重要的特点就是与平台的无关性。而使用Java虚拟机是实现这一特点的关键。一般的高级语言如果要在不同的平台上运行，至少需要编译成不同的目标代码。而引入Java语言虚拟机后，Java语言在不同平台上运行时不需要重新编译。Java语言使用模式Java虚拟机屏蔽了与具体平台相关的信息，使得Java语言编译程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。Java虚拟机在执行字节码时，把字节码解释成具体平台上的机器指令执行。</p>
+</li>
+</ul>
+<h1 id="nio-io"><a href="#nio-io" class="headerlink" title="nio/io"></a>nio/io</h1><p><a href="http://tech.meituan.com/nio.html" target="_blank" rel="noopener">http://tech.meituan.com/nio.html</a><br><a href="http://www.cnblogs.com/LBSer/p/4622749.html" target="_blank" rel="noopener">http://www.cnblogs.com/LBSer/p/4622749.html</a></p>
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><p>IO包和NIO包的内容相对来说不是很多，首先NIO模型要熟悉，特别是其中的selector一定要非常清楚它的职责和实现原理。其实NIO的核心是IO线程池，一定要记住这个关键点。有的时候，面试官可能也会问你IO包的设计模式（装饰器模式），为什么要这样设计？</p>
+<p>有的面试官还会问你有没有更好的设计，这个时候如果你不知道请果断说自己现在的水平有限，想不出来更好的设计，千万不要信口开河，随意YY。</p>
+<p>java底层是怎样对文件操作的<br><a href="http://www.oschina.net/code/snippet_2251389_43244" target="_blank" rel="noopener">http://www.oschina.net/code/snippet_2251389_43244</a></p>
+<p>用java扫描指定文件夹下面所有以.txt, .log结尾的文件，并将其绝对路径输出。</p>
+<h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><ol>
+<li>https处理的一个过程，对称加密和非对称加密</li>
+<li>socket 是用的什么协议,tcp协议连接(握手)的过程是什么样的,socket使用要注意哪些问题<br>　　解答：tcp协议,
+　　<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3>TCP 协议可靠性数据传输实现基本原理<br>TCP 协议必须提供对所有这些问题的解决方案方可保证其所声称的数据可靠性传输。TCP协议规范和当前绝大多数TCP 协议实现代码均采用数据重传和数据确认应答机制来完成TCP 协议的可靠性数据传输。数据超时重传和数据应答机制的基本前提是对每个传输的字节进行编号，即我们通常所说的序列号。数据超时重传是发送端在某个数据包发送出去，在一段固定时间后如果没有收到对该数据包的确认应答，则（假定该数据包在传输过程中丢失）重新发送该数据包。而数据确认应答是指接收端在成功接收到一个有效数据包后，发送一个确认应答数据包给发送端主机，该确认应答数据包中所包含的应答序列号即指已接收到的数据中最后一个字节的序列号加1，加1 的目的在于指出此时接收端期望接收的下一个数据包中第一个字节的序列号。数据超时重传和数据确认应答以及对每个传输的字节分配序列号是TCP 协议提供可靠性数据传输的核心本质。</li>
+</ol>
+<p>TCP 协议声称可靠性数据传输，其底层实现机制主要包括三个方面：使用序列号对传输的数据进行编号，数据超时重传，数据确认应答。</p>
+<p>12.TCP 协议建立连接的必要性 使用TCP 协议必须首先建立一个连接是保证TCP 协议可靠性数据传输的基本前提。 诚如前文所述，序列号的使用对于 TCP 协议而言至关重要，在正式数据传输之前，双方必须得到对方的初始字节数据的编号，这样才有可能对其所接收数据的合法性进行判断，才有其它的对数据重复，数据重叠等一系列问题的进一步判别和解决。故交换各自的初始序列号必须在正式数据传输之前完成，我们美其名曰这个过程为连接建立过程。</p>
+<p>要关注的问题。</p>
+<p>初始序列号的交换从最直接的角度来说需要四个数据包：</p>
+<p>1&gt; 主机 A 向主机B 发送其初始序列号。</p>
+<p>2&gt; 主机 B 向主机A 确认其发送的初始序列号。</p>
+<p>3&gt; 主机 B 向主机A 发送其初始序列号。</p>
+<p>4&gt; 主机 A 向主机B 确认其发送的初始序列号。</p>
+<p>tcp头部都什么东西，http呢？</p>
+<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><h2 id="运行环境-1"><a href="#运行环境-1" class="headerlink" title="运行环境"></a>运行环境</h2><h3 id="操作系统Linux"><a href="#操作系统Linux" class="headerlink" title="操作系统Linux"></a>操作系统Linux</h3><p>熟悉linux下的开发么？</p>
+<ol>
+<li>负载均衡的原理</li>
+<li>集群如何同步会话状态</li>
+<li>用什么命令查找某个文件名？</li>
+<li>用什么命令删除某个文件和下面的所有东西？</li>
+</ol>
+<p>服务器集群有搭建过吗<br><a href="http://www.iteye.com/topic/1119823" target="_blank" rel="noopener">http://www.iteye.com/topic/1119823</a></p>
+<h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h3><p>Tomcat最大连接数问题 tomcat 本身没有限制，可以随意配置， 不过win2000本身的限制是2000， Linux是1500， 一台普通服务器基本不能负载这么高的并发量，尤其动态应用，所以设置高了基本没有意义</p>
+<p>tomact 里session共享是怎么做到的<br><a href="http://zhli986-yahoo-cn.iteye.com/blog/1344694" target="_blank" rel="noopener">http://zhli986-yahoo-cn.iteye.com/blog/1344694</a></p>
+<p>Tomcat的server.xml中Context元素的以下参数应该怎么配合适</p>
+<p>答曰：</p>
+<p>maxThreads=“150” 表示最多同时处理150个连接 minSpareThreads=“25” 表示即使没有人使用也开这么多空线程等待 maxSpareThreads=“75” 表示如果最多可以空75个线程，例如某时刻有80人访问，之后没有人访问了，则tomcat不会保留80个空线程，而是关闭5个空的。</p>
+<p>acceptCount=“100” 当同时连接的人数达到maxThreads时，还可以接收排队的连接，超过这个连接的则直接返回拒绝连接。</p>
+<p>根据你的配置建议 maxThreads=“500” minSpareThreads=“100” 如果你的网站经常访问量都很大的话，缺省就开比较大 maxSpareThreads=“300” acceptCount=“100” 这只是说你的服务器可以支持这么多用户，但还要看你安装了哪些东西，还有你的程序是否足够高效率。</p>
+<p>tomcat6 以下版本中的几点配置说明 如何加大tomcat连接数</p>
+<p>在tomcat配置文件server.xml中的配置中，和连接数相关的参数有： minProcessors：最小空闲连接线程数，用于提高系统处理性能，默认值为10 maxProcessors：最大连接线程数，即：并发处理的最大请求数，默认值为75 acceptCount：允许的最大连接数，应大于等于maxProcessors，默认值为100 enableLookups：是否反查域名，取值为：true或false。为了提高处理能力，应设置为false connectionTimeout：网络连接超时，单位：毫秒。设置为0表示永不超时，这样设置有隐患的。通常可设置为30000毫秒。</p>
+<p>其中和最大连接数相关的参数为maxProcessors和acceptCount。如果要加大并发连接数，应同时加大这两个参数。</p>
+<p>添加tomcat管理员帐户 添加管理员账户tomcat-users.xml<br>6.TOMCAT内存 基本原理：JAVA程序启动时都会JVM 都会分配一个初始内存和最大内存给这个应用程序。这个初始内存和最大内存在一定程度都会影响程序的性能。比如说在应用程序用到最大内存的时候，JVM是要 先去做垃圾回收的动作，释放被占用的一些内存。 所以想调整Tomcat的启动时初始内存和最大内存就需要向JVM声明，一般的JAVA程序在运行都可以通过中-Xms -Xmx来调整应用程序的初始内存和最大内存: 如：java -Xms64m -Xmx128m application.jar.</p>
+<p>方法1：如果是使用的tomcat_home/bin/catalina.sh(linux)或catalina.bat(win)启动的： 修改相应文件，加上下面这句： JAVA_OPTS=‘$JAVA_OPTS -server -Xmx800m -Xms512m -XX:MaxNewSize=256m -XX:MaxPermSize=256m -Djava.awt.headless=true’–ms是最小内存，mx是最大内存。这里设置最小内存为512M,最大内存为 800M。$JAVA_OPTS是保留先前设置。 CATALINA_OPTS似乎可以与JAVA_OPTS不加区别的使用。[对于catalina.bat则是如此设置： set JAVA_OPTS=-Xms1024m -Xmx1024m]</p>
+<p>方法2：如果使用的winnt服务启动： 在命令行键入regedit，找到 HKEY_LOCAL_MACHINE–&gt;SOFTWARE–&gt;Apache Software Foundation–&gt;Procrun 2.0–&gt;Tomcat5–&gt;Parameters的Java， 修改Options的值，新添加属性： -Xms64m -Xmx128m 或者直接修改JvmMx(最大内存)和JvmMs(最小内存)。</p>
+<p>有人建议Xms和Xmx的值取成一样比较好，说是可以加快内存回收速度。 修改完之后，可以访问<a href="http://127.0.0.1:8080/manager/status查看内存大小。" target="_blank" rel="noopener">http://127.0.0.1:8080/manager/status查看内存大小。</a></p>
+<p>也可以编写下面测试tomcat内存大小的jsp页面： &lt;% Runtime lRuntime = Runtime.getRuntime(); out.println(“<strong><em> BEGIN MEMORY STATISTICS<br>”); out.println(“Free Memory: “+lRuntime.freeMemory()+”<br>”); out.println(“Max Memory: “+lRuntime.maxMemory()+”<br>”); out.println(“Total Memory: “+lRuntime.totalMemory()+”<br>”); out.println(“Available Processors : “+lRuntime.availableProcessors()+”<br>”); out.println(” END MEMORY STATISTICS </em></strong>“); %&gt;</p>
+<p>tomcat中的基本配置？<br>Tomcat的如何配置监听端口和启动内存？</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><ol>
+<li>数据库事务属性</li>
+<li>sql语句：创建一个table。</li>
+<li>sql语句优化怎么做的,建索引的时候要考虑什么</li>
+<li>数据库连接池设置几个连接,是怎么处理的，说说你的理解</li>
+<li>数据库性能优化有做么？做了些什么？遇到过那些问题？</li>
+</ol>
+<p>mysql索引类型有哪些？<br>mysql存储引擎有哪些？<br>mysql语句如何优化？</p>
+<p>mysql读写分离代码层实现</p>
+<p>你们系统的数据库切分，按什么切？（纵向、横向）<br>数据库切分<br><a href="http://wenku.baidu.com/view/35d6149b51e79b89680226a7.html" target="_blank" rel="noopener">http://wenku.baidu.com/view/35d6149b51e79b89680226a7.html</a></p>
+<h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>momogo的特性，以及使用时需要注意的？业务上怎么用的？</p>
+<h2 id="solr"><a href="#solr" class="headerlink" title="solr"></a>solr</h2><h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><h1 id="系统架构设计"><a href="#系统架构设计" class="headerlink" title="系统架构设计"></a>系统架构设计</h1><p>除了单例和工厂需要掌握其他的东西。</p>
+<p>对高并发，高可用的想法？具体的做法？</p>
+<p>为什么使用angularjs？</p>
+<p>redis也准备一下，什么是redis？</p>
+<p>知道技术架构的核心原则是什么？</p>
+<h2 id="架构师核心能力"><a href="#架构师核心能力" class="headerlink" title="架构师核心能力"></a>架构师核心能力</h2><p><a href="http://blog.qiniu.com/archives/1489" target="_blank" rel="noopener">http://blog.qiniu.com/archives/1489</a><br><a href="https://yq.aliyun.com/articles/54376" target="_blank" rel="noopener">https://yq.aliyun.com/articles/54376</a></p>
+<h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><ul>
+<li>画出来以前做过的系统的架构图？<br>参考：<a href="http://www.processon.com/view/583592f0e4b086d1e7a1df94" target="_blank" rel="noopener">http://www.processon.com/view/583592f0e4b086d1e7a1df94</a><br><img src="http://oo501cyv7.bkt.clouddn.com/14842126315727.jpg" alt=""></li>
+</ul>
+<ul>
+<li>soa和微服务的区别，以及微服务的优点和缺点？<br><a href="http://www.infoq.com/cn/articles/basis-frameworkto-implement-micro-service" target="_blank" rel="noopener">http://www.infoq.com/cn/articles/basis-frameworkto-implement-micro-service</a><br><a href="http://www.ibm.com/developerworks/cn/websphere/library/techarticles/1601_clark-trs/1601_clark.html" target="_blank" rel="noopener">http://www.ibm.com/developerworks/cn/websphere/library/techarticles/1601_clark-trs/1601_clark.html</a><br><a href="https://yq.aliyun.com/articles/2764" target="_blank" rel="noopener">https://yq.aliyun.com/articles/2764</a><br><a href="http://dockone.io/article/394" target="_blank" rel="noopener">http://dockone.io/article/394</a><br><a href="http://microservices.io/" target="_blank" rel="noopener">http://microservices.io/</a></li>
+</ul>
+<p>rpc通信和rmi区别<br><a href="https://waylau.com/remote-procedure-calls/" target="_blank" rel="noopener">https://waylau.com/remote-procedure-calls/</a></p>
+<p>网站性能优化都做了什么，具体的？ETag、Last-Modified、Expires、Cache-Control<br>分布式缓存的内存管理，如何管理和释放不断膨胀的session，memcache是否熟悉</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>除了单例和工厂需要掌握其他的东西。</p>
+<p>画出最熟悉的三个设计模式的类图</p>
+<p>单例模式：懒汉模式和饿汉模式。</p>
+<p>简述你所熟悉的设计模式。模拟一个应用场景，并说出你所使用的设计模式的优缺点（单例模式)</p>
+<p>中间件技术主要涉及哪些？<br>分布式技术（缓存、消息系统、热部署、jmx等）？</p>
+<h2 id="高并发"><a href="#高并发" class="headerlink" title="高并发"></a>高并发</h2><p>什么是分布式框架？<br>《构建高性能Web站点》<br>《大型网站技术架构》<br>对高并发，高可用的想法？具体的做法？</p>
+<ol>
+<li>高并发情况下，我们系统是如何支撑大量的请求的</li>
+<li>并发、同步的接口或方法</li>
+<li>并发访问同一条数据的时候，如何保证数据同步。</li>
+</ol>
+<p>怎么搭建支持高并发的网站？<br><a href="http://wulijun.github.io/2012/08/10/high-concurrency-web.html" target="_blank" rel="noopener">http://wulijun.github.io/2012/08/10/high-concurrency-web.html</a></p>
+<h2 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h2><p>有个每秒钟5k个请求，查询手机号所属地的笔试题（记得不完整，没列出），如何设计算法？请求再多，比如5w，如何设计整个系统？</p>
+<p>给定一个数组，数组中存放着线程的引用，根据该数据结构，设计一个线程池的方案，要求在取出空闲线程和归还线程的时候，复杂度为O（1），并且申请的辅助空间为常数级。</p>
+<p>实现双链表查找相交节点。（我实现了3种方法）</p>
+<p>面试官提出的问题</p>
+<p>问题1：</p>
+<p>给定一个数组，数组中存放着线程的引用，根据该数据结构，设计一个线程池的方案，要求在取出空闲线程和归还线程的时候，复杂度为O（1），并且申请的辅助空间为常数级。</p>
+<p>回 答： 按照要求，需要在O（1）时间内放回或者取出，而且不能申请O（n）的辅助空间，但是在任务中可以有一些标记字段（isBusy&lt;是否忙碌&gt;，originIdx&lt;对应数组位置下标&gt;等）。 经过考虑，我可以这样做： 在每次取出和放回 的时候都按照顺序依次存放，但由于每个任务中都记录了数组下标，而数组对应下标都存着该任务的引用，则当任务没有按照次序归还线程时，可将该线程和另外一个正在运行着的线程位置进行互换，从而达到按顺序归还的效果，同时修改两个互换线程关于busy和所属下标的值，这样，在取出的时候可以做到按照顺序取，达到O（1），放回的时候可以按照顺序放，在O（1）的复杂度内，交换两个线程的所属位置即可解决。</p>
+<p>面试经历：</p>
+<p>内推的蚂蚁金福实习，电面的形式 一面：主要很开心的聊天，涉及都是简历项目中的问题，如分布式文件系统的一些基本CAP概念，自己开发负责的部分，整体的开发环境（40G Mellanox高速互连网等），时间也不长，大约20几分钟，面完感觉还不错 二面：面试的是一个女面试官，一开始也是介绍项目，但似乎她对我项目内容并不感冒，在我提到项目分布式文件系统用到一个开源bdb数据库后，转入数据库知识点的问答，最先问了个索引，由于没复习，完全忘记概念了。再然后问了死锁的条件及如何检测，死锁的四个条件大约还记得，答出来后，关于死锁的检测，由于平常并没使用啥工具，更多就是对自己遇到的gdb调试中的死锁问题做了一些简单阐述，后来才了解到数据库中有很多方法~最后问了一个大规模并发读写请求访问的问题，我强调了单点故障，负载均衡，但又没很完善地阐述解决方法~感觉思路就不跟面试官在一条线上吧，再加上没复习知识点极其薄弱，总体面试情况相当糟糕~ 面试官提出的问题</p>
+<p>问题1： 产生死锁的条件？如何检测死锁？ 回 答： 死锁的条件还是从那4个基本的互斥，部分分配，不可剥夺和环路作答。关于死锁的检测，感觉更多数据库当中的，如SQL就有不少处理手段，这个还是不太熟悉~</p>
+<p>面试经历：</p>
+<p>2015年1月底先进行了电话面试。 2015年2月安排到阿里总部单独面试，往返机票可报销。 面试官一共两人，都是技术主管，总共进行了2个小时。 最后确定下来我还在P5的水平，但近期只招收P6+的技术岗位，憾别阿里。 面试过程中讨论的技术范围很广，但都会跟部门职位相关。计算机底层，数据库索引，算法，SSH(Spring,Struts,Hibernate)相关原理，网络协议和优化，算法（手机9宫格输入法的实现）等都有问到。 虽然有3年工作经验，但这两个月离职阶段确实没准备好，不少问题没答到点上，虽然经过提示，还是能回答上。但阿里P6+ 级别的要求是能在个别技术领域上独当一面，所以面试过程中提示过多，那就很遗憾的只能Say good bye了。 不管怎么说，准备面试与参加面试过程中，让整个技术生涯的经验都得到了沉淀，今后发展道路也更加清晰，不虚此行。 继续加油。阿里春季确认，大伙加油吧。 面试官提出的问题</p>
+<p>问题1： 面试中提出了几个实战型的问题，其中一个是抛开现有的开源软件，独立设计一套高并发的分布式登陆系统，要如何实现。 回 答： 从如何储存用户信息，如何同步Session，如何管理Cookie，如何避免XSS攻击，平行权限问题等方向去答（没有回答得很满意）。</p>
+<p>1到1亿的自然数，求所有数的拆分后的数字之和，如286 拆分成2、8、6，如1到11拆分后的数字之和 =&gt; 1 + … + 9 + 1 + 0 + 1 + 1。</p>
+<p>海量数据处理<br><a href="http://mm.fancymore.com/reading/java-interview-questions2.html" target="_blank" rel="noopener">http://mm.fancymore.com/reading/java-interview-questions2.html</a><br><a href="http://blog.csdn.net/clam_clam/article/details/6869556" target="_blank" rel="noopener">http://blog.csdn.net/clam_clam/article/details/6869556</a></p>
+<p>秒杀系统设计<br><a href="http://mm.fancymore.com/reading/java-interview-project-killsgood.html" target="_blank" rel="noopener">http://mm.fancymore.com/reading/java-interview-project-killsgood.html</a></p>
+<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="数据结构与算法-1"><a href="#数据结构与算法-1" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><p>二叉树的遍历算法</p>
+<p>快速排序，手写代码。<br>就是从一个无序数组中找出中位数，我没想到什么好方法，直接用选择排序将数组进行排序(排出前半部分就可以了)，然后return a[a.length/2]</p>
+<p>总结：快速选择可以用于这类面试题：</p>
+<p>1）求出无序数组中第k大的数</p>
+<p>2）求出无序数组中最大/小的k个数</p>
+<p>参考： <a href="http://www.tuicool.com/articles/M3EnAra" target="_blank" rel="noopener">http://www.tuicool.com/articles/M3EnAra</a></p>
+<p>堆排序，描述过程，纸上画出来。</p>
+<p>写算法：输出一个串的所有可能字符组合。</p>
+<p>例如输入“abcd“，输出a,b,c,d,ab,ac,ad,bc,bd,cd,abc,abd,acd,bcd,abcd 输入串可能会有重复字符，例如输入”abcc“，输出a,b,c,ab,bc,ac,cc,abc,acc,bcc</p>
+<p>递归算法：<a href="http://bylijinnan.iteye.com/blog/1370407" target="_blank" rel="noopener">http://bylijinnan.iteye.com/blog/1370407</a></p>
+<p>二进制算法：<a href="http://zhidao.baidu.com/question/398799198.html" target="_blank" rel="noopener">http://zhidao.baidu.com/question/398799198.html</a></p>
+<p>加密解密的东西做过么？如md5什么的</p>
+<p>斐波那契数列<br><a href="http://lavasoft.blog.51cto.com/62575/199680" target="_blank" rel="noopener">http://lavasoft.blog.51cto.com/62575/199680</a></p>
+<p>关于阶乘的两个常见算法及一个相关面试题<br><a href="http://www.cnblogs.com/anderslly/archive/2008/05/19/factorial-algorithms.html" target="_blank" rel="noopener">http://www.cnblogs.com/anderslly/archive/2008/05/19/factorial-algorithms.html</a></p>
+<p>《程序员面试金典》</p>
+<h1 id="技术团队管理"><a href="#技术团队管理" class="headerlink" title="技术团队管理"></a>技术团队管理</h1><ul>
+<li>团队领导能力，怎么管人？</li>
+<li>项目管理能力</li>
+</ul>
+<p>敏捷管理具体是怎么做的，结合业务。</p>
+<p>梳理项目需求怎么能保证快速准确的产出需求。</p>
+<p>如果遇到产品和技术的工期矛盾怎么处理？</p>
+<p>沟通能力强</p>
+<p>团队领导能力</p>
+<p>项目管理能力<br>项目管理过程有着比较深入的理解</p>
+<p>项目管理、自动部署等工具<br>maven、svn、git、jenkins等</p>
+<h1 id="面试技巧"><a href="#面试技巧" class="headerlink" title="面试技巧"></a>面试技巧</h1><p><a href="http://www.sunhaojie.com/2016/01/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%8E%E4%B9%88%E8%8E%B7%E5%BE%97%E9%AB%98%E5%B7%A5%E8%B5%84/" target="_blank" rel="noopener">http://www.sunhaojie.com/2016/01/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%8E%E4%B9%88%E8%8E%B7%E5%BE%97%E9%AB%98%E5%B7%A5%E8%B5%84/</a></p>
+<h2 id="自我介绍主要考察方面"><a href="#自我介绍主要考察方面" class="headerlink" title="自我介绍主要考察方面"></a>自我介绍主要考察方面</h2><p>套路<br>面试官趁机看简历<br>营造一个轻松的开场</p>
+<p>你是谁？<br>态度<br>了解一些个人信息：年龄、专业、工作年限、工作经历、行业背景、项目经验<br>通过你的声音、肢体语言，又或是你的姓名由来，背景故事，都可以决定你的第一印象是否深刻</p>
+<p>你会什么？<br>表达能力<br>逻辑总结能力<br>知识面如何，是否对技术有浓厚兴趣，特别关注的是你的特长是什么。</p>
+<p>为什么是你？<br>主要考察你的能力和目标岗位的匹配度，主要以下<br>专业技能与特长<br>业务经验<br>是否可以融入当前团队</p>
+<h2 id="自我介绍和项目介绍"><a href="#自我介绍和项目介绍" class="headerlink" title="自我介绍和项目介绍"></a>自我介绍和项目介绍</h2><p>面试中描述你做的每一个项目：<br>你做了什么工作？<br>这些工作你解决了什么问题？<br>还有什么困难没有解决？<br>这些困难在后续如何优化？<br>优化后可以实现什么功能？<br>这些功能如何和中间件和分布式并行系统联系在一起？？</p>
+<p>==自我介绍的时候还需要准备一下，怎么突出自己的能力，技术和管理？==<br>结合业务来说技术点？</p>
+<p>未来的定位是什么？偏技术或者偏管理？具体怎么规划的？你比较有优势的点？未来期望加强的点</p>
+<p>这一部分内容，一般的模式就是你自己去讲你做过的项目，然后面试官会冷不丁的让你去解释其中某一部分，比如让你解释当时为什么要这么做，或者问你现在觉得有没有更好的办法。而这些穿插的问题，大部分与你的项目所用到的技术有关。而你需要做的，就是充分、再充分的去总结自己做过的项目（尤其是最近的一两个项目），挖掘出一个甚至N个亮点，以备于到时候可以让面试官产生眼前一亮的感觉。如果你能达到这种效果的话，基本上离你成功就不远了。</p>
+<p>先从项目模块入手，详细问项目模块是怎么实现的,遇到的问题怎么解决(一定要说自己做过的,真实的情况)</p>
+<p>个人优势？</p>
+<p>与同事沟通的时候，如果遇到冲突了如何解决？</p>
+<p>说说项目</p>
+<p>由于我几年一直做一个产品，从后台做到前台，从业务开发做到技术平台，所以就画了整个产品部署架构图，b/s &amp; c/s的，然后一层层的讲解。</p>
+<p>　　 B/S现有Web框架改造、浏览器缓存、c/s补丁下载各种方式、cdn、c/s通信协议、rpc集群、http集群、负载均衡、集群前置机调 度、后端服务器主从实例、后端服务器各种优化(异步、性能隔离)、数据库服务器各种优化(索引、物化视图、读写分离、帐套结转、数据库横向切分、纵向切 分)、层间调用性能监控的实现，对照产品架构图各个部分一路讲下来。<br>　　<br>　　 自我介绍是简历中最重要的。==自我介绍要用事实描述，不要用观点描述，比如我有10年Java开发经验，这个是事实，我崇尚团队合作，学习能力强，这个是观点。==事实可以证明，而观点很难，所以事实描述比观点描述更有说服力。自我介绍主要是对自己经历的一个亮点总结，比如张三有十年的Java开发经验，其中有两年的Linux操作经验，两年的项目管理经验。张三有自己的个人技术博客XXX.com，经常翻译国内网文章并在XX网站发表，主导或参与XX开源项目。曾经在XX比赛中拿过三等奖。当然类似于学习能力很强的观点描述也可以写，但是要举例子，比如曾经在2周内学习完IOS，并开发了XX应用。</p>
+<p>　　 </p>
+<h2 id="项目管理"><a href="#项目管理" class="headerlink" title="项目管理"></a>项目管理</h2><p>团队管理心得？<br>梳理项目需求怎么能保证快速准确的产出需求。<br>敏捷管理具体是怎么做的，结合业务。<br>如果遇到产品和技术的工期矛盾怎么处理？</p>
+<p>敏捷开发<br><a href="https://www.zhihu.com/question/20637406" target="_blank" rel="noopener">https://www.zhihu.com/question/20637406</a><br><a href="http://www.ciandt.com.cn/blog/agile-advantage-weakness" target="_blank" rel="noopener">http://www.ciandt.com.cn/blog/agile-advantage-weakness</a></p>
+<p>管理能力<br><a href="https://linux.cn/article-6356-1.html" target="_blank" rel="noopener">https://linux.cn/article-6356-1.html</a><br><a href="http://developer.51cto.com/art/201603/507074.htm" target="_blank" rel="noopener">http://developer.51cto.com/art/201603/507074.htm</a><br><a href="http://meta.ftqq.com/groups/%E9%9A%8F%E7%AC%94/%E5%B8%9D%E9%83%BD%E6%B5%AE%E7%94%9F%E5%BD%95/_book/004.html" target="_blank" rel="noopener">http://meta.ftqq.com/groups/%E9%9A%8F%E7%AC%94/%E5%B8%9D%E9%83%BD%E6%B5%AE%E7%94%9F%E5%BD%95/_book/004.html</a></p>
+<h2 id="突出自己的技术能力"><a href="#突出自己的技术能力" class="headerlink" title="突出自己的技术能力"></a>突出自己的技术能力</h2><p>怎么达到给面试官留下深刻印象的技术深度呢？<br>  1、一个取巧的方式是在准备面试的阶段，研究一个技术点，尽量深的挖掘，面试时如果有机会聊这个点，会有一定的效果。其实这种也不算一种取巧，技术深度的考察就是考察候选人是否有专研的能力，学习能力。研究的知识点尽量是以往项目中用到的，至于原因好好想想就明白了。</p>
+<p>回答问题不够细致（应该是因为对技术不够深入造成的）<br>找几个点进行深入的研究<br><strong>momogo</strong>的特性，以及使用时需要注意的？业务上怎么用的？<br>分片<br>用智联那一套东西来说</p>
+<h3 id="个人信息和工作经验"><a href="#个人信息和工作经验" class="headerlink" title="个人信息和工作经验"></a>个人信息和工作经验</h3><p>我叫郝伟光，86年出生, 2009年毕业于内江师范学院。 在互联网行业有超过7年的丰富的研发工作经验，4年的团队管理经验，曾先后任职于搜房网、正保教育、智联招聘和聚力精彩这几家公司，在上家公司担任研发总监的岗位兼任架构师；<br>热爱技术，熟悉Java技术体系，另外对.NET、iOS开发有所涉猎，擅长分布式、高性能应用的设计。负责过日pv千万级的项目。<br>我熟悉各种开发流程和主流架构模式，以及设计模式和UML，有较强的需求分析、架构设计、项目管理能力，对敏捷开发有较深入的理解并有多个项目成功经验，独立带领20-30人的团队进行研发.<br>我在研发团队管理期间，尝试了多种方法去建立良性的团队氛围，并有效的改善了研发效率；关注如何提高程序员的生产力。通过工具的使用，专业的培训学习提升技术人员水平。<br>技术是为产品支撑的，所以我对产品设计也有所涉猎。<br>在公司中曾多次别评为优秀员工。非常感谢！</p>
+<h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><p>1、项目开发能力，面试中在个人的开场白后面试官会选择一个简历中的项目或者让面试人自己选择项目描述，这里主要是检验面试人的项目能力，包括项目理解力，沟通能力和思维能力等。选择哪个项目比较合适？描述和公司的业务或者和这个职位的业务相关的项目是一个更好的选择，因为相关面试官会更了解业务，所以就要求面试人对项目的描述要更有条理。介绍整个项目的时候最好围绕以下几点描述：<br>    1、项目的目标，项目主要解决了什么问题，是否能讲明白这点非常重要，只有说明白了问题域，才能使项目的实现更合情合理。<br>    2、项目是怎么实现的，采用了什么技术，框架，有哪些困难，又是采用什么办法解决了？这个阶段面试人要仔细的思考一下，是主要体现能力的地方。最忌讳简单的描述实现方式是增删改查，没有难点和亮点。有句老话叫：“会者不难，难着不会”，所以当开发完成一个项目后总是发现项目没有什么难度，找不出亮点，其实是已解决的问题都会感觉到比较简单。所以做完项目后总结一下，回顾一下项目开发过程中设计的优点和缺点，挖掘一下项目的亮点，使项目更饱满。也不用回避项目中的缺点，项目没有一蹴而就的，不是所有问题都可以完美解决的，所以不妨说出项目的缺点，如果能给出一个补救措施会更好。<br>    3、自己在团队中是什么角色，做了哪些贡献？有哪些收获？重点是哪些收获，因为以前的都是过去式，将来能在新项目做多少贡献才是重要的。所以项目中使用到的技术，框架，技巧等，如果能深入研究一下对以后的工作和面试会有比较好的帮助。</p>
+<p>工作成绩——下边写一段实例，其中内容是虚构的：</p>
+<ul>
+<li>2006年，参与了手机XX网发布系统WAPCMS的开发（这部分是大家都会写的）。</li>
+<li>作为核心程序员，不但完成了网站界面、调度队列的开发工作，更提出了高效的组件级缓存系统，通过碎片化缓冲有效的提升了系统的渲染效率（这部分是很多同学忘掉的，要写出你在这个项目中具体负责的部分，以及你贡献出来的价值）。</li>
+<li>在该系统上线后，Web前端性能从10QPS提升到200QPS，服务器由10台减少到3台（通过量化的数字来增强可信度）。</li>
+<li>2008年升任WAPCMS项目负责人，带领一个3人小组支持着每天超过2亿的PV（这就是Benefit。你能带给前雇主的价值，也就是你能带给新雇主的价值）。</li>
+</ul>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14829846806064.png" alt=""></p>
+<ol>
+<li>之前做过哪些项目；举个例子说明那个==项目的关键点、技术架构==<h4 id="一站式招聘管理平台"><a href="#一站式招聘管理平台" class="headerlink" title="一站式招聘管理平台"></a>一站式招聘管理平台</h4>关键点</li>
+</ol>
+<p>架构：基于dubbo微服务架构设计，前后端分离，restful风格的接口定义<br>后台：spring+spring mvc+mybatis+Spring Data JPA<br>前台：angularjs+jquery+bootstrap<br>数据：mysql、redis、mongodb和solr<br>其他：rabbitMQ、JUnit单元测试、Jenkins自动化部署 </p>
+<h4 id="智联招聘-校园招聘系统"><a href="#智联招聘-校园招聘系统" class="headerlink" title="智联招聘-校园招聘系统"></a>智联招聘-校园招聘系统</h4><p>架构：系统采用SOA架构设计，<br>主要使用到的技术spring+spring mvc+mybatis ，mysql读写分离，Mongodb，rabbitMQ，Memcached，Solr，CDN等，基于以上技术，网站在面对高并发高负载也可以保证高性能和高可用性，压力测试结果显示网站可以响应千万级别用户使用。 </p>
+<h4 id="父母会（一个母婴类社交网站）"><a href="#父母会（一个母婴类社交网站）" class="headerlink" title="父母会（一个母婴类社交网站）"></a>父母会（一个母婴类社交网站）</h4><h4 id="搜房家天下家居电商平台"><a href="#搜房家天下家居电商平台" class="headerlink" title="搜房家天下家居电商平台"></a>搜房家天下家居电商平台</h4><p>这一部分内容，一般的模式就是你自己去讲你做过的项目，然后面试官会冷不丁的让你去解释其中某一部分，比如让你解释当时为什么要这么做，或者问你现在觉得有没有更好的办法。而这些穿插的问题，大部分与你的项目所用到的技术有关。而你需要做的，就是充分、再充分的去总结自己做过的项目（尤其是最近的一两个项目），挖掘出一个甚至N个亮点，以备于到时候可以让面试官产生眼前一亮的感觉。如果你能达到这种效果的话，基本上离你成功就不远了。</p>
+<p>先从项目模块入手，详细问项目模块是怎么实现的,遇到的问题怎么解决(一定要说自己做过的,真实的情况)</p>
+<p>由于我几年一直做一个产品，从后台做到前台，从业务开发做到技术平台，所以就画了整个产品部署架构图，b/s &amp; c/s的，然后一层层的讲解。</p>
+<p>B/S现有Web框架改造、浏览器缓存、c/s补丁下载各种方式、cdn、c/s通信协议、rpc集群、http集群、负载均衡、集群前置机调 度、后端服务器主从实例、后端服务器各种优化(异步、性能隔离)、数据库服务器各种优化(索引、物化视图、读写分离、帐套结转、数据库横向切分、纵向切 分)、层间调用性能监控的实现，对照产品架构图各个部分一路讲下来。</p>
+<h3 id="职业规划"><a href="#职业规划" class="headerlink" title="职业规划"></a>职业规划</h3><p>未来方向是做技术管理，偏向于技术。</p>
+<p>有什么问题想问的？</p>
+<p>个人优势？</p>
+<p>技术人员的三条路子：<br>技术<br>管理<br>产品管理</p>
+<p>未来的定位是什么？偏技术或者偏管理</p>
+<h1 id="程序员面试所需的软技能"><a href="#程序员面试所需的软技能" class="headerlink" title="程序员面试所需的软技能"></a>程序员面试所需的软技能</h1><p>==那就是在一个适合思考的时刻，去思考和总结自己所经历的过去以及所掌握的技术，要总结到精髓，并且挖掘出自己至少一个亮点。==</p>
+<h2 id="你为什么要换工作"><a href="#你为什么要换工作" class="headerlink" title="你为什么要换工作"></a>你为什么要换工作</h2><p>老大问你这个问题，就是想评估一下如果你入职之后，能待多久，公司团队能不能把你融进来。</p>
+<p>我觉得这个问题，程序员们就不要太纠结于技巧了，直接老老实实从下面俩原因选一个或都讲，坦诚相待就OK了：</p>
+<ul>
+<li><p>钱不够，薪资没达到期望值</p>
+<ul>
+<li>这个大家不要避讳，HR和面试官会觉得这个原因是OK的</li>
+</ul>
+</li>
+<li><p>觉得现在的工作在浪费时间，没有成就感，想找一个更牛的团队，实现自己的价值</p>
+<ul>
+<li>表达自己技术和职业上的追求，而不是混日子养老</li>
+</ul>
+</li>
+</ul>
+<p>注意一定不要说是因为和领导闹得不愉快，或者领导傻逼这种话，面试官要是听到这种话，内心独白就是：老子要是把你招进来，以后你背后是不是也会骂我，那赶紧滚犊子吧。然后面带微笑的说，今天的面试就先到这了，balabala……</p>
+<p>回答完这个问题之后，最好在表达一下自己心中的技术团队的氛围，常用词汇有，开放，对事不对人，敢于尝试新技术，等等</p>
+<h2 id="你还有什么问题吗"><a href="#你还有什么问题吗" class="headerlink" title="你还有什么问题吗"></a>你还有什么问题吗</h2><p>最好不要回答没啥问题了，一定要问几个，显得自己对这个工作是特别渴望的，比如下面几个：</p>
+<ul>
+<li><p>咱们部门具体采用的技术方案是什么</p>
+</li>
+<li><p>我如果能来，是一个什么角色</p>
+</li>
+<li><p>公司未来两到三年对技术部门的规划是什么</p>
+</li>
+<li><p>我今天面试的结果大概是怎样的，有哪些需要继续提升的</p>
+</li>
+</ul>
+<h2 id="如何谈薪酬"><a href="#如何谈薪酬" class="headerlink" title="如何谈薪酬"></a>如何谈薪酬</h2><p>很多程序员，包括很久之前的我，都根本不会谈薪酬，或者谈一次就放弃，别人给多少就是多少。薪酬谈判其实还是蛮重要的，不仅仅是多的那些钱，更重要的因为薪酬谈判中你如何评价自己和谈判能力，会影响公司对你的看法。</p>
+<p>一旦成为公司的一员，其实你很难改变别人的第一印象，涨薪也是按照百分比，仔细的谈一下薪酬，可以让未来的雇主觉得你是一个很有价值的员工，就像我当年进百度，傻不呵呵的说了一句对薪资没啥要求，结果应该就是最低的工资，囧。</p>
+<p>其实薪酬谈判是受你自己的声望和能力影响的，想一下你如果你的Github主页有2000个星星，谈判的时候的主动权会非常大，所以薪酬谈判很大一部分因素是日常的积累，就像前面说的自我营销。</p>
+<h3 id="获得面试机会的类型"><a href="#获得面试机会的类型" class="headerlink" title="获得面试机会的类型"></a>获得面试机会的类型</h3><p>你获取工作方式的不同，也决定的你薪酬谈判时候的地位，通常来说是 公司主动找到你&gt;内推&gt;猎头&gt;自己海投，所以大家尽量找关系内推。如果有一天你的博客下面收到以下面试邀请，那你的谈判主动权会大大提高，所以还是注意日常积累吧</p>
+<h3 id="不要先出价"><a href="#不要先出价" class="headerlink" title="不要先出价"></a>不要先出价</h3><p>谈判一个重要法则，就是先出价的会比较处于劣势，因为你没法加价了，却给了对方砍价的空间，但是要一个过于高的价格，又会让雇主直接放弃，我的策略是，先找到自己的定位，然后再谈判</p>
+<h3 id="找准自己的定位"><a href="#找准自己的定位" class="headerlink" title="找准自己的定位"></a>找准自己的定位</h3><p>比如你特别想去A公司，你现在公司是10K，</p>
+<ul>
+<li><p>先找几个BCDE公司练练手，薪酬谈判的时候直接要高价，比如20K</p>
+</li>
+<li><p>如果对方想也没想就拒绝了，说明自己现在还不够格，下次面试要15试试</p>
+</li>
+<li><p>如果对方犹豫或者答应了，下次面试你就可以要25K 以此类推</p>
+</li>
+</ul>
+<p>目的就是找准市场给自己的定价，心里有一个谱。</p>
+<h3 id="具体谈判"><a href="#具体谈判" class="headerlink" title="具体谈判"></a>具体谈判</h3><p>面试官和HR一定会问你，你的薪资要求.这个时候最好的回答就是拒绝回答，面试申请单要求写期望薪资，可以写根据薪酬体系面议，面试官问你，也给出相同的答复，如果再问，可以用几个问题缓解一下，比如</p>
+<ul>
+<li><p>给出预期之前，我愿意更了解一下贵公司和我的工作内容</p>
+</li>
+<li><p>关于这个职位，你们一定有一个具体的预算，我可以告诉你们这个预算是不是符合我心理预期</p>
+</li>
+<li><p>我现在没法给出一个具体的数字，如果一定要的话，大概是XX到XX（就必须说出一个区间了)</p>
+</li>
+<li><p>我手里已经有月薪15K的offer了，诸如此类，提高自己谈判的地位</p>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://icyfenix.iteye.com/blog/715301" target="_blank" rel="noopener">一个面试官对面试问题的分析</a></li>
+<li><a href="http://mm.fancymore.com/category/interview.html" target="_blank" rel="noopener">java面经</a></li>
+<li><a href="http://gold.xitu.io/entry/578d938079bc44005ff26aec" target="_blank" rel="noopener">想不想通过一线互联网公司面试？</a></li>
+<li><a href="http://www.zuoxiaolong.com/blog/article.ftl?id=235" target="_blank" rel="noopener">万能的林萧说：我来告诉你，一个草根程序员如何进入BAT</a></li>
+<li><a href="http://www.zuoxiaolong.com/blog/article.ftl?id=232" target="_blank" rel="noopener">万能的林萧说：一篇文章教会你，如何做到招聘要求中的“要有扎实的Java基础”。</a></li>
+<li><a href="http://www.zuoxiaolong.com/blog/article.ftl?id=184" target="_blank" rel="noopener">回答阿里社招面试如何准备，顺便谈谈对于Java程序猿学习当中各个阶段的建议</a></li>
+<li><a href="https://blog.coding.net/blog/Team-Innovation-Growth" target="_blank" rel="noopener">采访 | Coding.net CTO 孙宇聪接受 InfoQ 采访:团队、创新及优化</a></li>
+<li><a href="https://www.zhihu.com/question/21387153" target="_blank" rel="noopener">程序员面试过程中，面试官想要从”自我介绍”获得什么信息？</a></li>
+<li><a href="https://www.zhihu.com/question/19603341" target="_blank" rel="noopener">面试的时候，如何自我介绍？</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>赏个包子钱~~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>light</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2017/05/08/java面试大全/" title="java面试大全">http://yoursite.com/2017/05/08/java面试大全/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/08/MySQL中text、blob字段类型的不同/" rel="next" title="MySQL中text、blob字段类型的不同">
+                <i class="fa fa-chevron-left"></i> MySQL中text、blob字段类型的不同
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/01/java反射基础知识/" rel="prev" title="java反射基础知识">
+                java反射基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/2578.jpg"
+                alt="light" />
+            
+              <p class="site-author-name" itemprop="name">light</p>
+              <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/haoweiguang" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#语言基础"><span class="nav-number">1.</span> <span class="nav-text">语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的数据结构相关的类实现原理"><span class="nav-number">1.1.</span> <span class="nav-text">Java的数据结构相关的类实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-集合框架"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、 集合框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、-string、stringbuilder、stringbuffer区别"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、 string、stringbuilder、stringbuffer区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型"><span class="nav-number">1.2.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">1.3.</span> <span class="nav-text">作用域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java开发框架"><span class="nav-number">2.</span> <span class="nav-text">java开发框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#spring"><span class="nav-number">2.1.</span> <span class="nav-text">spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-mvc"><span class="nav-number">2.2.</span> <span class="nav-text">spring mvc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet"><span class="nav-number">2.3.</span> <span class="nav-text">servlet</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程"><span class="nav-number">3.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程-1"><span class="nav-number">3.1.</span> <span class="nav-text">多线程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jvm相关"><span class="nav-number">4.</span> <span class="nav-text">jvm相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jvm"><span class="nav-number">4.1.</span> <span class="nav-text">jvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GC"><span class="nav-number">4.2.</span> <span class="nav-text">GC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载机制"><span class="nav-number">4.3.</span> <span class="nav-text">类加载机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存模型"><span class="nav-number">4.4.</span> <span class="nav-text">内存模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试问题"><span class="nav-number">4.5.</span> <span class="nav-text">面试问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个GC部分简单的连环炮。"><span class="nav-number">4.5.1.</span> <span class="nav-text">一个GC部分简单的连环炮。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面是关于类加载机制的简单连环炮。"><span class="nav-number">4.5.2.</span> <span class="nav-text">下面是关于类加载机制的简单连环炮。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再来一个关于内存的连环炮。"><span class="nav-number">4.5.3.</span> <span class="nav-text">再来一个关于内存的连环炮。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nio-io"><span class="nav-number">5.</span> <span class="nav-text">nio/io</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">5.1.</span> <span class="nav-text">IO</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">6.</span> <span class="nav-text">网络编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#协议"><span class="nav-number">6.1.</span> <span class="nav-text">协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP"><span class="nav-number">6.1.1.</span> <span class="nav-text">TCP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行环境"><span class="nav-number">7.</span> <span class="nav-text">运行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行环境-1"><span class="nav-number">7.1.</span> <span class="nav-text">运行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统Linux"><span class="nav-number">7.1.1.</span> <span class="nav-text">操作系统Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tomcat"><span class="nav-number">7.1.2.</span> <span class="nav-text">Tomcat</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">8.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">8.1.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb"><span class="nav-number">8.2.</span> <span class="nav-text">mongodb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solr"><span class="nav-number">8.3.</span> <span class="nav-text">solr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis"><span class="nav-number">8.4.</span> <span class="nav-text">redis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统架构设计"><span class="nav-number">9.</span> <span class="nav-text">系统架构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#架构师核心能力"><span class="nav-number">9.1.</span> <span class="nav-text">架构师核心能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#架构设计"><span class="nav-number">9.2.</span> <span class="nav-text">架构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-number">9.2.1.</span> <span class="nav-text">设计模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高并发"><span class="nav-number">9.3.</span> <span class="nav-text">高并发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统设计"><span class="nav-number">9.4.</span> <span class="nav-text">系统设计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构与算法"><span class="nav-number">10.</span> <span class="nav-text">数据结构与算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构与算法-1"><span class="nav-number">10.1.</span> <span class="nav-text">数据结构与算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术团队管理"><span class="nav-number">11.</span> <span class="nav-text">技术团队管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试技巧"><span class="nav-number">12.</span> <span class="nav-text">面试技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自我介绍主要考察方面"><span class="nav-number">12.1.</span> <span class="nav-text">自我介绍主要考察方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自我介绍和项目介绍"><span class="nav-number">12.2.</span> <span class="nav-text">自我介绍和项目介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目管理"><span class="nav-number">12.3.</span> <span class="nav-text">项目管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突出自己的技术能力"><span class="nav-number">12.4.</span> <span class="nav-text">突出自己的技术能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#个人信息和工作经验"><span class="nav-number">12.4.1.</span> <span class="nav-text">个人信息和工作经验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目介绍"><span class="nav-number">12.4.2.</span> <span class="nav-text">项目介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一站式招聘管理平台"><span class="nav-number">12.4.2.1.</span> <span class="nav-text">一站式招聘管理平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智联招聘-校园招聘系统"><span class="nav-number">12.4.2.2.</span> <span class="nav-text">智联招聘-校园招聘系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#父母会（一个母婴类社交网站）"><span class="nav-number">12.4.2.3.</span> <span class="nav-text">父母会（一个母婴类社交网站）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜房家天下家居电商平台"><span class="nav-number">12.4.2.4.</span> <span class="nav-text">搜房家天下家居电商平台</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#职业规划"><span class="nav-number">12.4.3.</span> <span class="nav-text">职业规划</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序员面试所需的软技能"><span class="nav-number">13.</span> <span class="nav-text">程序员面试所需的软技能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#你为什么要换工作"><span class="nav-number">13.1.</span> <span class="nav-text">你为什么要换工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你还有什么问题吗"><span class="nav-number">13.2.</span> <span class="nav-text">你还有什么问题吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何谈薪酬"><span class="nav-number">13.3.</span> <span class="nav-text">如何谈薪酬</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获得面试机会的类型"><span class="nav-number">13.3.1.</span> <span class="nav-text">获得面试机会的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要先出价"><span class="nav-number">13.3.2.</span> <span class="nav-text">不要先出价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找准自己的定位"><span class="nav-number">13.3.3.</span> <span class="nav-text">找准自己的定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体谈判"><span class="nav-number">13.3.4.</span> <span class="nav-text">具体谈判</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">13.4.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">light</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.1</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'FR41X5AqL4IcM2cE5qBmHU1Q-gzGzoHsz',
+        appKey: 'iXWuS118CuMxx8GkdQl53Xry',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "FR41X5AqL4IcM2cE5qBmHU1Q-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "FR41X5AqL4IcM2cE5qBmHU1Q-gzGzoHsz",
+                'X-LC-Key': "iXWuS118CuMxx8GkdQl53Xry",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
