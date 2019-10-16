@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.haoweiguang.me/"/>
-  <updated>2019-10-16T06:17:13.638Z</updated>
+  <updated>2019-10-16T10:40:02.571Z</updated>
   <id>http://www.haoweiguang.me/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>产品经理应具备的能力（读张小龙有感）</title>
+    <link href="http://www.haoweiguang.me/2019/10/16/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%88%E8%AF%BB%E5%BC%A0%E5%B0%8F%E9%BE%99%E6%9C%89%E6%84%9F%EF%BC%89/"/>
+    <id>http://www.haoweiguang.me/2019/10/16/产品经理应具备的能力（读张小龙有感）/</id>
+    <published>2019-10-16T10:38:11.000Z</published>
+    <updated>2019-10-16T10:40:02.571Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在读有关张小龙的资料，我觉着最真实、最有价值的还数龙哥还未封神之前在饭否的言论啦。花了好几天，断断续续的读完了，感觉龙哥好牛逼，感觉自己能吸收的东东了了。那就先写下自己当前的想法，另记下认为比较经典的言论，以后可以常来翻一翻，常看常新。</p><blockquote><p>产品人是站在上帝身边的人</p></blockquote><p>产品经理看到这句，心里肯定会乐开了花，但权利越大，责任越大啊。龙哥为啥这样说呢，一是来奉承产品经理，二是产品经理确实是洞悉人性，满足用户需求</p><blockquote><p>所以我后来发现,人不是培养出来的,是给他们土壤,然后,有才能的人自己会成长起来的。甚至不需要我分享什么。后来我就不培养人了,只观察人了。 </p></blockquote><p>优秀的人，有了土壤，自己就会长起来，其他职业也是。</p><blockquote><p> 如果工作不是被好奇心驱动,不如回家卖红薯。</p><p> 做产品,最要紧是保持十年如一日的新鲜感。</p><p>好奇心和发现是最值得珍惜的品德。</p></blockquote><p>好奇心很重要，这是人最原始的东西，也最能持久。</p><blockquote><p> 以后招产品经理,直接给他一个小电器,比如mp3播放器,让他写个产品使用手册,就知道行不行了。</p><p> 要提防那些Blog写得好的产品经理,因为在Blog上花的时间越多,在产品上花的时间就越少。原来还以为有例外,现在看起来无一例外。</p></blockquote><p>咳咳，Fenng老师，你怎么看？</p><blockquote><p> 做产品,就是跟用户谈一场恋爱,否则只是一场商业交易而已。产品人是多么的博爱啊。</p><p> 面试产品经理,所有技能合格后,要问,你喜欢摇滚吗。回答否的,就算了。</p><p> 我在生活上不是一个有洁癖的人,但对待产品却分毫必究,介大概就是传说中的精神分裂吧。</p><p> 很多人看到MJ的海报说pm心中有爱。不是爱,是愤怒。</p></blockquote><p>产品不应该仅仅是功能（需求）的堆砌，应该还要有“温度”，可能包含了产品经理的价值观、爱、愤怒或者其他，那样才有灵魂。</p><blockquote><p> 老乔是Intel的葛洛夫的唯有偏执狂才能生存的证明人。 偏执需要权力的辅佐才能进行到底。</p></blockquote><p>我还是想活的久一点，当个普通人也未尝不可吧。就像龙哥说的“ think less,live more（想得少，活得更久）”。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在读有关张小龙的资料，我觉着最真实、最有价值的还数龙哥还未封神之前在饭否的言论啦。花了好几天，断断续续的读完了，感觉龙哥好牛逼，感觉自己能吸收的东东了了。那就先写下自己当前的想法，另记下认为比较经典的言论，以后可以常来翻一翻，常看常新。&lt;/p&gt;
+&lt;blockquote&gt;
+      
+    
+    </summary>
+    
+      <category term="产品设计" scheme="http://www.haoweiguang.me/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="张小龙" scheme="http://www.haoweiguang.me/tags/%E5%BC%A0%E5%B0%8F%E9%BE%99/"/>
+    
+      <category term="产品经理" scheme="http://www.haoweiguang.me/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>张小龙饭否摘抄</title>
@@ -506,41 +534,6 @@
       <category term="NIO" scheme="http://www.haoweiguang.me/tags/NIO/"/>
     
       <category term="IO" scheme="http://www.haoweiguang.me/tags/IO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络协议进阶2——TCP/UDP协议详解</title>
-    <link href="http://www.haoweiguang.me/2017/07/02/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E8%BF%9B%E9%98%B62%E2%80%94%E2%80%94TCP-UDP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.haoweiguang.me/2017/07/02/网络协议进阶2——TCP-UDP协议详解/</id>
-    <published>2017-07-02T03:17:47.000Z</published>
-    <updated>2017-07-16T08:39:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>分开叙述tcp、ip、http/https等协议</p><p>这个协议在java中的体现？</p><p>分为应用层、传输层、网络层和实体层<br><img src="http://oo501cyv7.bkt.clouddn.com/14816321462047.jpg" alt></p><p>一、TCP/IP协议</p><p>TCP/IP协议（传输控制协议）由网络层的IP协议和传输层的TCP协议组成。IP层负责网络主机的定位，数据传输的路由，由IP地址可以唯一的确定Internet上的一台主机。TCP层负责面向应用的可靠的或非可靠的数据传输机制，这是网络编程的主要对象。</p><p>二、TCP与UDP</p><p>TCP是一种面向连接的保证可靠传输的协议。通过TCP协议传输，得到的是一个顺序的无差错的数据流。发送方和接收方的成对的两个socket之间必须建立连接，以便在TCP协议的基础上进行通信，当一个socket（通常都是server socket）等待建立连接时，另一个socket可以要求进行连接，一旦这两个socket连接起来，它们就可以进行双向数据传输，双方都可以进行发送或接收操作。</p><p>　　UDP是一种面向无连接的协议，每个数据报都是一个独立的信息，包括完整的源地址或目的地址，它在网络上以任何可能的路径传往目的地，因此能否到达目的地，到达目的地的时间以及内容的正确性都是不能被保证的。</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14816330764039.jpg" alt></p><p>TCP与UDP区别：</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14816332469431.jpg" alt></p><p>TCP特点：</p><p>　　1、TCP是面向连接的协议，通过三次握手建立连接，通讯完成时要拆除连接，由于TCP是面向连接协议，所以只能用于点对点的通讯。而且建立连接也需要消耗时间和开销。</p><p>　　2、TCP传输数据无大小限制，进行大数据传输。</p><p>　　3、TCP是一个可靠的协议，它能保证接收方能够完整正确地接收到发送方发送的全部数据。</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14816333163774.jpg" alt></p><p>UDP特点：</p><p>　　1、UDP是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。</p><p>　　2、UDP传输数据时有大小限制，每个被传输的数据报必须限定在64KB之内。</p><p>　　3、UDP是一个不可靠的协议，发送方所发送的数据报并不一定以相同的次序到达接收方。</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14816333420719.jpg" alt></p><p>TCP与UDP应用：</p><p>　　1、TCP在网络通信上有极强的生命力，例如远程连接（Telnet）和文件传输（FTP）都需要不定长度的数据被可靠地传输。但是可靠的传输是要付出代价的，对数据内容正确性的检验必然占用计算机的处理时间和网络的带宽，因此TCP传输的效率不如UDP高。</p><p>　　2，UDP操作简单，而且仅需要较少的监护，因此通常用于局域网高可靠性的分散系统中client/server应用程序。例如视频会议系统，并不要求音频视频数据绝对的正确，只要保证连贯性就可以了，这种情况下显然使用UDP会更合理一些</p><p>TCP通信需要服务器端侦听listen、接收客户端连接请求accept，等待客户端connect建立连接后才能进行数据包的收发(recv/send)工作。</p><p>而UDP则服务器和客户端的概念不明显，服务器端即接收端需要绑定端口，等待客户端的数据的到来。后续便可以进行数据的收发(recvfrom/sendto)工作。</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14816331321116.jpg" alt></p><p>参考</p><ul><li><a href="http://www.cnblogs.com/ghj1976/p/4295346.html" target="_blank" rel="noopener">HTTP TCP UDP Socket 关系的几个经典图</a></li><li><a href="https://krystalchisholm.wordpress.com/2010/11/24/chapter-17/" target="_blank" rel="noopener">Chapter 7 – ISP Services</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;分开叙述tcp、ip、http/https等协议&lt;/p&gt;
-&lt;p&gt;这个协议在java中的体现？&lt;/p&gt;
-&lt;p&gt;分为应用层、传输层、网络层和实体层&lt;br&gt;&lt;img src=&quot;http://oo501cyv7.bkt.clouddn.com/14816321462047.jpg&quot;
-      
-    
-    </summary>
-    
-      <category term="理解计算器机" scheme="http://www.haoweiguang.me/categories/%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9C%BA/"/>
-    
-      <category term="网络协议" scheme="http://www.haoweiguang.me/categories/%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9C%BA/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-      <category term="网络协议" scheme="http://www.haoweiguang.me/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-    
-      <category term="理解计算机" scheme="http://www.haoweiguang.me/tags/%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-      <category term="TCP" scheme="http://www.haoweiguang.me/tags/TCP/"/>
-    
-      <category term="UDP" scheme="http://www.haoweiguang.me/tags/UDP/"/>
     
   </entry>
   
