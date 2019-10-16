@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -39,8 +39,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -133,12 +133,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/20/java集合框架-HashMap实现原理分析/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/20/java集合框架-HashMap实现原理分析/">
 
 
 
@@ -238,7 +238,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -246,7 +246,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -256,7 +256,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -276,9 +276,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -429,8 +427,8 @@
 <h3 id="1-1-数组"><a href="#1-1-数组" class="headerlink" title="1.1 数组"></a>1.1 数组</h3><p>数组存储区间是连续的，占用内存严重，故空间复杂的很大。但数组的二分查找时间复杂度小，为O(1)；数组的特点是：<strong>寻址容易，插入和删除困难；</strong></p>
 <h3 id="1-2-链表"><a href="#1-2-链表" class="headerlink" title="1.2 链表"></a>1.2 链表</h3><p>链表存储区间离散，占用内存比较宽松，故空间复杂度很小，但时间复杂度很大，达O(N)。链表的特点是：<strong>寻址困难，插入和删除容易</strong>。</p>
 <h3 id="1-3-哈希表"><a href="#1-3-哈希表" class="headerlink" title="1.3 哈希表"></a>1.3 哈希表</h3><p>那么我们能不能综合两者的特性，做出一种寻址容易，插入删除也容易的数据结构？答案是肯定的，这就是我们要提起的哈希表。哈希表（Hash table）既满足了数据的查找方便，同时不占用太多的内容空间，使用也十分方便。</p>
-<p>哈希表有多种不同的实现方法，我接下来解释的是最常用的一种方法—— 拉链法，我们可以理解为“链表的数组” ，如图：<br><img src="http://oo501cyv7.bkt.clouddn.com/14847296397735.jpg" alt=""></p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14847296679116.jpg" alt=""></p>
+<p>哈希表有多种不同的实现方法，我接下来解释的是最常用的一种方法—— 拉链法，我们可以理解为“链表的数组” ，如图：<br><img src="http://oo501cyv7.bkt.clouddn.com/14847296397735.jpg" alt></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14847296679116.jpg" alt></p>
 <p>从上图我们可以发现哈希表是由数组+链表组成的，一个长度为16的数组中，每个元素存储的是一个链表的头结点。那么这些元素是按照什么样的规则存储到数组中呢。一般情况是通过hash(key)%len获得，也就是元素的key的哈希值对数组长度取模得到。比如上述哈希表中，12%16=12,28%16=12,108%16=12,140%16=12。所以12、28、108以及140都存储在数组下标为12的位置。</p>
 <p>　　HashMap其实也是一个线性的数组实现的,所以可以理解为其存储数据的容器就是一个线性数组。这可能让我们很不解，一个线性的数组怎么实现按键值对来存取数据呢？这里HashMap有做一些处理。</p>
 <p>　　首先HashMap里面实现一个静态内部类<code>Entry</code>，其重要的属性有 <code>key , value, next</code>，从属性key,value我们就能很明显的看出来Entry就是HashMap键值对实现的一个基础bean，我们上面说到HashMap的基础就是一个线性数组，这个数组就是Entry[]，Map里面的内容都保存在Entry[]里面。</p>
@@ -491,7 +489,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -615,9 +613,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/2578.jpg"
-                alt="light" />
+              <img class="site-author-image" itemprop="image" src="/uploads/2578.jpg" alt="light">
             
               <p class="site-author-name" itemprop="name">light</p>
               <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
@@ -746,7 +742,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:haoweiguang1986#gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
@@ -811,7 +807,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

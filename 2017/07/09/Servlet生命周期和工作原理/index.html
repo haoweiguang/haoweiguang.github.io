@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -39,8 +39,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -132,12 +132,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/09/Servlet生命周期和工作原理/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/09/Servlet生命周期和工作原理/">
 
 
 
@@ -237,7 +237,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -245,7 +245,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -255,7 +255,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -275,9 +275,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -443,7 +441,7 @@
 <p>初始化后，Servlet就可以接受请求了。<br>基本方式是执行Servlet接口中的service方法。并把请求和响应对象作为参数传递。当并行的请求到来时，多个service（）方法能够同时运行在独立的线程中。<br>service()方法检查 HTTP 请求类型（GET、POST、PUT、DELETE 等），并在适当的时候调用 doGet()、doPost()、doPut()，doDelete() 等方法。<br>当然，API也提供了HttpServlet抽象类，其中有doGet、doPost等特殊方法。<br>注意：任意的容器按照规范必须实现上述几种方法，所以你的代码写在这几个方法中都可以。</p>
 <p>第四步：终止服务</p>
 <p>容器会在合适的时候销毁某个Servlet对象，这个策略取决于容器的开发者/商。<br>在容器关闭的时候Servlet对象一定会被销毁。<br>当1或2发生时，也就是Servlet对象被销毁时，destroy方法会被调用</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14995681398150.png" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14995681398150.png" alt></p>
 <p>PS:<strong>Servlet的生命（周期）是由容器管理的，换句话说，Servlet程序员不能用代码控制其生命。</strong></p>
 <h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>首先简单解释一下Servlet接收和响应客户请求的过程，首先客户发送一个请求，Servlet是调用service()方法对请求进行响应的，通过源代码可见，service()方法中对请求的方式进行了匹配，选择调用doGet,doPost等这些方法，然后再进入对应的方法中调用逻辑层的方法，实现对客户的响应。在Servlet接口和GenericServlet中是没有doGet,doPost等等这些方法的，HttpServlet中定义了这些方法，但是都是返回error信息，所以，我们每次定义一个Servlet的时候，都必须实现doGet或doPost等这些方法。</p>
 <p>每一个自定义的Servlet都必须实现Servlet的接口，Servlet接口中定义了五个方法，其中比较重要的三个方法涉及到Servlet的生命周期，分别是上文提到的init(),service(),destroy()方法。GenericServlet是一个通用的，不特定于任何协议的Servlet,它实现了Servlet接口。而HttpServlet继承于GenericServlet，因此HttpServlet也实现了Servlet接口。所以我们定义Servlet的时候只需要继承HttpServlet即可。</p>
@@ -514,7 +512,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -638,9 +636,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/2578.jpg"
-                alt="light" />
+              <img class="site-author-image" itemprop="image" src="/uploads/2578.jpg" alt="light">
             
               <p class="site-author-name" itemprop="name">light</p>
               <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
@@ -769,7 +765,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:haoweiguang1986#gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
@@ -834,7 +830,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

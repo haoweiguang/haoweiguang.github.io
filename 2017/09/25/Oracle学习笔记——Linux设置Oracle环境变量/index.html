@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -39,8 +39,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -134,12 +134,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/25/Oracle学习笔记——Linux设置Oracle环境变量/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/25/Oracle学习笔记——Linux设置Oracle环境变量/">
 
 
 
@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -247,7 +247,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -257,7 +257,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -277,9 +277,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -378,7 +376,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -446,13 +444,13 @@
       
         <p>有三种设置方法，具体如下：</p>
 <p>方法一：直接运行export命令定义变量,<strong>该变量只在当前的shell（BASH）或其子shell（BASH）下是有效的</strong>，shell关闭了，变量也就失效了，再打开新shell时就没有这个变量，需要使用的话还需要重新定义。</p>
-<p>以设置oracle环境变量为例<br><img src="http://oo501cyv7.bkt.clouddn.com/15063281966273.png" alt=""></p>
+<p>以设置oracle环境变量为例<br><img src="http://oo501cyv7.bkt.clouddn.com/15063281966273.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export ORACLE_BASE=/data/app/oracle; </span><br><span class="line">export ORACLE_HOME=$ORACLE_BASE/product/12.1.0/dbhome_1; </span><br><span class="line">export ORACLE_SID=orcl; </span><br><span class="line">export PATH=$ORACLE_HOME/bin:$PATH;</span><br></pre></td></tr></table></figure>
 <p>方法二：在用户目录下的.bash_profile文件中增加变量，改变量<strong>仅会对当前用户有效</strong>，并且是“永久的”。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/15063282260029.png" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/15063282260029.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ORACLE_BASE=/data/app/oracle;                          export ORACLE_BASE</span><br><span class="line">ORACLE_HOME=$ORACLE_BASE/product/12.1.0/dbhome_1;      export ORACLE_HOME</span><br><span class="line">ORACLE_SID=orcl;                                       export ORACLE_SID</span><br><span class="line">PATH=$ORACLE_HOME/bin:$PATH;                           export PATH</span><br></pre></td></tr></table></figure>
 <p>方法三： 在/etc/profile文件中添加变量，该变量将<strong>会对Linux下所有用户有效</strong>，并且是“永久的”。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/15063282550340.png" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/15063282550340.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ORACLE_BASE=/data/app/oracle;                        export ORACLE_BASE</span><br><span class="line">ORACLE_HOME=$ORACLE_BASE/product/12.1.0/dbhome_1;    export ORACLE_HOME</span><br><span class="line">ORACLE_SID=orcl;                                     export ORACLE_SID</span><br><span class="line">PATH=$ORACLE_HOME/bin:$PATH;                         export PATH</span><br></pre></td></tr></table></figure>
 
       
@@ -477,7 +475,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -590,9 +588,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/2578.jpg"
-                alt="light" />
+              <img class="site-author-image" itemprop="image" src="/uploads/2578.jpg" alt="light">
             
               <p class="site-author-name" itemprop="name">light</p>
               <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
@@ -721,7 +717,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:haoweiguang1986#gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
@@ -770,7 +766,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

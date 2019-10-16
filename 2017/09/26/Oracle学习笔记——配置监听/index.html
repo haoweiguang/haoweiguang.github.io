@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -39,8 +39,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -132,12 +132,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/26/Oracle学习笔记——配置监听/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/26/Oracle学习笔记——配置监听/">
 
 
 
@@ -237,7 +237,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -245,7 +245,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -255,7 +255,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -275,9 +275,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -376,7 +374,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -443,7 +441,7 @@
 
       
         <h3 id="什么是监听"><a href="#什么是监听" class="headerlink" title="什么是监听"></a>什么是监听</h3><p>如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。</p>
-<p>在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，独立于数据库运行。它负责对客户端传入的连接请求进行监听，并且对服务器端的连接负荷进行调整。当客户端准备建立一个到服务器端的连接时，监听器接收客户端的连接请求， 然后再将这个客户端连接请求交给服务器进行处理，一旦客户端和服务器建立连接，客户端和服务器以后就直接进行通信，而不再需要监听器的参与，这就好比师傅 领进门，修行靠个人。就如下图所示：<br><img src="http://oo501cyv7.bkt.clouddn.com/15064117419478.png" alt=""></p>
+<p>在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，独立于数据库运行。它负责对客户端传入的连接请求进行监听，并且对服务器端的连接负荷进行调整。当客户端准备建立一个到服务器端的连接时，监听器接收客户端的连接请求， 然后再将这个客户端连接请求交给服务器进行处理，一旦客户端和服务器建立连接，客户端和服务器以后就直接进行通信，而不再需要监听器的参与，这就好比师傅 领进门，修行靠个人。就如下图所示：<br><img src="http://oo501cyv7.bkt.clouddn.com/15064117419478.png" alt></p>
 <ol>
 <li>客户端向服务器端发出连接请求，监听器监听到客户端的连接请求；</li>
 <li>监听器把客户端的连接请求交给数据库服务器进行处理；</li>
@@ -496,7 +494,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -618,9 +616,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/2578.jpg"
-                alt="light" />
+              <img class="site-author-image" itemprop="image" src="/uploads/2578.jpg" alt="light">
             
               <p class="site-author-name" itemprop="name">light</p>
               <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
@@ -749,7 +745,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:haoweiguang1986#gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
@@ -814,7 +810,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

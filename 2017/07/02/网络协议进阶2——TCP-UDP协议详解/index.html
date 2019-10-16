@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -39,8 +39,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -137,12 +137,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="郝伟光的Notes" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/02/网络协议进阶2——TCP-UDP协议详解/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/02/网络协议进阶2——TCP-UDP协议详解/">
 
 
 
@@ -242,7 +242,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -250,7 +250,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -260,7 +260,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -280,9 +280,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -381,7 +379,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -456,31 +454,31 @@
       
         <p>分开叙述tcp、ip、http/https等协议</p>
 <p>这个协议在java中的体现？</p>
-<p>分为应用层、传输层、网络层和实体层<br><img src="http://oo501cyv7.bkt.clouddn.com/14816321462047.jpg" alt=""></p>
+<p>分为应用层、传输层、网络层和实体层<br><img src="http://oo501cyv7.bkt.clouddn.com/14816321462047.jpg" alt></p>
 <p>一、TCP/IP协议</p>
 <p>TCP/IP协议（传输控制协议）由网络层的IP协议和传输层的TCP协议组成。IP层负责网络主机的定位，数据传输的路由，由IP地址可以唯一的确定Internet上的一台主机。TCP层负责面向应用的可靠的或非可靠的数据传输机制，这是网络编程的主要对象。</p>
 <p>二、TCP与UDP</p>
 <p>TCP是一种面向连接的保证可靠传输的协议。通过TCP协议传输，得到的是一个顺序的无差错的数据流。发送方和接收方的成对的两个socket之间必须建立连接，以便在TCP协议的基础上进行通信，当一个socket（通常都是server socket）等待建立连接时，另一个socket可以要求进行连接，一旦这两个socket连接起来，它们就可以进行双向数据传输，双方都可以进行发送或接收操作。</p>
 <p>　　UDP是一种面向无连接的协议，每个数据报都是一个独立的信息，包括完整的源地址或目的地址，它在网络上以任何可能的路径传往目的地，因此能否到达目的地，到达目的地的时间以及内容的正确性都是不能被保证的。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14816330764039.jpg" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816330764039.jpg" alt></p>
 <p>TCP与UDP区别：</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14816332469431.jpg" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816332469431.jpg" alt></p>
 <p>TCP特点：</p>
 <p>　　1、TCP是面向连接的协议，通过三次握手建立连接，通讯完成时要拆除连接，由于TCP是面向连接协议，所以只能用于点对点的通讯。而且建立连接也需要消耗时间和开销。</p>
 <p>　　2、TCP传输数据无大小限制，进行大数据传输。</p>
 <p>　　3、TCP是一个可靠的协议，它能保证接收方能够完整正确地接收到发送方发送的全部数据。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14816333163774.jpg" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816333163774.jpg" alt></p>
 <p>UDP特点：</p>
 <p>　　1、UDP是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。</p>
 <p>　　2、UDP传输数据时有大小限制，每个被传输的数据报必须限定在64KB之内。</p>
 <p>　　3、UDP是一个不可靠的协议，发送方所发送的数据报并不一定以相同的次序到达接收方。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14816333420719.jpg" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816333420719.jpg" alt></p>
 <p>TCP与UDP应用：</p>
 <p>　　1、TCP在网络通信上有极强的生命力，例如远程连接（Telnet）和文件传输（FTP）都需要不定长度的数据被可靠地传输。但是可靠的传输是要付出代价的，对数据内容正确性的检验必然占用计算机的处理时间和网络的带宽，因此TCP传输的效率不如UDP高。</p>
 <p>　　2，UDP操作简单，而且仅需要较少的监护，因此通常用于局域网高可靠性的分散系统中client/server应用程序。例如视频会议系统，并不要求音频视频数据绝对的正确，只要保证连贯性就可以了，这种情况下显然使用UDP会更合理一些</p>
 <p>TCP通信需要服务器端侦听listen、接收客户端连接请求accept，等待客户端connect建立连接后才能进行数据包的收发(recv/send)工作。</p>
 <p>而UDP则服务器和客户端的概念不明显，服务器端即接收端需要绑定端口，等待客户端的数据的到来。后续便可以进行数据的收发(recvfrom/sendto)工作。</p>
-<p><img src="http://oo501cyv7.bkt.clouddn.com/14816331321116.jpg" alt=""></p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816331321116.jpg" alt></p>
 <p>参考</p>
 <ul>
 <li><a href="http://www.cnblogs.com/ghj1976/p/4295346.html" target="_blank" rel="noopener">HTTP TCP UDP Socket 关系的几个经典图</a></li>
@@ -509,7 +507,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付"/>
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="light 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -628,9 +626,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/2578.jpg"
-                alt="light" />
+              <img class="site-author-image" itemprop="image" src="/uploads/2578.jpg" alt="light">
             
               <p class="site-author-name" itemprop="name">light</p>
               <p class="site-description motion-element" itemprop="description">关于技术、个人感悟等的记录</p>
@@ -759,7 +755,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:haoweiguang1986@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:haoweiguang1986#gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i></a>
                   
                 </span>
               
@@ -808,7 +804,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
