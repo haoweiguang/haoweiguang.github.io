@@ -71,6 +71,32 @@
   </entry>
   
   <entry>
+    <title>我为什么写作</title>
+    <link href="http://www.haoweiguang.me/2019/08/29/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%86%99%E4%BD%9C/"/>
+    <id>http://www.haoweiguang.me/2019/08/29/我为什么写作/</id>
+    <published>2019-08-29T05:55:18.000Z</published>
+    <updated>2019-10-17T05:57:40.761Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。</p><p>写作大概能分为两种，一种是为自己而写，主要想通过写作来更好的学习、思考、记录、复盘等；一种是为他人而写，通过写作扩大影响力、赚钱等等。我的目标是“<strong>为自己而写</strong>”。</p><p><strong>为了深度思考</strong>，把自己学的东西。通过写作，将自己的思考转换为文字后，很多实践经验和总结往往才能够真正的系统化和结构化，同时完成整个思维的抽象和升华过程。写作有时候像教人，能把一件事写明白了，证明自己掌握的也挺好的了。</p><p><strong>让自己慢下来</strong>，平时看的太多，太杂，除了通过写作来梳理，为了更好的吸收，其实<strong>写作是真正能够让人平静下来的事情</strong>，写作是在安静的时候，一个人，自己和自己的心灵的对话，让自己听到自己内心的声音。</p><p>也有一些<strong>交流的需要</strong>，我现在有个习惯，就是如果觉着一个人思想还不错，我就会去找他的博客、公众号等，把他写的文章看一遍，就能大概了解这个人了，减少了沟通的成本。</p><p>你们有没有觉着回忆是不准确的，我们经常修改和美化自己的记忆，以验证自己当下的判断（就像“禀赋效应”那样）。所以记录下来，回头再看，是对自己成长过程最好的交代。另外，记录当时状态对于人生也是一份宝贵的财富。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">为什么你应该（从现在开始就）-刘未鹏</a></li><li><a href="https://fatesinger.com/100080" target="_blank" rel="noopener">当我谈博客时我在谈些什么-Fatesinger</a></li><li><a href="https://yukunwu.wordpress.com/why-write-blogs/" target="_blank" rel="noopener">为何写作-zero</a></li></ul><h3 id="Revision-history"><a href="#Revision-history" class="headerlink" title="Revision history"></a>Revision history</h3><p>2019.8.29 开写</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。&lt;/p&gt;
+&lt;p&gt;写作大概能分为两种，一种是为自己而写，主要想通
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.haoweiguang.me/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="写作" scheme="http://www.haoweiguang.me/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>程序员健康生活指南总目录</title>
     <link href="http://www.haoweiguang.me/2019/04/22/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97%E6%80%BB%E7%9B%AE%E5%BD%95/"/>
     <id>http://www.haoweiguang.me/2019/04/22/程序员健康生活指南总目录/</id>
@@ -506,33 +532,6 @@
       <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
     
       <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java之NIO编程</title>
-    <link href="http://www.haoweiguang.me/2017/07/04/java%E4%B9%8BNIO%E7%BC%96%E7%A8%8B/"/>
-    <id>http://www.haoweiguang.me/2017/07/04/java之NIO编程/</id>
-    <published>2017-07-03T16:30:59.000Z</published>
-    <updated>2017-07-03T17:14:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>NIO（Non-blocking I/O，在Java领域，也称为New I/O，从 Java 1.4 开始），是一种==同步非阻塞的I/O模型==，也是I/O多路复用的基础，已经被越来越多地应用到大型应用服务器，成为解决高并发与大量连接、I/O处理问题的有效方式。</p><p>主要包括三个核心组件：<br>NIO的工具包提出了基于Selector（选择器）、Buffer（缓冲区）、Channel（通道）的新模式；Selector（选择器）、可选择的Channel（通道）和SelectionKey（选择键）配合起来使用，可以实现并发的非阻塞型I/O能力。</p><p>NI/O 是一种同步非阻塞的 I/O 模型。同步是指线程不断轮询 I/O 事件是否就绪，非阻塞是指线程在等待 I/O 的时候，可以同时做其他任务。同步的核心就是 Selector，Selector 代替了线程本身轮询 I/O 事件，避免了阻塞同时减少了不必要的线程消耗；非阻塞的核心就是通道和缓冲区，当 I/O 事件就绪时，可以通过写道缓冲区，保证 I/O 的成功，而无需线程阻塞式地等待。</p><h2 id="优缺点？"><a href="#优缺点？" class="headerlink" title="优缺点？"></a>优缺点？</h2><p>相较之前的io，效率更高，提升了并发量</p><p>I/O相比于BI/O,采用一种基于通道和缓存区的I/O方式 ,它可以使用 Native 函数库直接分配堆外内存，然后通过一个存储在 Java 堆的 DirectByteBuffer 对象作为这块内存的引用进行操作，避免了在 Java 堆和 Native 堆中来回复制数据。</p><h3 id="Java-NIO-和-IO-的主要区别"><a href="#Java-NIO-和-IO-的主要区别" class="headerlink" title="Java NIO 和 IO 的主要区别"></a>Java NIO 和 IO 的主要区别</h3><p>下表总结了 Java NIO 和 IO 之间的主要差别，我会更详细地描述表中每部分的差异。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IO                NIO</span><br><span class="line">面向流            面向缓冲</span><br><span class="line">阻塞IO            非阻塞IO</span><br><span class="line">无                选择器</span><br></pre></td></tr></table></figure><p>面向流I/O的系统，一次处理一个字节的数据。一个输入流会产生一个字节的数据，而一个输出流同样一次消费一个字节的数据。对于流式数据，很容易创建过滤器。可以相对简单地把几个过滤器连接在一起，每个过滤器完成自己的工作，也是按字节进行过滤，精细的处理机制。另一方面，面向流I/O的通信往往比较缓慢。</p><p>面向块I/O的系统，以块为单位处理数据。每个操作步骤会生成或消费一个块的数据。以块为单位处理数据，其处理速度远快于以字节流为单位的方式。但是，与面向流I/O的通信相比，面向块I/O的通信缺乏优雅和简洁。</p><h3 id="什么时候应该使用java-io？什么时候又该使用java-nio呢？"><a href="#什么时候应该使用java-io？什么时候又该使用java-nio呢？" class="headerlink" title="什么时候应该使用java.io？什么时候又该使用java.nio呢？"></a>什么时候应该使用java.io？什么时候又该使用java.nio呢？</h3><p>1、 可扩展性。这可能会促使你选择不同的软件包。Java.net需要每个Socket通信都有一个线程。编码将大为简化。java.nio更富有效率，但相对难以编码。</p><p>2、 在处理成千上万的连接时，你可能需要更好的扩展性；但是如果连接数较低时，你可能更注重块I/O的高吞吐率。</p><p>3、当使用SSL (Secure Sockets Layer，安全套接字层) 工作时，选择java.nio则实现难度很大。</p><h2 id="内部的原理？"><a href="#内部的原理？" class="headerlink" title="内部的原理？"></a>内部的原理？</h2><p>假设某银行只有10个职员。该银行的业务流程分为以下4个步骤：</p><p>1） 顾客填申请表（5分钟）；</p><p>2） 职员审核（1分钟）；</p><p>3） 职员叫保安去金库取钱（3分钟）；</p><p>4） 职员打印票据，并将钱和票据返回给顾客（1分钟）。</p><p>　　我们看看银行不同的工作方式对其工作效率到底有何影响。</p><p>1 BIO方式<br>　　每来一个顾客，马上由一位职员来接待处理，并且这个职员需要负责以上4个完整流程。当超过10个顾客时，剩余的顾客需要排队等候。</p><p>　　我们算算这个银行一个小时到底能处理多少顾客？一个职员处理一个顾客需要10分钟（5+1+3+1）时间，一个小时（60分钟）能处理6个顾客，一共10个职员，那就是只能处理60个顾客。</p><p>　　可以看到银行职员的工作状态并不饱和，比如在第1步，其实是处于等待中。</p><p>　　这种工作其实就是BIO，每次来一个请求（顾客），就分配到线程池中由一个线程（职员）处理，如果超出了线程池的最大上限（10个），就扔到队列等待 。</p><p>2 NIO方式<br>　　如何提高银行的吞吐量呢？</p><p>　　思路：分而治之，将任务拆分开来，由专门的人负责专门的任务。</p><p>　　具体来讲，银行专门指派一名职员A，A的工作就是每当有顾客到银行，他就递上表格让顾客填写，每当有顾客填好表后，A就将其随机指派给剩余的9名职员完成后续步骤。</p><p>　　我们计算下这种工作方式下银行一个小时到底能处理多少顾客？</p><p>　　假设顾客非常多，职员A的工作处于饱和中，他不断的将填好表的顾客带到柜台处理，柜台一个职员5分钟能处理完一个顾客，一个小时9名职员能处理：9*（60/5）=108。</p><p>　　可见工作方式的转变能带来效率的极大提升。</p><p>  这种工作方式其实就NIO的思路。下图是非常经典的NIO说明图，mainReactor线程负责监听server socket，accept新连接，并将建立的socket分派给subReactor；subReactor可以是一个线程，也可以是线程池（一般可以设置为CPU核数），负责多路分离已连接的socket，读写网络数据，这里的读写网络数据可类比顾客填表这一耗时动作，对具体的业务处理功能，其扔给worker线程池完成。</p><p>　　可以看到典型NIO有三类线程，分别是mainReactor线程、subReactor线程、work线程。不同的线程干专业的事情，最终每个线程都没空着，系统的吞吐量自然就上去了。</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14991017840585.jpg" alt></p><h2 id="具体的用法是什么？"><a href="#具体的用法是什么？" class="headerlink" title="具体的用法是什么？"></a>具体的用法是什么？</h2><h2 id="应用场景？"><a href="#应用场景？" class="headerlink" title="应用场景？"></a>应用场景？</h2><p>netty</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li><a href="http://www.itpub.net/thread-1372775-1-1.html" target="_blank" rel="noopener">Java NIO与Java IO的分析比较</a></li><li><a href="http://www.cnblogs.com/LBSer/p/4622749.html" target="_blank" rel="noopener">一个故事讲清楚NIO</a><br><a href="https://yq.aliyun.com/articles/2371" target="_blank" rel="noopener">https://yq.aliyun.com/articles/2371</a><br><a href="http://www.yangyong.me/java-nio%E5%85%A5%E9%97%A8%E4%B8%8E%E8%AF%A6%E8%A7%A3/" target="_blank" rel="noopener">http://www.yangyong.me/java-nio%E5%85%A5%E9%97%A8%E4%B8%8E%E8%AF%A6%E8%A7%A3/</a><br><a href="http://www.hollischuang.com/archives/184" target="_blank" rel="noopener">http://www.hollischuang.com/archives/184</a><br><a href="http://wiki.jikexueyuan.com/project/java-nio/nio-io.html" target="_blank" rel="noopener">http://wiki.jikexueyuan.com/project/java-nio/nio-io.html</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;是什么？&quot;&gt;&lt;a href=&quot;#是什么？&quot; class=&quot;headerlink&quot; title=&quot;是什么？&quot;&gt;&lt;/a&gt;是什么？&lt;/h2&gt;&lt;p&gt;NIO（Non-blocking I/O，在Java领域，也称为New I/O，从 Java 1.4 开始），是一种==同步
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
-    
-      <category term="NIO" scheme="http://www.haoweiguang.me/tags/NIO/"/>
-    
-      <category term="IO" scheme="http://www.haoweiguang.me/tags/IO/"/>
     
   </entry>
   
