@@ -300,7 +300,7 @@
     <link href="http://www.haoweiguang.me/2017/09/18/idea%E5%9C%A8tomcat%E4%B8%AD%E7%9A%84%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
     <id>http://www.haoweiguang.me/2017/09/18/idea在tomcat中的热部署/</id>
     <published>2017-09-18T03:32:58.000Z</published>
-    <updated>2017-09-18T03:37:47.000Z</updated>
+    <updated>2019-10-17T06:02:28.043Z</updated>
     
     <content type="html"><![CDATA[<h1 id="idea在tomcat中的热部署"><a href="#idea在tomcat中的热部署" class="headerlink" title="idea在tomcat中的热部署"></a>idea在tomcat中的热部署</h1><p>如果每次jsp页面或后台代码有修改，都得重启，确实比较麻烦，现在找到一种利用jrebel这个插件来实现热不熟。</p><p>在idea的插件库中找到jrebel，如下图<br><img src="http://oo501cyv7.bkt.clouddn.com/15057048125945.jpg" alt></p><p>因为这个插件是需要收费，这里有办法可以免费获取激活码：</p><p>方法1：JRebel有一个免费获得激活码的方法，登录<a href="https://my.jrebel.com这个网站（FQ），然后用Twitter或者Facebook账号登录这个网站，就能获得免费的激活码。" target="_blank" rel="noopener">https://my.jrebel.com这个网站（FQ），然后用Twitter或者Facebook账号登录这个网站，就能获得免费的激活码。</a><br><img src="http://oo501cyv7.bkt.clouddn.com/15057048682483.jpg" alt></p><p>在IDEA里面Help-&gt;JRebel-&gt;Activate，复制粘贴激活码就行了。<br><img src="http://oo501cyv7.bkt.clouddn.com/15057048855064.jpg" alt></p><p>方法2：<br>1.激活时填写的 <a href="http://idea.jrebel.ml/ilanyu" target="_blank" rel="noopener">http://idea.jrebel.ml/ilanyu</a> 及 lanyu19950316@gmail.com，授权服务器地址格式为：<a href="http://idea.jrebel.ml/{用户名}，邮箱随意填写，idea.jrebel.ml" target="_blank" rel="noopener">http://idea.jrebel.ml/{用户名}，邮箱随意填写，idea.jrebel.ml</a> 可能随时会被封，可使用反向代理工具代理 <a href="http://idea.lanyus.com/，即可稳定使用授权服务器。" target="_blank" rel="noopener">http://idea.lanyus.com/，即可稳定使用授权服务器。</a></p><p>2.该激活方法可离线使用6个月，可根据需要点击 Renew offline seat 即可更新离线过期时间。</p>]]></content>
     
@@ -313,7 +313,7 @@
     
     </summary>
     
-      <category term="工具" scheme="http://www.haoweiguang.me/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
     
     
       <category term="idea" scheme="http://www.haoweiguang.me/tags/idea/"/>
