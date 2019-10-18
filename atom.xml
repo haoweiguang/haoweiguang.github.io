@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.haoweiguang.me/"/>
-  <updated>2019-10-18T08:41:22.263Z</updated>
+  <updated>2019-10-16T10:50:46.718Z</updated>
   <id>http://www.haoweiguang.me/</id>
   
   <author>
@@ -15,36 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Git分支策略-我的实践</title>
-    <link href="http://www.haoweiguang.me/2019/10/18/Git%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5-%E6%88%91%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/</id>
-    <published>2019-10-18T08:23:59.000Z</published>
-    <updated>2019-10-18T08:41:22.263Z</updated>
-    
-    <content type="html"><![CDATA[<p>具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。</p><p>这样做的好处：</p><ul><li>简单，团队更容易接受、执行，更易操作</li><li>简单也更不容易出错</li></ul><p>如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢复杂了。因为你分支策略还得考虑怎么保证master和线上一致。我们分多个场景来讲：</p><h3 id="场景1-我们要添加一个新功能"><a href="#场景1-我们要添加一个新功能" class="headerlink" title="场景1 我们要添加一个新功能"></a>场景1 我们要添加一个新功能</h3><h4 id="场景1-1-当前没有并行的功能"><a href="#场景1-1-当前没有并行的功能" class="headerlink" title="场景1.1 当前没有并行的功能"></a>场景1.1 当前没有并行的功能</h4><p>1.开发的时候先从master建一个功能分支，命名：Feature-xxx，后续在此基础上做开发就行了，视情况决定是否建个人分支（命名：Feature-xxx-light）</p><p>2.功能开发完成，准备提测，如果是按照瀑布模型开发，可以直接把Feature分支的代码部署到测试环境（QA），发现bug直接在此分支修改就行，然后部署到测试环境；如果是敏捷开发，那最好分出来一个测试分支，因为该功能分支还得继续开发，可能会包含未完成的功能，这时候如果拿功能分支部署测试环境，会遇到问题。如果开辟了一个测试分支，这样就把开发跟测试隔离了，测试环境的bug什么都可以在测试分支搞定。</p><p>3.（可选）  开发测试完成提交到pre-production</p><p>4.（可选）  进一步测试没有问题提交到release分支</p><p>5.后续就是上线，则合并到master分支，并在master分支上做发布</p><p>6.（可选）  如果需要延迟发布则新建production分支（比如，等待iOS审核，需遵守upstream first）</p><h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p><p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p><p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p><h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p><p>2.从master创建本地bug分支，命名：bugfix-xxx</p><p>3.修复bug</p><p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p><p>5.各个环境的测试通过，合并到master，并在master上做发布</p><p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。&lt;/p&gt;
-&lt;p&gt;这样做的好处：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;简单，团队更容易接受、执行，更易操作&lt;/li&gt;
-&lt;li&gt;简单也更不容易出错&lt;/li&gt;
-&lt;/u
-      
-    
-    </summary>
-    
-      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
-    
-    
-      <category term="Git" scheme="http://www.haoweiguang.me/tags/Git/"/>
-    
-  </entry>
   
   <entry>
     <title>产品经理应具备的能力（读张小龙有感）</title>
@@ -137,6 +107,36 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Git分支策略-我的实践</title>
+    <link href="http://www.haoweiguang.me/2019/03/18/Git%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5-%E6%88%91%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://www.haoweiguang.me/2019/03/18/Git分支策略-我的实践/</id>
+    <published>2019-03-18T08:23:59.000Z</published>
+    <updated>2019-10-18T08:45:17.959Z</updated>
+    
+    <content type="html"><![CDATA[<p>具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。</p><p>这样做的好处：</p><ul><li>简单，团队更容易接受、执行，更易操作</li><li>简单也更不容易出错</li></ul><p>如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢复杂了。因为你分支策略还得考虑怎么保证master和线上一致。我们分多个场景来讲：</p><h3 id="场景1-我们要添加一个新功能"><a href="#场景1-我们要添加一个新功能" class="headerlink" title="场景1 我们要添加一个新功能"></a>场景1 我们要添加一个新功能</h3><h4 id="场景1-1-当前没有并行的功能"><a href="#场景1-1-当前没有并行的功能" class="headerlink" title="场景1.1 当前没有并行的功能"></a>场景1.1 当前没有并行的功能</h4><p>1.开发的时候先从master建一个功能分支，命名：Feature-xxx，后续在此基础上做开发就行了，视情况决定是否建个人分支（命名：Feature-xxx-light）</p><p>2.功能开发完成，准备提测，如果是按照瀑布模型开发，可以直接把Feature分支的代码部署到测试环境（QA），发现bug直接在此分支修改就行，然后部署到测试环境；如果是敏捷开发，那最好分出来一个测试分支，因为该功能分支还得继续开发，可能会包含未完成的功能，这时候如果拿功能分支部署测试环境，会遇到问题。如果开辟了一个测试分支，这样就把开发跟测试隔离了，测试环境的bug什么都可以在测试分支搞定。</p><p>3.（可选）  开发测试完成提交到pre-production</p><p>4.（可选）  进一步测试没有问题提交到release分支</p><p>5.后续就是上线，则合并到master分支，并在master分支上做发布</p><p>6.（可选）  如果需要延迟发布则新建production分支（比如，等待iOS审核，需遵守upstream first）</p><h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p><p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p><p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p><h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p><p>2.从master创建本地bug分支，命名：bugfix-xxx</p><p>3.修复bug</p><p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p><p>5.各个环境的测试通过，合并到master，并在master上做发布</p><p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。&lt;/p&gt;
+&lt;p&gt;这样做的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单，团队更容易接受、执行，更易操作&lt;/li&gt;
+&lt;li&gt;简单也更不容易出错&lt;/li&gt;
+&lt;/u
+      
+    
+    </summary>
+    
+      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
+    
+    
+      <category term="Git" scheme="http://www.haoweiguang.me/tags/Git/"/>
     
   </entry>
   
