@@ -5,9 +5,9 @@
   <subtitle>梦想是要有的，万一实现了呢</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.haoweiguang.me/"/>
+  <link href="http://haoweiguang.me/"/>
   <updated>2019-10-16T10:50:46.718Z</updated>
-  <id>http://www.haoweiguang.me/</id>
+  <id>http://haoweiguang.me/</id>
   
   <author>
     <name>Light微光</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>产品经理应具备的能力（读张小龙有感）</title>
-    <link href="http://www.haoweiguang.me/2019/10/16/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%88%E8%AF%BB%E5%BC%A0%E5%B0%8F%E9%BE%99%E6%9C%89%E6%84%9F%EF%BC%89/"/>
-    <id>http://www.haoweiguang.me/2019/10/16/产品经理应具备的能力（读张小龙有感）/</id>
+    <link href="http://haoweiguang.me/2019/10/16/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%BA%94%E5%85%B7%E5%A4%87%E7%9A%84%E8%83%BD%E5%8A%9B%EF%BC%88%E8%AF%BB%E5%BC%A0%E5%B0%8F%E9%BE%99%E6%9C%89%E6%84%9F%EF%BC%89/"/>
+    <id>http://haoweiguang.me/2019/10/16/产品经理应具备的能力（读张小龙有感）/</id>
     <published>2019-10-16T10:38:11.000Z</published>
     <updated>2019-10-16T10:50:46.718Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="产品设计" scheme="http://www.haoweiguang.me/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="http://haoweiguang.me/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="张小龙" scheme="http://www.haoweiguang.me/tags/%E5%BC%A0%E5%B0%8F%E9%BE%99/"/>
+      <category term="张小龙" scheme="http://haoweiguang.me/tags/%E5%BC%A0%E5%B0%8F%E9%BE%99/"/>
     
-      <category term="产品经理" scheme="http://www.haoweiguang.me/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+      <category term="产品经理" scheme="http://haoweiguang.me/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>张小龙饭否摘抄</title>
-    <link href="http://www.haoweiguang.me/2019/10/16/%E5%BC%A0%E5%B0%8F%E9%BE%99%E9%A5%AD%E5%90%A6%E6%91%98%E6%8A%84/"/>
-    <id>http://www.haoweiguang.me/2019/10/16/张小龙饭否摘抄/</id>
+    <link href="http://haoweiguang.me/2019/10/16/%E5%BC%A0%E5%B0%8F%E9%BE%99%E9%A5%AD%E5%90%A6%E6%91%98%E6%8A%84/"/>
+    <id>http://haoweiguang.me/2019/10/16/张小龙饭否摘抄/</id>
     <published>2019-10-16T06:11:52.000Z</published>
     <updated>2019-10-16T06:17:13.638Z</updated>
     
@@ -63,17 +63,17 @@
     
     </summary>
     
-      <category term="产品设计" scheme="http://www.haoweiguang.me/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+      <category term="产品设计" scheme="http://haoweiguang.me/categories/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="张小龙" scheme="http://www.haoweiguang.me/tags/%E5%BC%A0%E5%B0%8F%E9%BE%99/"/>
+      <category term="张小龙" scheme="http://haoweiguang.me/tags/%E5%BC%A0%E5%B0%8F%E9%BE%99/"/>
     
   </entry>
   
   <entry>
     <title>我为什么写作</title>
-    <link href="http://www.haoweiguang.me/2019/08/29/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%86%99%E4%BD%9C/"/>
-    <id>http://www.haoweiguang.me/2019/08/29/我为什么写作/</id>
+    <link href="http://haoweiguang.me/2019/08/29/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E5%86%99%E4%BD%9C/"/>
+    <id>http://haoweiguang.me/2019/08/29/我为什么写作/</id>
     <published>2019-08-29T05:55:18.000Z</published>
     <updated>2019-10-17T05:57:40.761Z</updated>
     
@@ -89,17 +89,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://www.haoweiguang.me/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://haoweiguang.me/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="写作" scheme="http://www.haoweiguang.me/tags/%E5%86%99%E4%BD%9C/"/>
+      <category term="写作" scheme="http://haoweiguang.me/tags/%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>程序员健康生活指南总目录</title>
-    <link href="http://www.haoweiguang.me/2019/04/22/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97%E6%80%BB%E7%9B%AE%E5%BD%95/"/>
-    <id>http://www.haoweiguang.me/2019/04/22/程序员健康生活指南总目录/</id>
+    <link href="http://haoweiguang.me/2019/04/22/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97%E6%80%BB%E7%9B%AE%E5%BD%95/"/>
+    <id>http://haoweiguang.me/2019/04/22/程序员健康生活指南总目录/</id>
     <published>2019-04-22T07:07:16.000Z</published>
     <updated>2019-04-22T07:07:16.971Z</updated>
     
@@ -112,8 +112,8 @@
   
   <entry>
     <title>Git分支策略-我的实践</title>
-    <link href="http://www.haoweiguang.me/2019/03/18/Git%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5-%E6%88%91%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://www.haoweiguang.me/2019/03/18/Git分支策略-我的实践/</id>
+    <link href="http://haoweiguang.me/2019/03/18/Git%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5-%E6%88%91%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://haoweiguang.me/2019/03/18/Git分支策略-我的实践/</id>
     <published>2019-03-18T08:23:59.000Z</published>
     <updated>2019-10-18T08:58:55.137Z</updated>
     
@@ -133,17 +133,17 @@
     
     </summary>
     
-      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
+      <category term="利器" scheme="http://haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
     
     
-      <category term="Git" scheme="http://www.haoweiguang.me/tags/Git/"/>
+      <category term="Git" scheme="http://haoweiguang.me/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>比特币的前世今生</title>
-    <link href="http://www.haoweiguang.me/2018/06/25/bition-history/"/>
-    <id>http://www.haoweiguang.me/2018/06/25/bition-history/</id>
+    <link href="http://haoweiguang.me/2018/06/25/bition-history/"/>
+    <id>http://haoweiguang.me/2018/06/25/bition-history/</id>
     <published>2018-06-25T13:54:01.000Z</published>
     <updated>2018-06-27T15:39:56.000Z</updated>
     
@@ -158,17 +158,17 @@
     
     </summary>
     
-      <category term="区块链" scheme="http://www.haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="比特币" scheme="http://www.haoweiguang.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+      <category term="比特币" scheme="http://haoweiguang.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
   <entry>
     <title>区块链和生产关系</title>
-    <link href="http://www.haoweiguang.me/2018/03/11/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%92%8C%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/"/>
-    <id>http://www.haoweiguang.me/2018/03/11/区块链和生产关系/</id>
+    <link href="http://haoweiguang.me/2018/03/11/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%92%8C%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/"/>
+    <id>http://haoweiguang.me/2018/03/11/区块链和生产关系/</id>
     <published>2018-03-11T09:04:27.000Z</published>
     <updated>2018-03-11T09:04:34.000Z</updated>
     
@@ -184,17 +184,17 @@
     
     </summary>
     
-      <category term="区块链" scheme="http://www.haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="区块链" scheme="http://www.haoweiguang.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://haoweiguang.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
   </entry>
   
   <entry>
     <title>《数字黄金》读书笔记</title>
-    <link href="http://www.haoweiguang.me/2018/02/04/2018-02-04/"/>
-    <id>http://www.haoweiguang.me/2018/02/04/2018-02-04/</id>
+    <link href="http://haoweiguang.me/2018/02/04/2018-02-04/"/>
+    <id>http://haoweiguang.me/2018/02/04/2018-02-04/</id>
     <published>2018-02-04T13:42:26.000Z</published>
     <updated>2018-02-04T14:41:16.000Z</updated>
     
@@ -213,21 +213,21 @@
     
     </summary>
     
-      <category term="区块链" scheme="http://www.haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://haoweiguang.me/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="比特币" scheme="http://www.haoweiguang.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+      <category term="比特币" scheme="http://haoweiguang.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
-      <category term="区块链" scheme="http://www.haoweiguang.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="http://haoweiguang.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
-      <category term="读书笔记" scheme="http://www.haoweiguang.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://haoweiguang.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Oracle学习笔记——配置监听</title>
-    <link href="http://www.haoweiguang.me/2017/09/26/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AE%E7%9B%91%E5%90%AC/"/>
-    <id>http://www.haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/</id>
+    <link href="http://haoweiguang.me/2017/09/26/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AE%E7%9B%91%E5%90%AC/"/>
+    <id>http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/</id>
     <published>2017-09-26T07:58:26.000Z</published>
     <updated>2017-09-26T07:59:47.000Z</updated>
     
@@ -242,17 +242,17 @@
     
     </summary>
     
-      <category term="数据库" scheme="http://www.haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="oracle" scheme="http://www.haoweiguang.me/tags/oracle/"/>
+      <category term="oracle" scheme="http://haoweiguang.me/tags/oracle/"/>
     
   </entry>
   
   <entry>
     <title>Oracle学习笔记——Linux设置Oracle环境变量</title>
-    <link href="http://www.haoweiguang.me/2017/09/25/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Linux%E8%AE%BE%E7%BD%AEOracle%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.haoweiguang.me/2017/09/25/Oracle学习笔记——Linux设置Oracle环境变量/</id>
+    <link href="http://haoweiguang.me/2017/09/25/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Linux%E8%AE%BE%E7%BD%AEOracle%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>http://haoweiguang.me/2017/09/25/Oracle学习笔记——Linux设置Oracle环境变量/</id>
     <published>2017-09-25T08:32:06.000Z</published>
     <updated>2019-10-16T06:20:51.270Z</updated>
     
@@ -268,17 +268,17 @@
     
     </summary>
     
-      <category term="数据库" scheme="http://www.haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="oracle" scheme="http://www.haoweiguang.me/tags/oracle/"/>
+      <category term="oracle" scheme="http://haoweiguang.me/tags/oracle/"/>
     
   </entry>
   
   <entry>
     <title>Linux环境变量总结</title>
-    <link href="http://www.haoweiguang.me/2017/09/25/Linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%80%BB%E7%BB%93/"/>
-    <id>http://www.haoweiguang.me/2017/09/25/Linux环境变量总结/</id>
+    <link href="http://haoweiguang.me/2017/09/25/Linux%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%80%BB%E7%BB%93/"/>
+    <id>http://haoweiguang.me/2017/09/25/Linux环境变量总结/</id>
     <published>2017-09-25T08:21:24.000Z</published>
     <updated>2017-09-25T08:22:57.000Z</updated>
     
@@ -294,19 +294,19 @@
     
     </summary>
     
-      <category term="理解计算器机" scheme="http://www.haoweiguang.me/categories/%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9C%BA/"/>
+      <category term="理解计算器机" scheme="http://haoweiguang.me/categories/%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E5%99%A8%E6%9C%BA/"/>
     
     
-      <category term="linux" scheme="http://www.haoweiguang.me/tags/linux/"/>
+      <category term="linux" scheme="http://haoweiguang.me/tags/linux/"/>
     
-      <category term="环境变量" scheme="http://www.haoweiguang.me/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <category term="环境变量" scheme="http://haoweiguang.me/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>Oracle学习笔记——在centos6.5上安装oracle11g</title>
-    <link href="http://www.haoweiguang.me/2017/09/21/INSTALLATION-OF-ORACLE-11g-Release-2-on-CentOS-6-5-1/"/>
-    <id>http://www.haoweiguang.me/2017/09/21/INSTALLATION-OF-ORACLE-11g-Release-2-on-CentOS-6-5-1/</id>
+    <link href="http://haoweiguang.me/2017/09/21/INSTALLATION-OF-ORACLE-11g-Release-2-on-CentOS-6-5-1/"/>
+    <id>http://haoweiguang.me/2017/09/21/INSTALLATION-OF-ORACLE-11g-Release-2-on-CentOS-6-5-1/</id>
     <published>2017-09-21T07:24:51.000Z</published>
     <updated>2017-09-21T07:27:11.000Z</updated>
     
@@ -327,8 +327,8 @@
   
   <entry>
     <title>idea在tomcat中的热部署</title>
-    <link href="http://www.haoweiguang.me/2017/09/18/idea%E5%9C%A8tomcat%E4%B8%AD%E7%9A%84%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
-    <id>http://www.haoweiguang.me/2017/09/18/idea在tomcat中的热部署/</id>
+    <link href="http://haoweiguang.me/2017/09/18/idea%E5%9C%A8tomcat%E4%B8%AD%E7%9A%84%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
+    <id>http://haoweiguang.me/2017/09/18/idea在tomcat中的热部署/</id>
     <published>2017-09-18T03:32:58.000Z</published>
     <updated>2019-10-17T06:02:28.043Z</updated>
     
@@ -343,21 +343,21 @@
     
     </summary>
     
-      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
+      <category term="利器" scheme="http://haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
     
     
-      <category term="idea" scheme="http://www.haoweiguang.me/tags/idea/"/>
+      <category term="idea" scheme="http://haoweiguang.me/tags/idea/"/>
     
-      <category term="tomcat" scheme="http://www.haoweiguang.me/tags/tomcat/"/>
+      <category term="tomcat" scheme="http://haoweiguang.me/tags/tomcat/"/>
     
-      <category term="热部署" scheme="http://www.haoweiguang.me/tags/%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
+      <category term="热部署" scheme="http://haoweiguang.me/tags/%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>数据库事务详解</title>
-    <link href="http://www.haoweiguang.me/2017/07/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/"/>
-    <id>http://www.haoweiguang.me/2017/07/21/数据库的事务/</id>
+    <link href="http://haoweiguang.me/2017/07/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/"/>
+    <id>http://haoweiguang.me/2017/07/21/数据库的事务/</id>
     <published>2017-07-21T04:25:01.000Z</published>
     <updated>2018-10-09T09:18:39.000Z</updated>
     
@@ -373,17 +373,17 @@
     
     </summary>
     
-      <category term="数据库" scheme="http://www.haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="事务" scheme="http://www.haoweiguang.me/tags/%E4%BA%8B%E5%8A%A1/"/>
+      <category term="事务" scheme="http://haoweiguang.me/tags/%E4%BA%8B%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>MySQL存储引擎</title>
-    <link href="http://www.haoweiguang.me/2017/07/21/MySQL%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
-    <id>http://www.haoweiguang.me/2017/07/21/MySQL存储引擎/</id>
+    <link href="http://haoweiguang.me/2017/07/21/MySQL%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
+    <id>http://haoweiguang.me/2017/07/21/MySQL存储引擎/</id>
     <published>2017-07-21T04:25:01.000Z</published>
     <updated>2019-10-16T06:20:29.552Z</updated>
     
@@ -399,19 +399,19 @@
     
     </summary>
     
-      <category term="数据库" scheme="http://www.haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="MySQL" scheme="http://www.haoweiguang.me/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://haoweiguang.me/tags/MySQL/"/>
     
-      <category term="存储引擎" scheme="http://www.haoweiguang.me/tags/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
+      <category term="存储引擎" scheme="http://haoweiguang.me/tags/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
   <entry>
     <title>java HashMap工作原理和实现</title>
-    <link href="http://www.haoweiguang.me/2017/07/20/java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-HashMap%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90/"/>
-    <id>http://www.haoweiguang.me/2017/07/20/java集合框架-HashMap实现原理分析/</id>
+    <link href="http://haoweiguang.me/2017/07/20/java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-HashMap%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90/"/>
+    <id>http://haoweiguang.me/2017/07/20/java集合框架-HashMap实现原理分析/</id>
     <published>2017-07-20T10:21:57.000Z</published>
     <updated>2018-09-22T16:32:27.000Z</updated>
     
@@ -427,16 +427,16 @@
     </summary>
     
     
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
+      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
     
-      <category term="HashMap" scheme="http://www.haoweiguang.me/tags/HashMap/"/>
+      <category term="HashMap" scheme="http://haoweiguang.me/tags/HashMap/"/>
     
   </entry>
   
   <entry>
     <title>Servlet的线程安全问题</title>
-    <link href="http://www.haoweiguang.me/2017/07/09/Servlet%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.haoweiguang.me/2017/07/09/Servlet的线程安全问题/</id>
+    <link href="http://haoweiguang.me/2017/07/09/Servlet%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/"/>
+    <id>http://haoweiguang.me/2017/07/09/Servlet的线程安全问题/</id>
     <published>2017-07-09T03:36:48.000Z</published>
     <updated>2017-07-09T03:37:25.000Z</updated>
     
@@ -454,16 +454,16 @@
     </summary>
     
     
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
+      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
     
-      <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
+      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
     
   </entry>
   
   <entry>
     <title>Servlet开发实战</title>
-    <link href="http://www.haoweiguang.me/2017/07/09/Servlet%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/"/>
-    <id>http://www.haoweiguang.me/2017/07/09/Servlet开发实战/</id>
+    <link href="http://haoweiguang.me/2017/07/09/Servlet%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98/"/>
+    <id>http://haoweiguang.me/2017/07/09/Servlet开发实战/</id>
     <published>2017-07-09T03:36:32.000Z</published>
     <updated>2019-10-16T06:21:32.408Z</updated>
     
@@ -478,17 +478,17 @@
     
     </summary>
     
-      <category term="Java" scheme="http://www.haoweiguang.me/categories/Java/"/>
+      <category term="Java" scheme="http://haoweiguang.me/categories/Java/"/>
     
     
-      <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
+      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
     
   </entry>
   
   <entry>
     <title>Servlet生命周期和工作原理</title>
-    <link href="http://www.haoweiguang.me/2017/07/09/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>http://www.haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/</id>
+    <link href="http://haoweiguang.me/2017/07/09/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/</id>
     <published>2017-07-09T03:36:11.000Z</published>
     <updated>2017-07-09T03:38:40.000Z</updated>
     
@@ -509,16 +509,16 @@
     </summary>
     
     
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
+      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
     
-      <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
+      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
     
   </entry>
   
   <entry>
     <title>Servlet容器详解</title>
-    <link href="http://www.haoweiguang.me/2017/07/09/Servlet%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.haoweiguang.me/2017/07/09/Servlet容器详解/</id>
+    <link href="http://haoweiguang.me/2017/07/09/Servlet%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://haoweiguang.me/2017/07/09/Servlet容器详解/</id>
     <published>2017-07-09T03:34:54.000Z</published>
     <updated>2017-07-09T03:35:24.000Z</updated>
     
@@ -534,9 +534,9 @@
     </summary>
     
     
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
+      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
     
-      <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
+      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
     
   </entry>
   
