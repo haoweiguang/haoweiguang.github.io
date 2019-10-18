@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.haoweiguang.me/"/>
-  <updated>2019-10-16T10:50:46.718Z</updated>
+  <updated>2019-10-18T08:41:22.263Z</updated>
   <id>http://www.haoweiguang.me/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git分支策略-我的实践</title>
+    <link href="http://www.haoweiguang.me/2019/10/18/Git%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5-%E6%88%91%E7%9A%84%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/</id>
+    <published>2019-10-18T08:23:59.000Z</published>
+    <updated>2019-10-18T08:41:22.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。</p><p>这样做的好处：</p><ul><li>简单，团队更容易接受、执行，更易操作</li><li>简单也更不容易出错</li></ul><p>如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢复杂了。因为你分支策略还得考虑怎么保证master和线上一致。我们分多个场景来讲：</p><h3 id="场景1-我们要添加一个新功能"><a href="#场景1-我们要添加一个新功能" class="headerlink" title="场景1 我们要添加一个新功能"></a>场景1 我们要添加一个新功能</h3><h4 id="场景1-1-当前没有并行的功能"><a href="#场景1-1-当前没有并行的功能" class="headerlink" title="场景1.1 当前没有并行的功能"></a>场景1.1 当前没有并行的功能</h4><p>1.开发的时候先从master建一个功能分支，命名：Feature-xxx，后续在此基础上做开发就行了，视情况决定是否建个人分支（命名：Feature-xxx-light）</p><p>2.功能开发完成，准备提测，如果是按照瀑布模型开发，可以直接把Feature分支的代码部署到测试环境（QA），发现bug直接在此分支修改就行，然后部署到测试环境；如果是敏捷开发，那最好分出来一个测试分支，因为该功能分支还得继续开发，可能会包含未完成的功能，这时候如果拿功能分支部署测试环境，会遇到问题。如果开辟了一个测试分支，这样就把开发跟测试隔离了，测试环境的bug什么都可以在测试分支搞定。</p><p>3.（可选）  开发测试完成提交到pre-production</p><p>4.（可选）  进一步测试没有问题提交到release分支</p><p>5.后续就是上线，则合并到master分支，并在master分支上做发布</p><p>6.（可选）  如果需要延迟发布则新建production分支（比如，等待iOS审核，需遵守upstream first）</p><h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p><p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p><p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p><h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p><p>2.从master创建本地bug分支，命名：bugfix-xxx</p><p>3.修复bug</p><p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p><p>5.各个环境的测试通过，合并到master，并在master上做发布</p><p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。&lt;/p&gt;
+&lt;p&gt;这样做的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单，团队更容易接受、执行，更易操作&lt;/li&gt;
+&lt;li&gt;简单也更不容易出错&lt;/li&gt;
+&lt;/u
+      
+    
+    </summary>
+    
+      <category term="利器" scheme="http://www.haoweiguang.me/categories/%E5%88%A9%E5%99%A8/"/>
+    
+    
+      <category term="Git" scheme="http://www.haoweiguang.me/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>产品经理应具备的能力（读张小龙有感）</title>
@@ -499,31 +529,6 @@
       
       
         &lt;h2 id=&quot;什么是-Servlet-容器？&quot;&gt;&lt;a href=&quot;#什么是-Servlet-容器？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Servlet 容器？&quot;&gt;&lt;/a&gt;什么是 Servlet 容器？&lt;/h2&gt;&lt;p&gt;容器就是你的程序运行时需要的环境。&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://www.haoweiguang.me/tags/java/"/>
-    
-      <category term="servlet" scheme="http://www.haoweiguang.me/tags/servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Servlet的概述</title>
-    <link href="http://www.haoweiguang.me/2017/07/08/Servlet%E7%9A%84%E6%A6%82%E8%BF%B0/"/>
-    <id>http://www.haoweiguang.me/2017/07/08/Servlet的概述/</id>
-    <published>2017-07-08T13:51:05.000Z</published>
-    <updated>2017-07-08T13:57:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是Servlet？"><a href="#什么是Servlet？" class="headerlink" title="什么是Servlet？"></a>什么是Servlet？</h2><p>servlet 是基于 Java 的 Web 组件，由容器（Servlet容器）进行管理，来生成动态内容。像其他基于 Java 的组件技术一样，servlet 也是基于平台无关的 Java 类格式，被编译为平台无关的字节码，可以被基于 Java 技术的 Web 服务器动态加载并运行。容器（Container），有时候也叫做 servlet 引擎，是 Web 服务器为支持 servlet 功能扩展的部分。客户端通过 servlet 容器实现的 request/response paradigm（请求/应答模式） 与 Servlet 进行交互。</p><h2 id="Servlet与其他技术的对比"><a href="#Servlet与其他技术的对比" class="headerlink" title="Servlet与其他技术的对比"></a>Servlet与其他技术的对比</h2><p>从功能上看，servlet 位于Common Gateway Interface（公共网关接口，简称 CGI）程序和私有的服务器扩展如 Netscape Server API（NSAPI）或 Apache Modules 这两者之间。<br>相对于其他服务器扩展机制 Servlet 有如下优势：</p><ul><li>它们通常比 CGI 脚本更快，因为采用不同的处理模型。</li><li>它们采用标准的 API 从而支持更多的Web 服务器。</li><li>它们拥有 Java 编程语言的所有优势，包括容易开发和平台无关。</li><li>它们可以访问 Java 平台提供的大量的 API。</li></ul><h2 id="Servlet的历史"><a href="#Servlet的历史" class="headerlink" title="Servlet的历史"></a>Servlet的历史</h2><h3 id="Servlet的由来"><a href="#Servlet的由来" class="headerlink" title="Servlet的由来"></a>Servlet的由来</h3><ul><li>背景<br>上世纪90年代，随着Internet和浏览器的飞速发展，基于浏览器的B/S模式随之火爆发展起来。<br>最初，用户使用浏览器向WEB服务器发送的请求都是请求静态的资源，比如html、css等。<br>但是可以想象：根据用户请求的不同动态的处理并返回资源是理所当然必须的要求。</li><li><p>CGI （现在几乎不用了）<br>必须要满足上述需求，所以CGI（Common Gateway Interface）出现了。CGI程序使用C、Shell Script或Perl编写，CGI是为特定操作系统编写的（如UNIX或Windows），不可移植，CGI程序对每个请求产生新的进程去处理。步骤如下：</p><ol><li>WEB服务器接收一个用户请求；</li><li>WEB服务器将请求转交给CGI程序处理；</li><li>CGI程序将处理结果返回给WEB服务器；</li><li>WEB服务器把结果送回用户； </li></ol></li><li><p>Java<br>与此同时，Java语言也在迅速发展。必然的，Java要支持上述需求。<br>Java有两种方案来实现动态需求，它们都属于JavaEE技术的一部分。</p></li></ul><ol><li>applet （中文意思：小程序）<br>这是纯客户端（浏览器）方案（基本被flash、ajax和HTMLL5替代），applet就是浏览器中的Java插件，浏览器通过它就能够解释执行WEB服务器发过来的Java代码，从而实现动态。但是，显然这种方案不好，既需要浏览器必须安装插件，又受限于浏览器，所以Java代码不能太多和太复杂。<br>比如，如果安装了JRE，虽然IE浏览器会自动启用Java插件，但是你可以轻易禁止。再比如Chrome还需要你手动去安装插件才行，普通用户连Java是什么都不知道他怎么会去装呢？<br>IE如下图：<br><img src="http://oo501cyv7.bkt.clouddn.com/14995213644794.png" alt></li><li>Servlet<br>既然浏览器不方便执行Java代码，那自然还是服务端来执行了，所以Servlet出现了，Servlet就是server端的applet的意思。</li></ol><h3 id="Servlet的工作原理概述"><a href="#Servlet的工作原理概述" class="headerlink" title="Servlet的工作原理概述"></a>Servlet的工作原理概述</h3><p>其实Servlet的工作原理基本类似上面的CGI，不过Servlet比CGI更好。</p><ol><li><p>WEB服务器接收一个用户请求；</p></li><li><p>WEB服务器将请求转交给WEB服务器关联的Servlet容器；</p></li><li><p>Servlet容器找到对应的Servlet并执行这个Servlet；</p></li><li><p>Servlet容器将处理结果返回给WEB服务器；</p></li><li><p>WEB服务器把结果送回用户；</p></li></ol><h3 id="Servlet的发展"><a href="#Servlet的发展" class="headerlink" title="Servlet的发展"></a>Servlet的发展</h3><ol><li><p>Servlet诞生后，SUN公司很快发现了Servlet编程非常繁琐，这是因为：</p><ul><li>Servlet代码中有大量冗余代码，每个Servlet都有一模一样的或基本近似的代码，比如out输出你可能就得写成百遍；</li><li>开发Servlet必须精通网页前端和美工，你得非常不直观的在Servlet中写前端代码，这使得实现各种页面效果和风格非常困难。</li></ul></li><li><p>所以，SUN借鉴了Microsoft的ASP，正式提出JSP（Servlet1.1），已期望能代替Servlet。但是很快，SUN发现JSP也有问题：</p><ul><li>前端开发人员需要看JSP中大量的令他困惑的后端代码；</li><li>同样，Servlet开发人员也得在复杂的前端代码中找到其能写Servlet代码的地方；</li></ul></li><li><p>所以，Servlet1.2出现了，这个版本的Servlet倡导了MVC思想：</p><ul><li>JSP（V）：将后端代码封装在标签中，使用大量的标签，JSP只用来写前端代码而不要有后台代码；</li><li>Servlet（C）：Servlet完成Controller的功能再加上部分代码逻辑；</li><li>Model（M）：Servlet将数据发送给Model，Model包括部分代码逻辑，最主要的Model也代表着被组织好的用于返回的数据。最终，Model数据会被显示在JSP上（V）。<br>基本上到这里Servlet的大方向已经固定了，随之，成熟的发展至今 - 2016年5月26日…</li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;什么是Servlet？&quot;&gt;&lt;a href=&quot;#什么是Servlet？&quot; class=&quot;headerlink&quot; title=&quot;什么是Servlet？&quot;&gt;&lt;/a&gt;什么是Servlet？&lt;/h2&gt;&lt;p&gt;servlet 是基于 Java 的 Web 组件，由容器（Serv
       
     
     </summary>
