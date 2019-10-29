@@ -97,6 +97,24 @@
   </entry>
   
   <entry>
+    <title>JVM之程序计数器</title>
+    <link href="http://haoweiguang.me/2019/04/29/JVM%E4%B9%8B%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/"/>
+    <id>http://haoweiguang.me/2019/04/29/JVM之程序计数器/</id>
+    <published>2019-04-29T04:48:38.000Z</published>
+    <updated>2019-10-29T04:50:32.908Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Java" scheme="http://haoweiguang.me/categories/Java/"/>
+    
+    
+      <category term="JVM" scheme="http://haoweiguang.me/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>程序员健康生活指南总目录</title>
     <link href="http://haoweiguang.me/2019/04/22/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%81%A5%E5%BA%B7%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97%E6%80%BB%E7%9B%AE%E5%BD%95/"/>
     <id>http://haoweiguang.me/2019/04/22/程序员健康生活指南总目录/</id>
@@ -366,6 +384,32 @@
   </entry>
   
   <entry>
+    <title>数据库事务详解</title>
+    <link href="http://haoweiguang.me/2017/07/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/"/>
+    <id>http://haoweiguang.me/2017/07/21/数据库的事务/</id>
+    <published>2017-07-21T04:25:01.000Z</published>
+    <updated>2018-10-09T09:18:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><blockquote><p>事务(Transaction)，一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。在计算机术语中，事务通常就是指数据库事务。</p></blockquote><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>一个数据库事务通常包含对数据库进行读或写的一个操作序列。它的存在包含有以下两个目的：</p><blockquote><p>1、为数据库操作提供了一个从失败中恢复到正常状态的方法，同时提供了数据库即使在异常状态下仍能保持一致性的方法。<br>2、当多个应用程序在并发访问数据库时，可以在这些应用程序之间提供一个隔离方法，以防止彼此的操作互相干扰。</p></blockquote><p>当一个事务被提交给了DBMS（数据库管理系统），则DBMS需要确保该事务中的所有操作都成功完成且其结果被永久保存在数据库中，如果事务中有的操作没有成功完成，则事务中的所有操作都需要被回滚，回到事务执行前的状态（要么全执行，要么全都不执行）;同时，该事务对数据库或者其他事务的执行无影响，所有的事务都好像在独立的运行。</p><p>但在现实情况下，失败的风险很高。在一个数据库事务的执行过程中，有可能会遇上事务操作失败、数据库系统/操作系统失败，甚至是存储介质失败等情况。这便需要DBMS对一个执行失败的事务执行恢复操作，将其数据库状态恢复到一致状态（数据的一致性得到保证的状态）。为了实现将数据库状态恢复到一致状态的功能，DBMS通常需要维护事务日志以追踪事务中所有影响数据库数据的操作。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>并非任意的对数据库的操作序列都是数据库事务。事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性。</p><blockquote><p>原子性（Atomicity）：事务作为一个整体被执行，包含在其中的对数据库的操作要么全部被执行，要么都不执行。<br>一致性（Consistency）：事务应确保数据库的状态从一个一致状态转变为另一个一致状态。一致状态的含义是数据库中的数据应满足完整性约束。<br>隔离性（Isolation）：多个事务并发执行时，一个事务的执行不应影响其他事务的执行。<br>持久性（Durability）：一个事务一旦提交，他对数据库的修改应该永久保存在数据库中。</p></blockquote><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>用一个常用的“A账户向B账号汇钱”的例子来说明如何通过数据库事务保证数据的准确性和完整性。熟悉关系型数据库事务的都知道从帐号A到帐号B需要6个操作：</p><p>1、从A账号中把余额读出来（500）。<br>2、对A账号做减法操作（500-100）。<br>3、把结果写回A账号中（400）。<br>4、从B账号中把余额读出来（500）。<br>5、对B账号做加法操作（500+100）。<br>6、把结果写回B账号中（600）。</p><h3 id="原子性："><a href="#原子性：" class="headerlink" title="原子性："></a>原子性：</h3><p>保证1-6所有过程要么都执行，要么都不执行。一旦在执行某一步骤的过程中发生问题，就需要执行回滚操作。 假如执行到第五步的时候，B账户突然不可用（比如被注销），那么之前的所有操作都应该回滚到执行事务之前的状态。</p><p>为了实现原子性，需要通过日志：将所有对数据的更新操作都写入日志，如果一个事务中的一部分操作已经成功，但以后的操作，由于断电/系统崩溃/其它的软硬件错误而无法继续，则通过回溯日志，将已经执行成功的操作撤销，从而达到“全部操作失败”的目的。最常见的场景是，数据库系统崩溃后重启，此时数据库处于不一致的状态，必须先执行一个crash recovery的过程：读取日志进行REDO（重演将所有已经执行成功但尚未写入到磁盘的操作，保证持久性），再对所有到崩溃时尚未成功提交的事务进行UNDO（撤销所有执行了一部分但尚未提交的操作，保证原子性）。crash recovery结束后，数据库恢复到一致性状态，可以继续被使用。</p><h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>在转账之前，A和B的账户中共有500+500=1000元钱。在转账之后，A和B的账户中共有400+600=1000元。也就是说，数据的状态在执行该事务操作之后从一个状态改变到了另外一个状态。同时一致性还能保证账户余额不会变成负数等。</p><h3 id="隔离性"><a href="#隔离性" class="headerlink" title="隔离性"></a>隔离性</h3><p>在A向B转账的整个过程中，只要事务还没有提交（commit），查询A账户和B账户的时候，两个账户里面的钱的数量都不会有变化。<br>如果在A给B转账的同时，有另外一个事务执行了C给B转账的操作，那么当两个事务都结束的时候，B账户里面的钱应该是A转给B的钱加上C转给B的钱再加上自己原有的钱。</p><p>原子性并不能完全保证一致性。在多个事务并行进行的情况下，即使保证了每一个事务的原子性，仍然可能导致数据不一致的结果。例如，事务1需要将100元转入帐号A：先读取帐号A的值，然后在这个值上加上100。但是，在这两个操作之间，另一个事务2修改了帐号A的值，为它增加了100元。那么最后的结果应该是A增加了200元。但事实上， 事务1最终完成后，帐号A只增加了100元，因为事务2的修改结果被事务1覆盖掉了。</p><p>为了保证并发情况下的一致性，引入了隔离性，即保证每一个事务能够看到的数据总是一致的，就好象其它并发事务并不存在一样。用术语来说，就是多个事务并发执行后的状态，和它们串行执行后的状态是等价的。怎样实现隔离性，已经有很多人回答过了，原则上无非是两种类型的锁：1)悲观锁 2)乐观锁</p><h3 id="持久性"><a href="#持久性" class="headerlink" title="持久性"></a>持久性</h3><p>一旦转账成功（事务提交），两个账户的里面的钱就会真的发生变化（会把数据写入数据库做持久化保存）！</p><h2 id="原子性与隔离性"><a href="#原子性与隔离性" class="headerlink" title="原子性与隔离性"></a>原子性与隔离性</h2><p>一致性与原子性是密切相关的,原子性的破坏可能导致数据库的不一致，数据的一致性问题并不都和原子性有关。<br>比如刚刚的例子，在第五步的时候，对B账户做加法时只加了50元。那么该过程可以符合原子性，但是数据的一致性就出现了问题。</p><p>因此，事务的原子性与一致性缺一不可。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="http://www.hollischuang.com/archives/898" target="_blank" rel="noopener">彻底理解数据库事务</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;事务(Transaction)，一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="事务" scheme="http://haoweiguang.me/tags/%E4%BA%8B%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL存储引擎</title>
     <link href="http://haoweiguang.me/2017/07/21/MySQL%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
     <id>http://haoweiguang.me/2017/07/21/MySQL存储引擎/</id>
@@ -390,32 +434,6 @@
       <category term="MySQL" scheme="http://haoweiguang.me/tags/MySQL/"/>
     
       <category term="存储引擎" scheme="http://haoweiguang.me/tags/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库事务详解</title>
-    <link href="http://haoweiguang.me/2017/07/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/"/>
-    <id>http://haoweiguang.me/2017/07/21/数据库的事务/</id>
-    <published>2017-07-21T04:25:01.000Z</published>
-    <updated>2018-10-09T09:18:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><blockquote><p>事务(Transaction)，一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。在计算机术语中，事务通常就是指数据库事务。</p></blockquote><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>一个数据库事务通常包含对数据库进行读或写的一个操作序列。它的存在包含有以下两个目的：</p><blockquote><p>1、为数据库操作提供了一个从失败中恢复到正常状态的方法，同时提供了数据库即使在异常状态下仍能保持一致性的方法。<br>2、当多个应用程序在并发访问数据库时，可以在这些应用程序之间提供一个隔离方法，以防止彼此的操作互相干扰。</p></blockquote><p>当一个事务被提交给了DBMS（数据库管理系统），则DBMS需要确保该事务中的所有操作都成功完成且其结果被永久保存在数据库中，如果事务中有的操作没有成功完成，则事务中的所有操作都需要被回滚，回到事务执行前的状态（要么全执行，要么全都不执行）;同时，该事务对数据库或者其他事务的执行无影响，所有的事务都好像在独立的运行。</p><p>但在现实情况下，失败的风险很高。在一个数据库事务的执行过程中，有可能会遇上事务操作失败、数据库系统/操作系统失败，甚至是存储介质失败等情况。这便需要DBMS对一个执行失败的事务执行恢复操作，将其数据库状态恢复到一致状态（数据的一致性得到保证的状态）。为了实现将数据库状态恢复到一致状态的功能，DBMS通常需要维护事务日志以追踪事务中所有影响数据库数据的操作。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>并非任意的对数据库的操作序列都是数据库事务。事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性。</p><blockquote><p>原子性（Atomicity）：事务作为一个整体被执行，包含在其中的对数据库的操作要么全部被执行，要么都不执行。<br>一致性（Consistency）：事务应确保数据库的状态从一个一致状态转变为另一个一致状态。一致状态的含义是数据库中的数据应满足完整性约束。<br>隔离性（Isolation）：多个事务并发执行时，一个事务的执行不应影响其他事务的执行。<br>持久性（Durability）：一个事务一旦提交，他对数据库的修改应该永久保存在数据库中。</p></blockquote><h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>用一个常用的“A账户向B账号汇钱”的例子来说明如何通过数据库事务保证数据的准确性和完整性。熟悉关系型数据库事务的都知道从帐号A到帐号B需要6个操作：</p><p>1、从A账号中把余额读出来（500）。<br>2、对A账号做减法操作（500-100）。<br>3、把结果写回A账号中（400）。<br>4、从B账号中把余额读出来（500）。<br>5、对B账号做加法操作（500+100）。<br>6、把结果写回B账号中（600）。</p><h3 id="原子性："><a href="#原子性：" class="headerlink" title="原子性："></a>原子性：</h3><p>保证1-6所有过程要么都执行，要么都不执行。一旦在执行某一步骤的过程中发生问题，就需要执行回滚操作。 假如执行到第五步的时候，B账户突然不可用（比如被注销），那么之前的所有操作都应该回滚到执行事务之前的状态。</p><p>为了实现原子性，需要通过日志：将所有对数据的更新操作都写入日志，如果一个事务中的一部分操作已经成功，但以后的操作，由于断电/系统崩溃/其它的软硬件错误而无法继续，则通过回溯日志，将已经执行成功的操作撤销，从而达到“全部操作失败”的目的。最常见的场景是，数据库系统崩溃后重启，此时数据库处于不一致的状态，必须先执行一个crash recovery的过程：读取日志进行REDO（重演将所有已经执行成功但尚未写入到磁盘的操作，保证持久性），再对所有到崩溃时尚未成功提交的事务进行UNDO（撤销所有执行了一部分但尚未提交的操作，保证原子性）。crash recovery结束后，数据库恢复到一致性状态，可以继续被使用。</p><h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>在转账之前，A和B的账户中共有500+500=1000元钱。在转账之后，A和B的账户中共有400+600=1000元。也就是说，数据的状态在执行该事务操作之后从一个状态改变到了另外一个状态。同时一致性还能保证账户余额不会变成负数等。</p><h3 id="隔离性"><a href="#隔离性" class="headerlink" title="隔离性"></a>隔离性</h3><p>在A向B转账的整个过程中，只要事务还没有提交（commit），查询A账户和B账户的时候，两个账户里面的钱的数量都不会有变化。<br>如果在A给B转账的同时，有另外一个事务执行了C给B转账的操作，那么当两个事务都结束的时候，B账户里面的钱应该是A转给B的钱加上C转给B的钱再加上自己原有的钱。</p><p>原子性并不能完全保证一致性。在多个事务并行进行的情况下，即使保证了每一个事务的原子性，仍然可能导致数据不一致的结果。例如，事务1需要将100元转入帐号A：先读取帐号A的值，然后在这个值上加上100。但是，在这两个操作之间，另一个事务2修改了帐号A的值，为它增加了100元。那么最后的结果应该是A增加了200元。但事实上， 事务1最终完成后，帐号A只增加了100元，因为事务2的修改结果被事务1覆盖掉了。</p><p>为了保证并发情况下的一致性，引入了隔离性，即保证每一个事务能够看到的数据总是一致的，就好象其它并发事务并不存在一样。用术语来说，就是多个事务并发执行后的状态，和它们串行执行后的状态是等价的。怎样实现隔离性，已经有很多人回答过了，原则上无非是两种类型的锁：1)悲观锁 2)乐观锁</p><h3 id="持久性"><a href="#持久性" class="headerlink" title="持久性"></a>持久性</h3><p>一旦转账成功（事务提交），两个账户的里面的钱就会真的发生变化（会把数据写入数据库做持久化保存）！</p><h2 id="原子性与隔离性"><a href="#原子性与隔离性" class="headerlink" title="原子性与隔离性"></a>原子性与隔离性</h2><p>一致性与原子性是密切相关的,原子性的破坏可能导致数据库的不一致，数据的一致性问题并不都和原子性有关。<br>比如刚刚的例子，在第五步的时候，对B账户做加法时只加了50元。那么该过程可以符合原子性，但是数据的一致性就出现了问题。</p><p>因此，事务的原子性与一致性缺一不可。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="http://www.hollischuang.com/archives/898" target="_blank" rel="noopener">彻底理解数据库事务</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;事务(Transaction)，一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="事务" scheme="http://haoweiguang.me/tags/%E4%BA%8B%E5%8A%A1/"/>
     
   </entry>
   
@@ -515,31 +533,6 @@
 &lt;li&gt;容器 = Servlet Container/Engine&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
-    
-      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Servlet容器详解</title>
-    <link href="http://haoweiguang.me/2017/07/09/Servlet%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://haoweiguang.me/2017/07/09/Servlet容器详解/</id>
-    <published>2017-07-09T03:34:54.000Z</published>
-    <updated>2017-07-09T03:35:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是-Servlet-容器？"><a href="#什么是-Servlet-容器？" class="headerlink" title="什么是 Servlet 容器？"></a>什么是 Servlet 容器？</h2><p>容器就是你的程序运行时需要的环境。<br>Servlet Container（Servlet 容器） 是 Web 服务器或者应用服务器的一部分，用于提供基于请求/响应发送模式的网络服务，解码基于 MIME 的请求，并且格式化基于 MIME 的响应。Servlet 容器同时也包含和管理他们的生命周期里Servlet。</p><p>Servlet容器可以嵌入到宿主的 Web 服务器中，或者通过 Web 服务器的本地扩展 API 单独作为附加组件安装。Servelt 容器也可能内嵌或安装到启用 Web 功能的应用服务器中。</p><p>所有的 Servlet 容器必须支持 HTTP 协议用于请求和响应，但额外的基于 请求/响应 的协议，如 HTTPS (HTTP over SSL)的支持是可选的。对于 HTTP 规范需要版本，容器必须支持 HTTP/1.0 和 HTTP/1.1。因为容器或许支持 RFC2616 (HTTP/1.1)描述的缓存机制，缓存机制可能在将客户端请求交给 Servlet 处理之前修改它们，也可能在将 Servlet 生成的响应发送给客户端之前修改它们，或者可能根据 RFC2616 规范直接对请求作出响应而不交给 Servlet 进行处理。</p><p>Servlet 容器应该使 Servlet 执行在一个安全限制的环境中。在 Java 平台标准版（J2SE, v.1.3 或更高） 或者 Java平台企业版(Java EE, v.1.3 或更高) 的环境下，这些限制应该被放置在 Java 平台定义的安全许可架构中。比如，高端的应用服务器为了保证容器的其他组件不受到负面影响可能会限制 Thread 对象的创建。</p><p>Java SE 7 是构建 Servlet 容器最低的 Java平 台版本。</p><h2 id="常见的Servlet容器"><a href="#常见的Servlet容器" class="headerlink" title="常见的Servlet容器"></a>常见的Servlet容器</h2><p>Tomcat，apache,Jetty是Servlet的运行环境，即一个Servlet容器,做过java web开发的应该都知道。 </p><h2 id="Servlet的执行流程"><a href="#Servlet的执行流程" class="headerlink" title="Servlet的执行流程"></a>Servlet的执行流程</h2><ol><li>Servlet容器的作用是负责处理客户请求，当客户请求来到时，Servlet容器获取请求，然后调用某个Servlet，并把Servlet的执行结果返回给客户</li><li>Servlet容器的工作过程是：当客户请求某个资源时，Servlet容器使用ServletRequest对象把客户的请求信息封装起来，然后调用java Servlet API中定义的Servlet的一些生命周期方法，完成Servlet的执行，接着把Servlet执行的要返回给客户的结果封装到 ServletResponse对象中，最后Servlet容器把客户的请求发送给客户，完成为客户的一次服务过程。每一个Servlet的类都执行 init（）、service（）、destory（）三个函数的自动调用，在启动时调用一次init（）函数用以进行参数的初始化，在服务期间每当接收到对该Servlet的请求时都会调用Service（）函数执行该Servlet的服务操作，当容器销毁时调用一次destory（）函数。 </li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;什么是-Servlet-容器？&quot;&gt;&lt;a href=&quot;#什么是-Servlet-容器？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Servlet 容器？&quot;&gt;&lt;/a&gt;什么是 Servlet 容器？&lt;/h2&gt;&lt;p&gt;容器就是你的程序运行时需要的环境。&lt;
       
     
     </summary>
