@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。 写作大概能分为两种，一种是为自己而写，主要想通过写作来更好的学习、思考、记录、复盘等；一种是为他人而写，通过写作扩大影响力、赚钱等等。我的目标是“为自己而写”。 为了深度思考，把自己学的">
-<meta name="keywords" content="写作">
+  <meta name="description" content="关于技术、产品、个人感悟等的记录">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我为什么写作">
-<meta property="og:url" content="http://haoweiguang.me/2019/08/29/我为什么写作/index.html">
+<meta property="og:title" content="JVM之程序计数器">
+<meta property="og:url" content="http://haoweiguang.me/2018/04/29/JVM之程序计数器/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。 写作大概能分为两种，一种是为自己而写，主要想通过写作来更好的学习、思考、记录、复盘等；一种是为他人而写，通过写作扩大影响力、赚钱等等。我的目标是“为自己而写”。 为了深度思考，把自己学的">
+<meta property="og:description" content="关于技术、产品、个人感悟等的记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-17T05:57:40.761Z">
+<meta property="og:updated_time" content="2019-10-29T04:53:25.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我为什么写作">
-<meta name="twitter:description" content="其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。 写作大概能分为两种，一种是为自己而写，主要想通过写作来更好的学习、思考、记录、复盘等；一种是为他人而写，通过写作扩大影响力、赚钱等等。我的目标是“为自己而写”。 为了深度思考，把自己学的">
+<meta name="twitter:title" content="JVM之程序计数器">
+<meta name="twitter:description" content="关于技术、产品、个人感悟等的记录">
 
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/08/29/我为什么写作/">
+  <link rel="canonical" href="http://haoweiguang.me/2018/04/29/JVM之程序计数器/">
 
 
 
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>我为什么写作 | 微光的Notes</title>
+  <title>JVM之程序计数器 | 微光的Notes</title>
   
 
 
@@ -348,7 +348,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/08/29/我为什么写作/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2018/04/29/JVM之程序计数器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -365,7 +365,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我为什么写作
+          <h1 class="post-title" itemprop="name headline">JVM之程序计数器
               
             
           </h1>
@@ -390,7 +390,7 @@
                 
               
 
-              <time title="创建时间：2019-08-29 13:55:18" itemprop="dateCreated datePublished" datetime="2019-08-29T13:55:18+08:00">2019-08-29</time>
+              <time title="创建时间：2018-04-29 12:48:38" itemprop="dateCreated datePublished" datetime="2018-04-29T12:48:38+08:00">2018-04-29</time>
             
 
             
@@ -408,7 +408,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -423,8 +423,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/29/我为什么写作/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/我为什么写作/" itemprop="commentCount"></span>
+                <a href="/2018/04/29/JVM之程序计数器/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/29/JVM之程序计数器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -452,19 +452,7 @@
       
 
       
-        <p>其实我对写作有很大的心里恐惧。还记刚上初中时，因为作文写不好彻夜难眠，也哭了无数次。有一次考试作文竟然只憋出来了6行，得了6分，至今难忘。但是我认为写作还是很有用处，所以也就硬着头皮写吧，以下说说我对写作的理解。</p>
-<p>写作大概能分为两种，一种是为自己而写，主要想通过写作来更好的学习、思考、记录、复盘等；一种是为他人而写，通过写作扩大影响力、赚钱等等。我的目标是“<strong>为自己而写</strong>”。</p>
-<p><strong>为了深度思考</strong>，把自己学的东西。通过写作，将自己的思考转换为文字后，很多实践经验和总结往往才能够真正的系统化和结构化，同时完成整个思维的抽象和升华过程。写作有时候像教人，能把一件事写明白了，证明自己掌握的也挺好的了。</p>
-<p><strong>让自己慢下来</strong>，平时看的太多，太杂，除了通过写作来梳理，为了更好的吸收，其实<strong>写作是真正能够让人平静下来的事情</strong>，写作是在安静的时候，一个人，自己和自己的心灵的对话，让自己听到自己内心的声音。</p>
-<p>也有一些<strong>交流的需要</strong>，我现在有个习惯，就是如果觉着一个人思想还不错，我就会去找他的博客、公众号等，把他写的文章看一遍，就能大概了解这个人了，减少了沟通的成本。</p>
-<p>你们有没有觉着回忆是不准确的，我们经常修改和美化自己的记忆，以验证自己当下的判断（就像“禀赋效应”那样）。所以记录下来，回头再看，是对自己成长过程最好的交代。另外，记录当时状态对于人生也是一份宝贵的财富。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" target="_blank" rel="noopener">为什么你应该（从现在开始就）-刘未鹏</a></li>
-<li><a href="https://fatesinger.com/100080" target="_blank" rel="noopener">当我谈博客时我在谈些什么-Fatesinger</a></li>
-<li><a href="https://yukunwu.wordpress.com/why-write-blogs/" target="_blank" rel="noopener">为何写作-zero</a></li>
-</ul>
-<h3 id="Revision-history"><a href="#Revision-history" class="headerlink" title="Revision history"></a>Revision history</h3><p>2019.8.29 开写</p>
-
+        
       
     </div>
 
@@ -509,7 +497,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/08/29/我为什么写作/" title="我为什么写作">http://haoweiguang.me/2019/08/29/我为什么写作/</a>
+    <a href="http://haoweiguang.me/2018/04/29/JVM之程序计数器/" title="JVM之程序计数器">http://haoweiguang.me/2018/04/29/JVM之程序计数器/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -522,7 +510,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/写作/" rel="tag"># 写作</a>
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
           
         </div>
       
@@ -535,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/22/程序员健康生活指南总目录/" rel="next" title="程序员健康生活指南总目录">
-                <i class="fa fa-chevron-left"></i> 程序员健康生活指南总目录
+              <a href="/2018/03/11/区块链和生产关系/" rel="next" title="区块链和生产关系">
+                <i class="fa fa-chevron-left"></i> 区块链和生产关系
               </a>
             
           </div>
@@ -545,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/16/张小龙饭否摘抄/" rel="prev" title="张小龙饭否摘抄">
-                张小龙饭否摘抄 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/25/bition-history/" rel="prev" title="比特币的前世今生">
+                比特币的前世今生 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,17 +583,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -771,22 +750,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Revision-history"><span class="nav-number">1.1.</span> <span class="nav-text">Revision history</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
