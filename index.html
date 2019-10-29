@@ -347,6 +347,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Light微光">
+      <meta itemprop="description" content="关于技术、产品、个人感悟等的记录">
+      <meta itemprop="image" content="/uploads/2578.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="微光的Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/18/Git分支策略-我的实践/" itemprop="url">
+                  Git分支策略-我的实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-18 16:23:59" itemprop="dateCreated datePublished" datetime="2019-10-18T16:23:59+08:00">2019-10-18</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/利器/" itemprop="url" rel="index"><span itemprop="name">利器</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/18/Git分支策略-我的实践/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/10/18/Git分支策略-我的实践/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。</p>
+<p>这样做的好处：</p>
+<ul>
+<li>简单，团队更容易接受、执行，更易操作</li>
+<li>简单也更不容易出错</li>
+</ul>
+<p>如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢复杂了。因为你分支策略还得考虑怎么保证master和线上一致。我们分多个场景来讲：</p>
+<h3 id="场景1-我们要添加一个新功能"><a href="#场景1-我们要添加一个新功能" class="headerlink" title="场景1 我们要添加一个新功能"></a>场景1 我们要添加一个新功能</h3><h4 id="场景1-1-当前没有并行的功能"><a href="#场景1-1-当前没有并行的功能" class="headerlink" title="场景1.1 当前没有并行的功能"></a>场景1.1 当前没有并行的功能</h4><p>1.开发的时候先从master建一个功能分支，命名：Feature-xxx，后续在此基础上做开发就行了，视情况决定是否建个人分支（命名：Feature-xxx-light）</p>
+<p>2.功能开发完成，准备提测，如果是按照瀑布模型开发，可以直接把Feature分支的代码部署到测试环境（QA），发现bug直接在此分支修改就行，然后部署到测试环境；如果是敏捷开发，那最好分出来一个测试分支，因为该功能分支还得继续开发，可能会包含未完成的功能，这时候如果拿功能分支部署测试环境，会遇到问题。如果开辟了一个测试分支，这样就把开发跟测试隔离了，测试环境的bug什么都可以在测试分支搞定。</p>
+<p>3.（可选）  开发测试完成提交到pre-production</p>
+<p>4.（可选）  进一步测试没有问题提交到release分支</p>
+<p>5.后续就是上线，则合并到master分支，并在master分支上做发布</p>
+<p>6.（可选）  如果需要延迟发布则新建production分支（比如，等待iOS审核，需遵守upstream first）</p>
+<h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p>
+<p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p>
+<p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p>
+<h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>最重要的是记得记得保存当前的代码，别一着急把当前的代码丢了，那真会欲哭无泪。<br>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p>
+<p>2.从master创建本地bug分支，命名：bugfix-xxx</p>
+<p>3.修复bug</p>
+<p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p>
+<p>5.各个环境的测试通过，合并到master，并在master上做发布</p>
+<p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>
+<p>但这些也不够全面，想到哪写到哪，后续持续迭代吧。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/10/16/产品经理应具备的能力（读张小龙有感）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1263,192 +1449,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/03/18/Git分支策略-我的实践/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Light微光">
-      <meta itemprop="description" content="关于技术、产品、个人感悟等的记录">
-      <meta itemprop="image" content="/uploads/2578.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="微光的Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/18/Git分支策略-我的实践/" itemprop="url">
-                  Git分支策略-我的实践
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-18 16:23:59" itemprop="dateCreated datePublished" datetime="2019-03-18T16:23:59+08:00">2019-03-18</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/利器/" itemprop="url" rel="index"><span itemprop="name">利器</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/18/Git分支策略-我的实践/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/03/18/Git分支策略-我的实践/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。</p>
-<p>这样做的好处：</p>
-<ul>
-<li>简单，团队更容易接受、执行，更易操作</li>
-<li>简单也更不容易出错</li>
-</ul>
-<p>如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢复杂了。因为你分支策略还得考虑怎么保证master和线上一致。我们分多个场景来讲：</p>
-<h3 id="场景1-我们要添加一个新功能"><a href="#场景1-我们要添加一个新功能" class="headerlink" title="场景1 我们要添加一个新功能"></a>场景1 我们要添加一个新功能</h3><h4 id="场景1-1-当前没有并行的功能"><a href="#场景1-1-当前没有并行的功能" class="headerlink" title="场景1.1 当前没有并行的功能"></a>场景1.1 当前没有并行的功能</h4><p>1.开发的时候先从master建一个功能分支，命名：Feature-xxx，后续在此基础上做开发就行了，视情况决定是否建个人分支（命名：Feature-xxx-light）</p>
-<p>2.功能开发完成，准备提测，如果是按照瀑布模型开发，可以直接把Feature分支的代码部署到测试环境（QA），发现bug直接在此分支修改就行，然后部署到测试环境；如果是敏捷开发，那最好分出来一个测试分支，因为该功能分支还得继续开发，可能会包含未完成的功能，这时候如果拿功能分支部署测试环境，会遇到问题。如果开辟了一个测试分支，这样就把开发跟测试隔离了，测试环境的bug什么都可以在测试分支搞定。</p>
-<p>3.（可选）  开发测试完成提交到pre-production</p>
-<p>4.（可选）  进一步测试没有问题提交到release分支</p>
-<p>5.后续就是上线，则合并到master分支，并在master分支上做发布</p>
-<p>6.（可选）  如果需要延迟发布则新建production分支（比如，等待iOS审核，需遵守upstream first）</p>
-<h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p>
-<p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p>
-<p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p>
-<h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>最重要的是记得记得保存当前的代码，别一着急把当前的代码丢了，那真会欲哭无泪。<br>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p>
-<p>2.从master创建本地bug分支，命名：bugfix-xxx</p>
-<p>3.修复bug</p>
-<p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p>
-<p>5.各个环境的测试通过，合并到master，并在master上做发布</p>
-<p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>
-<p>但这些也不够全面，想到哪写到哪，后续持续迭代吧。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2018/06/25/bition-history/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1736,7 +1736,12 @@
       
         
           
-            
+            <p>先放一张运行时数据区的图，这样能清楚程序计数器的位置</p>
+<p>线程私有的，生命周期与线程相同</p>
+<p>解释明白是什么，有啥作用？</p>
+<p>多线程下更有用</p>
+<p>此区域一般不会发生什么异常，排查的时候就别找这块了。</p>
+
           
         
       

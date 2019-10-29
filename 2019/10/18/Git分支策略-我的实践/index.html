@@ -119,11 +119,11 @@
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git分支策略-我的实践">
-<meta property="og:url" content="http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/index.html">
+<meta property="og:url" content="http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/index.html">
 <meta property="og:site_name" content="微光的Notes">
 <meta property="og:description" content="具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。 这样做的好处：  简单，团队更容易接受、执行，更易操作 简单也更不容易出错  如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-18T08:41:22.263Z">
+<meta property="og:updated_time" content="2019-10-29T05:00:32.407Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git分支策略-我的实践">
 <meta name="twitter:description" content="具体策略还是要根据项目的大小和复杂度来定。遵循的原则是先简单，然后根据项目情况不断的精细化，不要上来就搞一个特别复杂的规则。 这样做的好处：  简单，团队更容易接受、执行，更易操作 简单也更不容易出错  如果是个全新的项目，我觉着保留一个主干master，和线上代码一致，仅用来发布新版本。不用非得维护一个develop分支，这样反而麻烦。在项目上线之前，规则都相对简单。但是等项目上线后，问题就慢慢">
@@ -135,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/">
+  <link rel="canonical" href="http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/">
 
 
 
@@ -348,7 +348,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -468,12 +468,13 @@
 <h4 id="场景1-2-有多个功能并行"><a href="#场景1-2-有多个功能并行" class="headerlink" title="场景1.2 有多个功能并行"></a>场景1.2 有多个功能并行</h4><p>可能有个极端情况就是两个团队需要开发同一个功能，我觉着这种情况在前期任务划分的时候就应该尽量避免掉，实在无法避免，可以让一个团队负责开发，并暴露接口供另一个团队调用</p>
 <p>其实流程跟场景1.1差不多，就是从哪里新开分支，怎么合并会遇到些问题？</p>
 <p>还是从master创建分支。合并的时候根据项目情况选择是合并到pre-production或release，反正最终要合并到master分支并做发布。</p>
-<h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p>
+<h3 id="场景2-发现了线上bug"><a href="#场景2-发现了线上bug" class="headerlink" title="场景2 发现了线上bug"></a>场景2 发现了线上bug</h3><p>最重要的是记得记得保存当前的代码，别一着急把当前的代码丢了，那真会欲哭无泪。<br>1.如果本地还在开发，记得先使用git stash暂存，以免切换到master后代码丢失</p>
 <p>2.从master创建本地bug分支，命名：bugfix-xxx</p>
 <p>3.修复bug</p>
 <p>4.（可选）修改测试完成后依次同步到pre-produciton和release分支</p>
 <p>5.各个环境的测试通过，合并到master，并在master上做发布</p>
 <p>6.切换到自己的开发分支，使用git stash恢复暂存，继续工作</p>
+<p>但这些也不够全面，想到哪写到哪，后续持续迭代吧。</p>
 
       
     </div>
@@ -519,7 +520,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/" title="Git分支策略-我的实践">http://www.haoweiguang.me/2019/10/18/Git分支策略-我的实践/</a>
+    <a href="http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/" title="Git分支策略-我的实践">http://haoweiguang.me/2019/10/18/Git分支策略-我的实践/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -628,7 +629,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -726,7 +727,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
