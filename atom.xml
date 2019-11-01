@@ -156,9 +156,9 @@
     <link href="http://haoweiguang.me/2018/06/25/bition-history/"/>
     <id>http://haoweiguang.me/2018/06/25/bition-history/</id>
     <published>2018-06-25T13:54:01.000Z</published>
-    <updated>2018-06-27T15:39:56.000Z</updated>
+    <updated>2019-11-01T05:58:37.370Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="比特币诞生的背景？"><a href="#比特币诞生的背景？" class="headerlink" title="比特币诞生的背景？"></a>比特币诞生的背景？</h3><p>2008年，金融危机，当时政府和银行管理经济的能力遭到各方质疑，信用降入谷底。美国政府向华尔街和底特律汽车公司注入大笔资金，美联储推出“量化宽松”政策，本质上就是大量印美钞刺激经济，金价上涨。相当于政府拿民众的钱来补贴这些资本家。</p><h3 id="为什么要创建加密电子货币？"><a href="#为什么要创建加密电子货币？" class="headerlink" title="为什么要创建加密电子货币？"></a>为什么要创建加密电子货币？</h3><p>其实一直有一帮自由主义者密码极客希望创建一种完全去中心化的电子现金系统。可以脱离政府自由流通和发展。</p><p>因为之前的信用卡或者货币都存在诸多问题。比如信用卡需要用户的真实身份，对于用户的隐私保护不够。货币就存在超发的情况，政府通过这种方式从民众手里掠夺财富。</p><h3 id="加密电子货币的坎坷之路"><a href="#加密电子货币的坎坷之路" class="headerlink" title="加密电子货币的坎坷之路"></a>加密电子货币的坎坷之路</h3><p>1983年大卫·乔姆（David Chaum）最早提出把加密技术运用于现金上的想法。写了论文《不可被追踪的交易》，使用盲签（blind signature）的技术来实现匿名的网络支付系统。1989年大卫·乔姆创建了数字现金公司；在之前系统基础上创建了电子现金（Ecash）系统，这个系统还有一个别名为网络现金（cyberbucks）系统。得到了微软和visa等巨头的支持。但是因为理念太超前，未得到大范围的支持，另外，该系统支持企业对企业转账也是其失败的原因。</p><p>1998年，戴伟（Wei Dai）阐述了一种匿名的、分布式的电子现金系统：b-money。B.money强调点对点的交易和不可更改的交易记录。每个交易者都保持对交易追踪的权力。但是B.money系统中，大卫并没有解决账本同步的问题。</p><p>1998年，尼克·萨博（Nick Szabo）发明了比特黄金（BitGold），提出了工作量证明机制。</p><p>哈尔·芬尼（Hal Finney）发明了哈希现金（HashCash）则把该机制进一步完善为一种”可重复<br>利用的工作量证明（RPOW）“。“RPOW”的特色在于可重复使用，且虽然控管权集中，但发行者没有通胀压力。</p><p>2008年10月31日，名不见经传的中本聪在metzdowd.com的密码学邮件组列表中发表了比特币白皮书《Bitcoin: A Peer-to-Peer Electronic Cash System》（《比特币：一种点对点的现金支付系统》)。</p><p>2009年1月3日，比特币网络诞生，中本聪本人发布了开源的第一版比特币客户端。</p><p>2009年1月3日，比特币网络的第一个区块诞生了。<br><img src="http://oo501cyv7.bkt.clouddn.com/15301134448308.jpg" alt></p><p>2009年1月9日，中本聪本人发布了开源的0.1版比特币客户端。<br><img src="http://oo501cyv7.bkt.clouddn.com/15301134591691.jpg" alt></p><p>2009年1月12日，第一笔比特币交易，中本聪发送了 10 比特币给开发者、密码学活动份子，Hal Finney（哈尔·芬尼）。</p><p>2009年10月5日，有记录的最早比特币汇率： 1 美元 = 1309.03 比特币。</p><p>参考：<br><a href="https://en.wikipedia.org/wiki/Ecash" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Ecash</a><br><a href="https://daimajia.com/2018/02/10/blockchain-share-in-freesfund" target="_blank" rel="noopener">https://daimajia.com/2018/02/10/blockchain-share-in-freesfund</a><br><a href="https://zhuanlan.zhihu.com/p/32754317" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32754317</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="比特币诞生的背景？"><a href="#比特币诞生的背景？" class="headerlink" title="比特币诞生的背景？"></a>比特币诞生的背景？</h3><p>2008年，金融危机，当时政府和银行管理经济的能力遭到各方质疑，信用降入谷底。美国政府向华尔街和底特律汽车公司注入大笔资金，美联储推出“量化宽松”政策，本质上就是大量印美钞刺激经济，金价上涨。相当于政府拿民众的钱来补贴这些资本家。</p><h3 id="为什么要创建加密电子货币？"><a href="#为什么要创建加密电子货币？" class="headerlink" title="为什么要创建加密电子货币？"></a>为什么要创建加密电子货币？</h3><p>其实一直有一帮自由主义者密码极客希望创建一种完全去中心化的电子现金系统。可以脱离政府自由流通和发展。</p><p>因为之前的信用卡或者货币都存在诸多问题。比如信用卡需要用户的真实身份，对于用户的隐私保护不够。货币就存在超发的情况，政府通过这种方式从民众手里掠夺财富。</p><h3 id="加密电子货币的坎坷之路"><a href="#加密电子货币的坎坷之路" class="headerlink" title="加密电子货币的坎坷之路"></a>加密电子货币的坎坷之路</h3><p>1983年大卫·乔姆（David Chaum）最早提出把加密技术运用于现金上的想法。写了论文《不可被追踪的交易》，使用盲签（blind signature）的技术来实现匿名的网络支付系统。1989年大卫·乔姆创建了数字现金公司；在之前系统基础上创建了电子现金（Ecash）系统，这个系统还有一个别名为网络现金（cyberbucks）系统。得到了微软和visa等巨头的支持。但是因为理念太超前，未得到大范围的支持，另外，该系统支持企业对企业转账也是其失败的原因。</p><p>1998年，戴伟（Wei Dai）阐述了一种匿名的、分布式的电子现金系统：b-money。B.money强调点对点的交易和不可更改的交易记录。每个交易者都保持对交易追踪的权力。但是B.money系统中，大卫并没有解决账本同步的问题。</p><p>1998年，尼克·萨博（Nick Szabo）发明了比特黄金（BitGold），提出了工作量证明机制。</p><p>哈尔·芬尼（Hal Finney）发明了哈希现金（HashCash）则把该机制进一步完善为一种”可重复<br>利用的工作量证明（RPOW）“。“RPOW”的特色在于可重复使用，且虽然控管权集中，但发行者没有通胀压力。</p><p>2008年10月31日，名不见经传的中本聪在metzdowd.com的密码学邮件组列表中发表了比特币白皮书《Bitcoin: A Peer-to-Peer Electronic Cash System》（《比特币：一种点对点的现金支付系统》)。</p><p>2009年1月3日，比特币网络诞生，中本聪本人发布了开源的第一版比特币客户端。</p><p>2009年1月3日，比特币网络的第一个区块诞生了。<br><img src="http://images.insuncle.com/15301134448308.jpg" alt></p><p>2009年1月9日，中本聪本人发布了开源的0.1版比特币客户端。<br><img src="http://images.insuncle.com/15301134591691.jpg" alt></p><p>2009年1月12日，第一笔比特币交易，中本聪发送了 10 比特币给开发者、密码学活动份子，Hal Finney（哈尔·芬尼）。</p><p>2009年10月5日，有记录的最早比特币汇率： 1 美元 = 1309.03 比特币。</p><p>参考：<br><a href="https://en.wikipedia.org/wiki/Ecash" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Ecash</a><br><a href="https://daimajia.com/2018/02/10/blockchain-share-in-freesfund" target="_blank" rel="noopener">https://daimajia.com/2018/02/10/blockchain-share-in-freesfund</a><br><a href="https://zhuanlan.zhihu.com/p/32754317" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32754317</a></p>]]></content>
     
     <summary type="html">
     
@@ -173,6 +173,35 @@
     
     
       <category term="比特币" scheme="http://haoweiguang.me/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM之Java堆</title>
+    <link href="http://haoweiguang.me/2018/05/13/JVM%E4%B9%8BJava%E5%A0%86/"/>
+    <id>http://haoweiguang.me/2018/05/13/JVM之Java堆/</id>
+    <published>2018-05-13T02:05:48.000Z</published>
+    <updated>2019-10-31T09:10:11.494Z</updated>
+    
+    <content type="html"><![CDATA[<p>先看图，搞清楚堆在运行区的位置<br><img src="media/15725111452242.jpg" alt></p><blockquote><p>图片来自网络</p></blockquote><p><strong>介绍</strong><br>Java堆是JVM所管理内存中最大的一块，存放几乎所有对象实例（例外：栈上分配等）。这块是线程共享的区域。</p><p><img src="media/15725119049287.jpg" alt></p><p>垃圾回收器管理的主要区域，现代的收集器基本都采用分代收集算法，所以可划分为新生代与老年代，新生代可进一步划分为Eden区、From Survivor区（S0）、To Survivor区（S1）。</p><p>可以处于物理上不连续内存空间中，所以标记-清理算法才会起作用。</p><p><strong>这个区域一些参数的解释</strong><br><img src="media/15725127359370.jpg" alt></p><p>新生代与老年代的比例可以通过参数-XX:NewRatio来设置。比如，设置-XX:NewRatio=3，表示新生代:老年代=1:3，也就是说老年代占3/4。</p><p>Eden区、From Survivor区（S0）、To Survivor区（S1）之间的初始比例是8:1:1，通过-XX:SurvivorRatio参数来设置。比如：-XX:SurvivorRatio=8，表示两个Survivor:Eden = 2:8 ，每个Survivor占 1/10</p><p><strong>其他一些参数</strong></p><ul><li>-Xms：设置堆内存最小值</li><li>-Xmx：设置堆内存最大值</li><li>-Xmn堆中新生代初始及最大大小（NewSize和MaxNewSize为其细化）</li><li>-XX:NewSize设置新生代最小空间大小</li><li>-XX:MaxNewSize设置新生代最大空间大小</li><li>-XX:PermSize设置永久代最小空间大小</li><li>-XX:MaxPermSize设置永久代最大空间大小</li><li>-Xss设置每个线程的堆栈大小</li></ul><p>是不是参数太多，不容易记，这里有个记忆的小技巧</p><blockquote><p>Xmx（memory maximum）, Xms（memory startup）, Xmn（memory nursery/new）, Xss（stack size）</p></blockquote><p>对于参数的格式可以这样理解</p><ul><li>-: 标准VM选项，VM规范的选项。</li><li>-X: 非标准VM选项，不保证所有VM支持。</li><li>-XX: 高级选项，高级特性，但属于不稳定的选项。</li></ul><p><strong>会触发的异常</strong><br>OutOfMemoryError，堆中没有内存完成实例分配，并堆也无法再扩展时会触发。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;先看图，搞清楚堆在运行区的位置&lt;br&gt;&lt;img src=&quot;media/15725111452242.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来自网络&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Java堆是
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://haoweiguang.me/categories/Java/"/>
+    
+    
+      <category term="JVM" scheme="http://haoweiguang.me/tags/JVM/"/>
     
   </entry>
   
@@ -364,11 +393,11 @@
   </entry>
   
   <entry>
-    <title>idea在tomcat中的热部署</title>
+    <title>IDEA在tomcat中的热部署</title>
     <link href="http://haoweiguang.me/2017/09/18/idea%E5%9C%A8tomcat%E4%B8%AD%E7%9A%84%E7%83%AD%E9%83%A8%E7%BD%B2/"/>
     <id>http://haoweiguang.me/2017/09/18/idea在tomcat中的热部署/</id>
     <published>2017-09-18T03:32:58.000Z</published>
-    <updated>2019-10-17T06:02:28.043Z</updated>
+    <updated>2019-11-01T05:56:35.271Z</updated>
     
     <content type="html"><![CDATA[<h1 id="idea在tomcat中的热部署"><a href="#idea在tomcat中的热部署" class="headerlink" title="idea在tomcat中的热部署"></a>idea在tomcat中的热部署</h1><p>如果每次jsp页面或后台代码有修改，都得重启，确实比较麻烦，现在找到一种利用jrebel这个插件来实现热不熟。</p><p>在idea的插件库中找到jrebel，如下图<br><img src="http://oo501cyv7.bkt.clouddn.com/15057048125945.jpg" alt></p><p>因为这个插件是需要收费，这里有办法可以免费获取激活码：</p><p>方法1：JRebel有一个免费获得激活码的方法，登录<a href="https://my.jrebel.com这个网站（FQ），然后用Twitter或者Facebook账号登录这个网站，就能获得免费的激活码。" target="_blank" rel="noopener">https://my.jrebel.com这个网站（FQ），然后用Twitter或者Facebook账号登录这个网站，就能获得免费的激活码。</a><br><img src="http://oo501cyv7.bkt.clouddn.com/15057048682483.jpg" alt></p><p>在IDEA里面Help-&gt;JRebel-&gt;Activate，复制粘贴激活码就行了。<br><img src="http://oo501cyv7.bkt.clouddn.com/15057048855064.jpg" alt></p><p>方法2：<br>1.激活时填写的 <a href="http://idea.jrebel.ml/ilanyu" target="_blank" rel="noopener">http://idea.jrebel.ml/ilanyu</a> 及 lanyu19950316@gmail.com，授权服务器地址格式为：<a href="http://idea.jrebel.ml/{用户名}，邮箱随意填写，idea.jrebel.ml" target="_blank" rel="noopener">http://idea.jrebel.ml/{用户名}，邮箱随意填写，idea.jrebel.ml</a> 可能随时会被封，可使用反向代理工具代理 <a href="http://idea.lanyus.com/，即可稳定使用授权服务器。" target="_blank" rel="noopener">http://idea.lanyus.com/，即可稳定使用授权服务器。</a></p><p>2.该激活方法可离线使用6个月，可根据需要点击 Renew offline seat 即可更新离线过期时间。</p>]]></content>
     
@@ -518,36 +547,6 @@
     
       <category term="Java" scheme="http://haoweiguang.me/categories/Java/"/>
     
-    
-      <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Servlet生命周期和工作原理</title>
-    <link href="http://haoweiguang.me/2017/07/09/Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/</id>
-    <published>2017-07-09T03:36:11.000Z</published>
-    <updated>2017-07-09T03:38:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>名词解释：</p><ul><li>web.xml = 部署描述符（Deployment Descriptor ）</li><li>容器 = Servlet Container/Engine</li></ul><h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>主要有四个过程：init-&gt;service-&gt;doGet/doPost-&gt;destory</p><p>第一步：加载和实例化</p><ol><li>Servlet容器启动时自动装载某些Servlet，实现它只需要在web.XML文件中的<code>&lt;Servlet&gt;&lt;/Servlet&gt;</code>之间添加如下代码：<br><code>&lt;loadon-startup&gt;1&lt;/loadon-startup&gt;</code></li><li>在Servlet容器启动后，客户首次向Servlet发送请求</li><li>Servlet类文件被更新后，重新装载Servlet</li></ol><p>Servlet被装载后，Servlet容器创建一个Servlet实例并且调用Servlet的init()方法进行初始化。在Servlet的整个生命周期内，init()方法只被调用一次。</p><p>第二步：初始化 </p><p>实例化后会立马进行初始化，并传递实现ServletConfig接口的对象。也就是执行init方法。在init（）方法中，Servlet可以部署描述符中读取配置参数，或者执行任何其他一次性活动。在Servlet的整个生命周期类，init（）方法只被调用一次。</p><p>第三步：请求处理</p><p>初始化后，Servlet就可以接受请求了。<br>基本方式是执行Servlet接口中的service方法。并把请求和响应对象作为参数传递。当并行的请求到来时，多个service（）方法能够同时运行在独立的线程中。<br>service()方法检查 HTTP 请求类型（GET、POST、PUT、DELETE 等），并在适当的时候调用 doGet()、doPost()、doPut()，doDelete() 等方法。<br>当然，API也提供了HttpServlet抽象类，其中有doGet、doPost等特殊方法。<br>注意：任意的容器按照规范必须实现上述几种方法，所以你的代码写在这几个方法中都可以。</p><p>第四步：终止服务</p><p>容器会在合适的时候销毁某个Servlet对象，这个策略取决于容器的开发者/商。<br>在容器关闭的时候Servlet对象一定会被销毁。<br>当1或2发生时，也就是Servlet对象被销毁时，destroy方法会被调用</p><p><img src="http://oo501cyv7.bkt.clouddn.com/14995681398150.png" alt></p><p>PS:<strong>Servlet的生命（周期）是由容器管理的，换句话说，Servlet程序员不能用代码控制其生命。</strong></p><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>首先简单解释一下Servlet接收和响应客户请求的过程，首先客户发送一个请求，Servlet是调用service()方法对请求进行响应的，通过源代码可见，service()方法中对请求的方式进行了匹配，选择调用doGet,doPost等这些方法，然后再进入对应的方法中调用逻辑层的方法，实现对客户的响应。在Servlet接口和GenericServlet中是没有doGet,doPost等等这些方法的，HttpServlet中定义了这些方法，但是都是返回error信息，所以，我们每次定义一个Servlet的时候，都必须实现doGet或doPost等这些方法。</p><p>每一个自定义的Servlet都必须实现Servlet的接口，Servlet接口中定义了五个方法，其中比较重要的三个方法涉及到Servlet的生命周期，分别是上文提到的init(),service(),destroy()方法。GenericServlet是一个通用的，不特定于任何协议的Servlet,它实现了Servlet接口。而HttpServlet继承于GenericServlet，因此HttpServlet也实现了Servlet接口。所以我们定义Servlet的时候只需要继承HttpServlet即可。</p><p>Servlet接口和GenericServlet是不特定于任何协议的，而HttpServlet是特定于HTTP协议的类，所以HttpServlet中实现了service()方法，并将请求ServletRequest,ServletResponse强转为HttpRequest和HttpResponse。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public void service(ServletRequest req,ServletResponse res) </span><br><span class="line">  throws ServletException,IOException</span><br><span class="line">&#123;</span><br><span class="line">      HttpRequest request;</span><br><span class="line">      HttpResponse response;</span><br><span class="line"> </span><br><span class="line">     try</span><br><span class="line">     &#123;</span><br><span class="line">         req = (HttpRequest)request;</span><br><span class="line">         res = (HttpResponse)response;</span><br><span class="line">      &#125;catch(ClassCastException e)</span><br><span class="line">      &#123;</span><br><span class="line">         throw new ServletException(&quot;non-HTTP request response&quot;); </span><br><span class="line">      &#125;</span><br><span class="line">      service(request,response);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>代码的最后调用了HTTPServlet自己的service(request,response)方法，然后根据请求去调用对应的doXXX方法，因为HttpServlet中的doXXX方法都是返回错误信息。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">protected void doGet(HttpServletRequest res,HttpServletResponse resp)</span><br><span class="line">  throws ServletException,IOException</span><br><span class="line">&#123;</span><br><span class="line">   String protocol = req.getProtocol();</span><br><span class="line">   String msg = IStrings.getString(&quot;http.method_get_not_supported&quot;);</span><br><span class="line">   if(protocol.equals(&quot;1.1&quot;))</span><br><span class="line">   &#123;</span><br><span class="line">      resp.sendError(HttpServletResponse.SC.METHOD.NOT.ALLOWED,msg);</span><br><span class="line">    &#125;</span><br><span class="line">   esle</span><br><span class="line">    &#123;</span><br><span class="line">      resp.sendError(HttpServletResponse.SC_BAD_REQUEST,msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>所以需要我们在自定义的Servlet中override这些方法！</p><h3 id="Servlet响应请求阶段"><a href="#Servlet响应请求阶段" class="headerlink" title="Servlet响应请求阶段"></a>Servlet响应请求阶段</h3><p>对于用户到达Servlet的请求，Servlet容器会创建特定于这个请求的ServletRequest对象和ServletResponse对象，然后调用Servlet的service方法。service方法从ServletRequest对象获得客户请求信息，处理该请求，并通过ServletResponse对象向客户返回响应信息。</p><p>对于Tomcat来说，它会将传递过来的参数放在一个Hashtable中，该Hashtable的定义是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private Hashtable&lt;String String[]&gt; paramHashStringArray = new Hashtable&lt;String String[]&gt;();</span><br></pre></td></tr></table></figure><p>这是一个String–&gt;String[]的键值映射。</p><p>HashMap线程不安全的，Hashtable线程安全。</p><h3 id="Servlet终止阶段"><a href="#Servlet终止阶段" class="headerlink" title="Servlet终止阶段"></a>Servlet终止阶段</h3><p>当WEB应用被终止，或Servlet容器终止运行，或Servlet容器重新装载Servlet新实例时，Servlet容器会先调用Servlet的destroy()方法，在destroy()方法中可以释放掉Servlet所占用的资源。</p><h3 id="Servlet何时被创建"><a href="#Servlet何时被创建" class="headerlink" title="Servlet何时被创建"></a>Servlet何时被创建</h3><ol><li><p>默认情况下，当WEB客户第一次请求访问某个Servlet的时候，WEB容器将创建这个Servlet的实例。</p></li><li><p>当web.xml文件中如果<servlet>元素中指定了<load-on-startup>子元素时，Servlet容器在启动web服务器时，将按照顺序创建并初始化Servlet对象。</load-on-startup></servlet></p></li></ol><p>注意：在web.xml文件中，某些Servlet只有<serlvet>元素，没有<servlet-mapping>元素，这样我们无法通过url的方式访问这些Servlet，这种Servlet通常会在<servlet>元素中配置一个<load-on-startup>子元素，让容器在启动的时候自动加载这些Servlet并调用init()方法，完成一些全局性的初始化工作。</load-on-startup></servlet></servlet-mapping></serlvet></p><h3 id="Web应用何时被启动"><a href="#Web应用何时被启动" class="headerlink" title="Web应用何时被启动"></a>Web应用何时被启动</h3><ol><li>当Servlet容器启动的时候，所有的Web应用都会被启动</li><li>控制器启动web应用</li></ol><h2 id="JSP运行原理"><a href="#JSP运行原理" class="headerlink" title="JSP运行原理"></a>JSP运行原理</h2><p>当Web服务器上的JSP页面第一次被请求执行时，JSP引擎先将JSP页面文件转译成一个Java文件，即Servlet，Java Servlet是基于服务器端编程的API，用Java Servlet编写的Java程序称为servlet，servlet通过HTML与客户交互。服务器将前面转译成的Java文件编译成字节码文件，再执行这个字节码文件来响应客户的请求。当这个JSP页面再次被请求时，只要该JSP文件没有被改动，JSP引擎就直接调用已装载的Servlet。</p><p>JSP工作原理<br>所有JSP页面，在执行的时候都会被服务器端的JSP引擎转换为Servelet（.java），然后又由JSP引擎调用Java编译器，将Servelet（.java）编译为Class文件（.class），并由Java虚拟机（JVM）解释执行。下面验证这一点：<br>有一个JSP页面Test.jsp，在浏览器地址栏中输入<a href="http://localhost:8080/Test.jsp" target="_blank" rel="noopener">http://localhost:8080/Test.jsp</a> ,将会出现执行结果。同时在%CATALINA_HOME%/work/Catalina/localhost下多出两个文件：_Test_jsp.java和_Test_jsp.class，他们分别就是Servelet和Class文件</p><h2 id="JSP和servlet的运行原理探讨"><a href="#JSP和servlet的运行原理探讨" class="headerlink" title="JSP和servlet的运行原理探讨"></a>JSP和servlet的运行原理探讨</h2><p>&lt;%page language=”java”%&gt;在服务器端执行.<br>客户端用户填写 HTML 表单，发送请求。将请求发送给 服务器端servlet(tomcat是servlet的容器)。 servlet 将该 HTTP 请求转换成一个 MQSeries 消息，并将其放入一个队列。 后端应用程序处理该消息，然后通过消息队列发回一个应答。 servlet 从队列中检索消息，并将其存放在一个 Java Bean 中。 然后 servlet 调用编译过的 Java Server Page(JSP) 并动态生成结果 HTML 页面。 JSP 从 Java Bean 检索出该页面需要的数据，将其合并到 HTML，然后将结果页面发送给客户端。</p><p>JSP中的html代码和javascrīpt代码不会在服务器端执行，servlet 调用编译过的 Java Server Page(JSP) ，也就是运行由JSP编译成的class文件(运行的代码包括actionBean,formBean,一般的bean 和内嵌在JSP的Java代码).</p><p>一个Web运行程序（网站）可以有多个servlet，一般认为一个action就是一个servlet.</p><p>所谓Servlet是指运行在服务器端的Java小程序。用于响应客户端的请求。在默认情况下，Servlet采用一种无状态的请求-响应处理方式。Servlet代码的主要作用是为了增强Java服务器端的功能，它运行在服务器端，用于接收并且处理浏览器客户端发出的请求，该请求是通过配置文件web.xml的相关配置进行转发。也就是说Servlet是一个标准的Java类，它符合Java类的一般规则。和一般的Java类不同之处只是在于Servlet可以处理Http请求。</p><ol><li>servlet是持久的。servlet只需Web服务器加载一次,后续又用到这个servlet，就不需要再加载。(所谓加载是指servlet加载进JVM运行)</li><li>servlet是与平台无关的。</li><li>servlet是可扩展的。</li></ol><h2 id="Servlet与JSP的比较"><a href="#Servlet与JSP的比较" class="headerlink" title="Servlet与JSP的比较"></a>Servlet与JSP的比较</h2><ul><li>有许多相似之处，都可以生成动态网页。</li><li>JSP的优点是擅长于网页制作，生成动态页面比较直观，缺点是不容易跟踪与排错。</li><li>Servlet是纯Java语言，擅长于处理流程和业务逻辑，缺点是生成动态网页不直观。</li></ul><p>参考：</p><ul><li><a href="http://blog.csdn.net/u010297957/article/details/51498018" target="_blank" rel="noopener">Servlet的历史与规范</a></li><li><a href="http://www.hollischuang.com/archives/849" target="_blank" rel="noopener">Servlet 3.1规范学习笔记（一）——Servlet生命周期和线程安全性问题</a></li><li><a href="http://www.cnblogs.com/cuiliang/archive/2011/10/21/2220671.html" target="_blank" rel="noopener">Servlet生命周期与工作原理</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;名词解释：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;web.xml = 部署描述符（Deployment Descriptor ）&lt;/li&gt;
-&lt;li&gt;容器 = Servlet Container/Engine&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://haoweiguang.me/tags/java/"/>
     
       <category term="servlet" scheme="http://haoweiguang.me/tags/servlet/"/>
     
