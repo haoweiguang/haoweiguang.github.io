@@ -181,19 +181,15 @@
     <link href="http://haoweiguang.me/2018/05/13/JVM%E4%B9%8BJava%E5%A0%86/"/>
     <id>http://haoweiguang.me/2018/05/13/JVM之Java堆/</id>
     <published>2018-05-13T02:05:48.000Z</published>
-    <updated>2019-10-31T09:10:11.494Z</updated>
+    <updated>2019-11-01T06:48:04.489Z</updated>
     
-    <content type="html"><![CDATA[<p>先看图，搞清楚堆在运行区的位置<br><img src="media/15725111452242.jpg" alt></p><blockquote><p>图片来自网络</p></blockquote><p><strong>介绍</strong><br>Java堆是JVM所管理内存中最大的一块，存放几乎所有对象实例（例外：栈上分配等）。这块是线程共享的区域。</p><p><img src="media/15725119049287.jpg" alt></p><p>垃圾回收器管理的主要区域，现代的收集器基本都采用分代收集算法，所以可划分为新生代与老年代，新生代可进一步划分为Eden区、From Survivor区（S0）、To Survivor区（S1）。</p><p>可以处于物理上不连续内存空间中，所以标记-清理算法才会起作用。</p><p><strong>这个区域一些参数的解释</strong><br><img src="media/15725127359370.jpg" alt></p><p>新生代与老年代的比例可以通过参数-XX:NewRatio来设置。比如，设置-XX:NewRatio=3，表示新生代:老年代=1:3，也就是说老年代占3/4。</p><p>Eden区、From Survivor区（S0）、To Survivor区（S1）之间的初始比例是8:1:1，通过-XX:SurvivorRatio参数来设置。比如：-XX:SurvivorRatio=8，表示两个Survivor:Eden = 2:8 ，每个Survivor占 1/10</p><p><strong>其他一些参数</strong></p><ul><li>-Xms：设置堆内存最小值</li><li>-Xmx：设置堆内存最大值</li><li>-Xmn堆中新生代初始及最大大小（NewSize和MaxNewSize为其细化）</li><li>-XX:NewSize设置新生代最小空间大小</li><li>-XX:MaxNewSize设置新生代最大空间大小</li><li>-XX:PermSize设置永久代最小空间大小</li><li>-XX:MaxPermSize设置永久代最大空间大小</li><li>-Xss设置每个线程的堆栈大小</li></ul><p>是不是参数太多，不容易记，这里有个记忆的小技巧</p><blockquote><p>Xmx（memory maximum）, Xms（memory startup）, Xmn（memory nursery/new）, Xss（stack size）</p></blockquote><p>对于参数的格式可以这样理解</p><ul><li>-: 标准VM选项，VM规范的选项。</li><li>-X: 非标准VM选项，不保证所有VM支持。</li><li>-XX: 高级选项，高级特性，但属于不稳定的选项。</li></ul><p><strong>会触发的异常</strong><br>OutOfMemoryError，堆中没有内存完成实例分配，并堆也无法再扩展时会触发。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="JVM之Java堆"><a href="#JVM之Java堆" class="headerlink" title="JVM之Java堆"></a>JVM之Java堆</h1><p>先看图，搞清楚堆在运行区的位置<br><img src="http://images.insuncle.com/mweb/15725907891718.jpg" alt></p><blockquote><p>图片来自网络</p></blockquote><p><strong>介绍</strong><br>Java堆是JVM所管理内存中最大的一块，存放几乎所有对象实例（例外：栈上分配等）。这块是线程共享的区域。</p><p><img src="http://images.insuncle.com/mweb/15725908051364.jpg" alt></p><p>垃圾回收器管理的主要区域，现代的收集器基本都采用分代收集算法，所以可划分为新生代与老年代，新生代可进一步划分为Eden区、From Survivor区（S0）、To Survivor区（S1）。</p><p>可以处于物理上不连续内存空间中，所以标记-清理算法才会起作用。</p><p><strong>这个区域一些参数的解释</strong><br><img src="http://images.insuncle.com/mweb/15725908146701.jpg" alt></p><p>新生代与老年代的比例可以通过参数-XX:NewRatio来设置。比如，设置-XX:NewRatio=3，表示新生代:老年代=1:3，也就是说老年代占3/4。</p><p>Eden区、From Survivor区（S0）、To Survivor区（S1）之间的初始比例是8:1:1，通过-XX:SurvivorRatio参数来设置。比如：-XX:SurvivorRatio=8，表示两个Survivor:Eden = 2:8 ，每个Survivor占 1/10</p><p><strong>其他一些参数</strong></p><ul><li>-Xms：设置堆内存最小值</li><li>-Xmx：设置堆内存最大值</li><li>-Xmn堆中新生代初始及最大大小（NewSize和MaxNewSize为其细化）</li><li>-XX:NewSize设置新生代最小空间大小</li><li>-XX:MaxNewSize设置新生代最大空间大小</li><li>-XX:PermSize设置永久代最小空间大小</li><li>-XX:MaxPermSize设置永久代最大空间大小</li><li>-Xss设置每个线程的堆栈大小</li></ul><p>是不是参数太多，不容易记，这里有个记忆的小技巧</p><blockquote><p>Xmx（memory maximum）, Xms（memory startup）, Xmn（memory nursery/new）, Xss（stack size）</p></blockquote><p>对于参数的格式可以这样理解</p><ul><li>-: 标准VM选项，VM规范的选项。</li><li>-X: 非标准VM选项，不保证所有VM支持。</li><li>-XX: 高级选项，高级特性，但属于不稳定的选项。</li></ul><p><strong>会触发的异常</strong><br>OutOfMemoryError，堆中没有内存完成实例分配，并堆也无法再扩展时会触发。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;先看图，搞清楚堆在运行区的位置&lt;br&gt;&lt;img src=&quot;media/15725111452242.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;图片来自网络&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Java堆是
+        &lt;h1 id=&quot;JVM之Java堆&quot;&gt;&lt;a href=&quot;#JVM之Java堆&quot; class=&quot;headerlink&quot; title=&quot;JVM之Java堆&quot;&gt;&lt;/a&gt;JVM之Java堆&lt;/h1&gt;&lt;p&gt;先看图，搞清楚堆在运行区的位置&lt;br&gt;&lt;img src=&quot;http://images
       
     
     </summary>
