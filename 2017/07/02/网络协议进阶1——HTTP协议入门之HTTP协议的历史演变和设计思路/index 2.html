@@ -115,20 +115,21 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="HTTP 协议是互联网的基础协议，也是网页开发的必备知识，最新版本 HTTP/2 更是让它成为技术热点。 本文介绍 HTTP协议的历史演变和设计思路。  一、HTTP/0.9HTTP 是基于 TCP/IP 协议的应用层协议。它不涉及数据包（packet）传输，主要规定了客户端和服务器之间的通信格式，默认使用80端口。 最早版本是1991年发布的0.9版。该版本极其简单，只有一个命令GET。 1G">
+<meta name="keywords" content="网络协议,理解计算机,HTTP协议">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路">
+<meta property="og:url" content="http://haoweiguang.me/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="HTTP 协议是互联网的基础协议，也是网页开发的必备知识，最新版本 HTTP/2 更是让它成为技术热点。 本文介绍 HTTP协议的历史演变和设计思路。  一、HTTP/0.9HTTP 是基于 TCP/IP 协议的应用层协议。它不涉及数据包（packet）传输，主要规定了客户端和服务器之间的通信格式，默认使用80端口。 最早版本是1991年发布的0.9版。该版本极其简单，只有一个命令GET。 1G">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816335778945.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816948261078.jpg">
+<meta property="og:updated_time" content="2017-07-16T08:32:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路">
+<meta name="twitter:description" content="HTTP 协议是互联网的基础协议，也是网页开发的必备知识，最新版本 HTTP/2 更是让它成为技术热点。 本文介绍 HTTP协议的历史演变和设计思路。  一、HTTP/0.9HTTP 是基于 TCP/IP 协议的应用层协议。它不涉及数据包（packet）传输，主要规定了客户端和服务器之间的通信格式，默认使用80端口。 最早版本是1991年发布的0.9版。该版本极其简单，只有一个命令GET。 1G">
+<meta name="twitter:image" content="http://oo501cyv7.bkt.clouddn.com/14816335778945.jpg">
 
 
 
@@ -137,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/">
 
 
 
@@ -147,7 +148,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路 | 微光的Notes</title>
   
 
 
@@ -358,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路
               
             
           </h1>
@@ -400,7 +401,7 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-07-02 11:16:14" itemprop="dateCreated datePublished" datetime="2017-07-02T11:16:14+08:00">2017-07-02</time>
             
 
             
@@ -418,7 +419,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/理解计算器机/" itemprop="url" rel="index"><span itemprop="name">理解计算器机</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/理解计算器机/网络协议/" itemprop="url" rel="index"><span itemprop="name">网络协议</span></a></span>
 
                 
                 
@@ -433,8 +441,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +470,86 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
+        <p><img src="http://oo501cyv7.bkt.clouddn.com/14816335778945.jpg" alt></p>
+<p>HTTP 协议是互联网的基础协议，也是网页开发的必备知识，最新版本 HTTP/2 更是让它成为技术热点。</p>
+<p>本文介绍 HTTP协议的历史演变和设计思路。</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816948261078.jpg" alt></p>
+<h2 id="一、HTTP-0-9"><a href="#一、HTTP-0-9" class="headerlink" title="一、HTTP/0.9"></a>一、HTTP/0.9</h2><p>HTTP 是基于 TCP/IP 协议的应用层协议。它不涉及数据包（packet）传输，主要规定了客户端和服务器之间的通信格式，默认使用80端口。</p>
+<p>最早版本是1991年发布的0.9版。该版本极其简单，只有一个命令GET。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /index.html</span><br></pre></td></tr></table></figure>
+<p>上面命令表示，TCP 连接（connection）建立后，客户端向服务器请求（request）网页index.html。</p>
+<p>协议规定，服务器只能回应HTML格式的字符串，不能回应别的格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;Hello World&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>服务器发送完毕，就关闭TCP连接。</p>
+<h2 id="二、HTTP-1-0"><a href="#二、HTTP-1-0" class="headerlink" title="二、HTTP/1.0"></a>二、HTTP/1.0</h2><h3 id="2-1-简介"><a href="#2-1-简介" class="headerlink" title="2.1 简介"></a>2.1 简介</h3><p>1996年5月，HTTP/1.0 版本发布，内容大大增加。</p>
+<p>首先，任何格式的内容都可以发送。这使得互联网不仅可以传输文字，还能传输图像、视频、二进制文件。这为互联网的大发展奠定了基础。</p>
+<p>其次，除了<code>GET</code>命令，还引入了<code>POST</code>命令和<code>HEAD</code>命令，丰富了浏览器与服务器的互动手段。<br>再次，HTTP请求和回应的格式也变了。除了数据部分，每次通信都必须包括头信息（HTTP header），用来描述一些元数据。</p>
+<p>其他的新增功能还包括状态码（status code）、多字符集支持、多部分发送（multi-part type）、权限（authorization）、缓存（cache）、内容编码（content encoding）等。</p>
+<h3 id="2-2-请求格式"><a href="#2-2-请求格式" class="headerlink" title="2.2 请求格式"></a>2.2 请求格式</h3><p>下面是一个1.0版的HTTP请求的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET / HTTP/1.0</span><br><span class="line">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5)</span><br><span class="line">Accept: */*</span><br></pre></td></tr></table></figure>
+<p>可以看到，这个格式与0.9版有很大变化。<br>第一行是请求命令，必须在尾部添加协议版本（<code>HTTP/1.0</code>）。后面就是多行头信息，描述客户端的情况。</p>
+<h3 id="2-3-回应格式"><a href="#2-3-回应格式" class="headerlink" title="2.3 回应格式"></a>2.3 回应格式</h3><p>服务器的回应如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.0 200 OK </span><br><span class="line">Content-Type: text/plain</span><br><span class="line">Content-Length: 137582</span><br><span class="line">Expires: Thu, 05 Dec 1997 16:00:00 GMT</span><br><span class="line">Last-Modified: Wed, 5 August 1996 15:55:28 GMT</span><br><span class="line">Server: Apache 0.84</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;body&gt;Hello World&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>回应的格式是”头信息 + 一个空行（<code>\r\n</code>） + 数据”。其中，第一行是”协议版本 + 状态码（status code） + 状态描述”。</p>
+<h3 id="2-4-Content-Type-字段"><a href="#2-4-Content-Type-字段" class="headerlink" title="2.4 Content-Type 字段"></a>2.4 Content-Type 字段</h3><p>关于字符的编码，1.0版规定，头信息必须是 ASCII 码，后面的数据可以是任何格式。因此，服务器回应的时候，必须告诉客户端，数据是什么格式，这就是<code>Content-Type</code>字段的作用。<br>下面是一些常见的<code>Content-Type</code>字段的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* text/plain</span><br><span class="line">* text/html</span><br><span class="line">* text/css</span><br><span class="line">* image/jpeg</span><br><span class="line">* image/png</span><br><span class="line">* image/svg+xml</span><br><span class="line">* audio/mp4</span><br><span class="line">* video/mp4</span><br><span class="line">* application/javascript</span><br><span class="line">* application/pdf</span><br><span class="line">* application/zip</span><br><span class="line">* application/atom+xml</span><br></pre></td></tr></table></figure>
+<p>这些数据类型总称为MIME type，每个值包括一级类型和二级类型，之间用斜杠分隔。<br>除了预定义的类型，厂商也可以自定义类型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">application/vnd.debian.binary-package</span><br></pre></td></tr></table></figure>
+<p>上面的类型表明，发送的是Debian系统的二进制数据包。<br>MIME type还可以在尾部使用分号，添加参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: text/html; charset=utf-8</span><br></pre></td></tr></table></figure>
+<p>上面的类型表明，发送的是网页，而且编码是UTF-8。<br>客户端请求的时候，可以使用Accept字段声明自己可以接受哪些数据格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept: */*</span><br></pre></td></tr></table></figure>
+<p>上面代码中，客户端声明自己可以接受任何格式的数据。<br>MIME type不仅用在HTTP协议，还可以用在其他地方，比如HTML网页。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;</span><br><span class="line">&lt;!-- 等同于 --&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-5-Content-Encoding-字段"><a href="#2-5-Content-Encoding-字段" class="headerlink" title="2.5 Content-Encoding 字段"></a>2.5 Content-Encoding 字段</h3><p>由于发送的数据可以是任何格式，因此可以把数据压缩后再发送。Content-Encoding字段说明数据的压缩方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Encoding: gzip</span><br><span class="line">Content-Encoding: compress</span><br><span class="line">Content-Encoding: deflate</span><br></pre></td></tr></table></figure>
+<p>客户端在请求时，用Accept-Encoding字段说明自己可以接受哪些压缩方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+<h3 id="2-6-缺点"><a href="#2-6-缺点" class="headerlink" title="2.6 缺点"></a>2.6 缺点</h3><p>HTTP/1.0 版的主要缺点是，每个TCP连接只能发送一个请求。发送数据完毕，连接就关闭，如果还要请求其他资源，就必须再新建一个连接。<br>TCP连接的新建成本很高，因为需要客户端和服务器三次握手，并且开始时发送速率较慢（slow start）。所以，HTTP 1.0版本的性能比较差。随着网页加载的外部资源越来越多，这个问题就愈发突出了。<br>为了解决这个问题，有些浏览器在请求时，用了一个非标准的<code>Connection</code>字段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
+<p>这个字段要求服务器不要关闭TCP连接，以便其他请求复用。服务器同样回应这个字段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
+<p>一个可以复用的TCP连接就建立了，直到客户端或服务器主动关闭连接。但是，这不是标准字段，不同实现的行为可能不一致，因此不是根本的解决办法。</p>
+<h2 id="三、HTTP-1-1"><a href="#三、HTTP-1-1" class="headerlink" title="三、HTTP/1.1"></a>三、HTTP/1.1</h2><p>1997年1月，HTTP/1.1 版本发布，只比 1.0 版本晚了半年。它进一步完善了 HTTP 协议，一直用到了20年后的今天，直到现在还是最流行的版本。</p>
+<h3 id="3-1-持久连接"><a href="#3-1-持久连接" class="headerlink" title="3.1 持久连接"></a>3.1 持久连接</h3><p>1.1 版的最大变化，就是引入了持久连接（persistent connection），即TCP连接默认不关闭，可以被多个请求复用，不用声明Connection: keep-alive。<br>客户端和服务器发现对方一段时间没有活动，就可以主动关闭连接。不过，规范的做法是，客户端在最后一个请求时，发送Connection: close，明确要求服务器关闭TCP连接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection: close</span><br></pre></td></tr></table></figure>
+<p>目前，对于同一个域名，大多数浏览器允许同时建立6个持久连接。</p>
+<h3 id="3-2-管道机制"><a href="#3-2-管道机制" class="headerlink" title="3.2 管道机制"></a>3.2 管道机制</h3><p>1.1 版还引入了管道机制（pipelining），即在同一个TCP连接里面，客户端可以同时发送多个请求。这样就进一步改进了HTTP协议的效率。</p>
+<p>举例来说，客户端需要请求两个资源。以前的做法是，在同一个TCP连接里面，先发送A请求，然后等待服务器做出回应，收到后再发出B请求。管道机制则是允许浏览器同时发出A请求和B请求，但是服务器还是按照顺序，先回应A请求，完成后再回应B请求。</p>
+<h3 id="3-3-Content-Length-字段"><a href="#3-3-Content-Length-字段" class="headerlink" title="3.3 Content-Length 字段"></a>3.3 Content-Length 字段</h3><p>一个TCP连接现在可以传送多个回应，势必就要有一种机制，区分数据包是属于哪一个回应的。这就是<code>Content-length</code>字段的作用，声明本次回应的数据长度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Length: 3495</span><br></pre></td></tr></table></figure>
+<p>上面代码告诉浏览器，本次回应的长度是3495个字节，后面的字节就属于下一个回应了。<br>在1.0版中，<code>Content-Length</code>字段不是必需的，因为浏览器发现服务器关闭了TCP连接，就表明收到的数据包已经全了。</p>
+<h3 id="3-4-分块传输编码"><a href="#3-4-分块传输编码" class="headerlink" title="3.4 分块传输编码"></a>3.4 分块传输编码</h3><p>使用<code>Content-Length</code>字段的前提条件是，服务器发送回应之前，必须知道回应的数据长度。</p>
+<p>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模式”（stream）取代”缓存模式”（buffer）。</p>
+<p>因此，1.1版规定可以不使用<code>Content-Length</code>字段，而使用”分块传输编码”（chunked transfer encoding）。只要请求或回应的头信息有<code>Transfer-Encoding</code>字段，就表明回应将由数量未定的数据块组成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Transfer-Encoding: chunked</span><br></pre></td></tr></table></figure>
+<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Content-Type: text/plain</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line"></span><br><span class="line">25</span><br><span class="line">This is the data in the first chunk</span><br><span class="line"></span><br><span class="line">1C</span><br><span class="line">and this is the second one</span><br><span class="line"></span><br><span class="line">3</span><br><span class="line">con</span><br><span class="line"></span><br><span class="line">8</span><br><span class="line">sequence</span><br><span class="line"></span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-其他功能"><a href="#3-5-其他功能" class="headerlink" title="3.5 其他功能"></a>3.5 其他功能</h3><p>1.1版还新增了许多动词方法：<code>PUT</code>、<code>PATCH</code>、<code>HEAD</code>、 <code>OPTIONS</code>、<code>DELETE</code>。</p>
+<p>另外，客户端请求的头信息新增了<code>Host</code>字段，用来指定服务器的域名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Host: www.example.com</span><br></pre></td></tr></table></figure>
+<p>有了<code>Host</code>字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下了基础。</p>
+<h3 id="3-6-缺点"><a href="#3-6-缺点" class="headerlink" title="3.6 缺点"></a>3.6 缺点</h3><p>虽然1.1版允许复用TCP连接，但是同一个TCP连接里面，所有的数据通信是按次序进行的。服务器只有处理完一个回应，才会进行下一个回应。要是前面的回应特别慢，后面就会有许多请求排队等着。这称为”<a href="https://zh.wikipedia.org/wiki/%E9%98%9F%E5%A4%B4%E9%98%BB%E5%A1%9E" target="_blank" rel="noopener">队头堵塞</a>“（Head-of-line blocking）。</p>
+<p>为了避免这个问题，只有两种方法：一是减少请求数，二是同时多开持久连接。这导致了很多的网页优化技巧，比如合并脚本和样式表、将图片嵌入CSS代码、域名分片（domain sharding）等等。如果HTTP协议设计得更好一些，这些额外的工作是可以避免的。</p>
+<h2 id="四、SPDY-协议"><a href="#四、SPDY-协议" class="headerlink" title="四、SPDY 协议"></a>四、SPDY 协议</h2><p>2009年，谷歌公开了自行研发的 SPDY 协议，主要解决 HTTP/1.1 效率不高的问题。<br>这个协议在Chrome浏览器上证明可行以后，就被当作 HTTP/2 的基础，主要特性都在 HTTP/2 之中得到继承。</p>
+<h2 id="五、HTTP-2"><a href="#五、HTTP-2" class="headerlink" title="五、HTTP/2"></a>五、HTTP/2</h2><p>2015年，HTTP/2 发布。它不叫 HTTP/2.0，是因为标准委员会不打算再发布子版本了，下一个新版本将是 HTTP/3。</p>
+<h3 id="5-1-二进制协议"><a href="#5-1-二进制协议" class="headerlink" title="5.1 二进制协议"></a>5.1 二进制协议</h3><p>HTTP/1.1 版的头信息肯定是文本（ASCII编码），数据体可以是文本，也可以是二进制。HTTP/2 则是一个彻底的二进制协议，头信息和数据体都是二进制，并且统称为”帧”（frame）：头信息帧和数据帧。</p>
+<p>二进制协议的一个好处是，可以定义额外的帧。HTTP/2 定义了近十种帧，为将来的高级应用打好了基础。如果使用文本实现这种功能，解析数据将会变得非常麻烦，二进制解析则方便得多。</p>
+<h3 id="5-2-多工"><a href="#5-2-多工" class="headerlink" title="5.2 多工"></a>5.2 多工</h3><p>HTTP/2 复用TCP连接，在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，而且不用按照顺序一一对应，这样就避免了”队头堵塞”。</p>
+<p>举例来说，在一个TCP连接里面，服务器同时收到了A请求和B请求，于是先回应A请求，结果发现处理过程非常耗时，于是就发送A请求已经处理好的部分， 接着回应B请求，完成后，再发送A请求剩下的部分。</p>
+<p>这样双向的、实时的通信，就叫做多工（Multiplexing）。</p>
+<h3 id="5-3-数据流"><a href="#5-3-数据流" class="headerlink" title="5.3 数据流"></a>5.3 数据流</h3><p>因为 HTTP/2 的数据包是不按顺序发送的，同一个连接里面连续的数据包，可能属于不同的回应。因此，必须要对数据包做标记，指出它属于哪个回应。</p>
+<p>HTTP/2 将每个请求或回应的所有数据包，称为一个数据流（stream）。每个数据流都有一个独一无二的编号。数据包发送的时候，都必须标记数据流ID，用来区分它属于哪个数据流。另外还规定，客户端发出的数据流，ID一律为奇数，服务器发出的，ID为偶数。</p>
+<p>数据流发送到一半的时候，客户端和服务器都可以发送信号（<code>RST_STREAM</code>帧），取消这个数据流。1.1版取消数据流的唯一方法，就是关闭TCP连接。这就是说，HTTP/2 可以取消某一次请求，同时保证TCP连接还打开着，可以被其他请求使用。</p>
+<p>客户端还可以指定数据流的优先级。优先级越高，服务器就会越早回应。</p>
+<h3 id="5-4-头信息压缩"><a href="#5-4-头信息压缩" class="headerlink" title="5.4 头信息压缩"></a>5.4 头信息压缩</h3><p>HTTP 协议不带有状态，每次请求都必须附上所有信息。所以，请求的很多字段都是重复的，比如<code>Cookie</code>和<code>User Agent</code>，一模一样的内容，每次请求都必须附带，这会浪费很多带宽，也影响速度。</p>
+<p>HTTP/2 对这一点做了优化，引入了头信息压缩机制（header compression）。一方面，头信息使用<code>gzip</code>或<code>compress</code>压缩后再发送；另一方面，客户端和服务器同时维护一张头信息表，所有字段都会存入这个表，生成一个索引号，以后就不发送同样字段了，只发送索引号，这样就提高速度了。</p>
+<h3 id="5-5-服务器推送"><a href="#5-5-服务器推送" class="headerlink" title="5.5 服务器推送"></a>5.5 服务器推送</h3><p>HTTP/2 允许服务器未经请求，主动向客户端发送资源，这叫做服务器推送（server push）。</p>
+<p>常见场景是客户端请求一个网页，这个网页里面包含很多静态资源。正常情况下，客户端必须收到网页后，解析HTML源码，发现有静态资源，再发出静态资源请求。其实，服务器可以预期到客户端请求网页后，很可能会再请求静态资源，所以就主动把这些静态资源随着网页一起发给客户端了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2016/08/http.html" target="_blank" rel="noopener">HTTP 协议入门</a></li>
+<li><a href="http://www.open-open.com/solution/view/1455863940495" target="_blank" rel="noopener">http协议和tcp协议的区别是什么</a></li>
 </ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
-<ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
-</ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
-<ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
-</ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
-<ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
-</ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
-<ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
-</ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
 
       
     </div>
@@ -671,7 +595,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/" title="网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路">http://haoweiguang.me/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +608,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/网络协议/" rel="tag"># 网络协议</a>
+          
+            <a href="/tags/理解计算机/" rel="tag"># 理解计算机</a>
+          
+            <a href="/tags/HTTP协议/" rel="tag"># HTTP协议</a>
           
         </div>
       
@@ -697,8 +625,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/07/02/网络协议入门（二）/" rel="next" title="网络协议入门（二）">
+                <i class="fa fa-chevron-left"></i> 网络协议入门（二）
               </a>
             
           </div>
@@ -706,6 +634,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/02/网络协议进阶2——TCP-UDP协议详解/" rel="prev" title="网络协议进阶2——TCP/UDP协议详解">
+                网络协议进阶2——TCP/UDP协议详解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +712,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +745,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +832,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-0-9"><span class="nav-number">1.</span> <span class="nav-text">一、HTTP/0.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、HTTP-1-0"><span class="nav-number">2.</span> <span class="nav-text">二、HTTP/1.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-简介"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-请求格式"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 请求格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-回应格式"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 回应格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-Content-Type-字段"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 Content-Type 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-Content-Encoding-字段"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 Content-Encoding 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-缺点"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、HTTP-1-1"><span class="nav-number">3.</span> <span class="nav-text">三、HTTP/1.1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-持久连接"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 持久连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-管道机制"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 管道机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Content-Length-字段"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Content-Length 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-分块传输编码"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 分块传输编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-其他功能"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 其他功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-缺点"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、SPDY-协议"><span class="nav-number">4.</span> <span class="nav-text">四、SPDY 协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、HTTP-2"><span class="nav-number">5.</span> <span class="nav-text">五、HTTP/2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-二进制协议"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 二进制协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-多工"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 多工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-数据流"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 数据流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-头信息压缩"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 头信息压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-服务器推送"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 服务器推送</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

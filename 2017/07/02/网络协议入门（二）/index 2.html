@@ -115,20 +115,30 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="七、一个小结先对前面的内容，做一个小结。 我们已经知道，网络通信就是交换数据包。电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包，从而实现两台电脑之间的通信。数据包的结构，基本上是下面这样：  发送这个包，需要知道两个地址：  对方的MAC地址 对方的IP地址  有了这两个地址，数据包才能准确送到接收者手中。但是，前面说过，MAC地址有局限性，如果两台电脑不在同一个子网络，就无法知道对方的">
+<meta name="keywords" content="网络协议">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="网络协议入门（二）">
+<meta property="og:url" content="http://haoweiguang.me/2017/07/02/网络协议入门（二）/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="七、一个小结先对前面的内容，做一个小结。 我们已经知道，网络通信就是交换数据包。电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包，从而实现两台电脑之间的通信。数据包的结构，基本上是下面这样：  发送这个包，需要知道两个地址：  对方的MAC地址 对方的IP地址  有了这两个地址，数据包才能准确送到接收者手中。但是，前面说过，MAC地址有局限性，如果两台电脑不在同一个子网络，就无法知道对方的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816280847955.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816281262864.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816281721776.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816282063772.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816283222474.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816284096522.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816286436708.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816287378399.jpg">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14816289059177.jpg">
+<meta property="og:image" content="http://haoweiguang.me/2017/07/02/网络协议入门（二）/media/14816259798684/14816290203170.jpg">
+<meta property="og:image" content="http://haoweiguang.me/2017/07/02/网络协议入门（二）/media/14816259798684/14816290564421.jpg">
+<meta property="og:updated_time" content="2017-07-16T08:39:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="网络协议入门（二）">
+<meta name="twitter:description" content="七、一个小结先对前面的内容，做一个小结。 我们已经知道，网络通信就是交换数据包。电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包，从而实现两台电脑之间的通信。数据包的结构，基本上是下面这样：  发送这个包，需要知道两个地址：  对方的MAC地址 对方的IP地址  有了这两个地址，数据包才能准确送到接收者手中。但是，前面说过，MAC地址有局限性，如果两台电脑不在同一个子网络，就无法知道对方的">
+<meta name="twitter:image" content="http://oo501cyv7.bkt.clouddn.com/14816280847955.jpg">
 
 
 
@@ -137,7 +147,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/07/02/网络协议入门（二）/">
 
 
 
@@ -147,7 +157,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>网络协议入门（二） | 微光的Notes</title>
   
 
 
@@ -358,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/07/02/网络协议入门（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">网络协议入门（二）
               
             
           </h1>
@@ -400,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-07-02 11:04:45" itemprop="dateCreated datePublished" datetime="2017-07-02T11:04:45+08:00">2017-07-02</time>
             
 
             
@@ -418,7 +428,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/理解计算器机/" itemprop="url" rel="index"><span itemprop="name">理解计算器机</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/理解计算器机/网络协议/" itemprop="url" rel="index"><span itemprop="name">网络协议</span></a></span>
 
                 
                 
@@ -433,8 +450,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/07/02/网络协议入门（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/02/网络协议入门（二）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +479,85 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
+        <h2 id="七、一个小结"><a href="#七、一个小结" class="headerlink" title="七、一个小结"></a>七、一个小结</h2><p>先对前面的内容，做一个小结。</p>
+<p>我们已经知道，网络通信就是交换数据包。电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包，从而实现两台电脑之间的通信。数据包的结构，基本上是下面这样：</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816280847955.jpg" alt></p>
+<p>发送这个包，需要知道两个地址：</p>
 <ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
+<li>对方的MAC地址</li>
+<li>对方的IP地址</li>
 </ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
+<p>有了这两个地址，数据包才能准确送到接收者手中。但是，前面说过，MAC地址有局限性，如果两台电脑不在同一个子网络，就无法知道对方的MAC地址，必须通过网关（gateway）转发。</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816281262864.jpg" alt></p>
+<p>上图中，1号电脑要向4号电脑发送一个数据包。它先判断4号电脑是否在同一个子网络，结果发现不是（后文介绍判断方法），于是就把这个数据包发到网关A。网关A通过路由协议，发现4号电脑位于子网络B，又把数据包发给网关B，网关B再转发到4号电脑。</p>
+<p>1号电脑把数据包发到网关A，必须知道网关A的MAC地址。所以，数据包的目标地址，实际上分成两种情况：<br><img src="http://oo501cyv7.bkt.clouddn.com/14816281721776.jpg" alt></p>
+<p>发送数据包之前，电脑必须判断对方是否在同一个子网络，然后选择相应的MAC地址。接下来，我们就来看，实际使用中，这个过程是怎么完成的。</p>
+<h2 id="八、用户的上网设置"><a href="#八、用户的上网设置" class="headerlink" title="八、用户的上网设置"></a>八、用户的上网设置</h2><h3 id="8-1-静态IP地址"><a href="#8-1-静态IP地址" class="headerlink" title="8.1 静态IP地址"></a>8.1 静态IP地址</h3><p>你买了一台新电脑，插上网线，开机，这时电脑能够上网吗？</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816282063772.jpg" alt></p>
+<p>通常你必须做一些设置。有时，管理员（或者ISP）会告诉你下面四个参数，你把它们填入操作系统，计算机就能连上网了：</p>
 <ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
+<li>本机的IP地址</li>
+<li>子网掩码</li>
+<li>网关的IP地址</li>
+<li>DNS的IP地址</li>
 </ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
+<p>下图是Windows系统的设置窗口。</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816283222474.jpg" alt></p>
+<p>这四个参数缺一不可，后文会解释为什么需要知道它们才能上网。由于它们是给定的，计算机每次开机，都会分到同样的IP地址，所以这种情况被称作”静态IP地址上网”。</p>
+<p>但是，这样的设置很专业，普通用户望而生畏，而且如果一台电脑的IP地址保持不变，其他电脑就不能使用这个地址，不够灵活。出于这两个原因，大多数用户使用”动态IP地址上网”。</p>
+<h3 id="8-2-动态IP地址"><a href="#8-2-动态IP地址" class="headerlink" title="8.2 动态IP地址"></a>8.2 动态IP地址</h3><p>所谓”动态IP地址”，指计算机开机后，会自动分配到一个IP地址，不用人为设定。它使用的协议叫做DHCP协议。</p>
+<p>这个协议规定，每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做”DHCP服务器”。新的计算机加入网络，必须向”DHCP服务器”发送一个”DHCP请求”数据包，申请IP地址和相关的网络参数。</p>
+<p>前面说过，如果两台计算机在同一个子网络，必须知道对方的MAC地址和IP地址，才能发送数据包。但是，新加入的计算机不知道这两个地址，怎么发送数据包呢？</p>
+<p>DHCP协议做了一些巧妙的规定。</p>
+<h3 id="8-3-DHCP协议"><a href="#8-3-DHCP协议" class="headerlink" title="8.3 DHCP协议"></a>8.3 DHCP协议</h3><p>首先，它是一种应用层协议，建立在UDP协议之上，所以整个数据包是这样的：</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816284096522.jpg" alt></p>
+<p>   （1）最前面的”以太网标头”，设置发出方（本机）的MAC地址和接收方（DHCP服务器）的MAC地址。前者就是本机网卡的MAC地址，后者这时不知道，就填入一个广播地址：FF-FF-FF-FF-FF-FF。</p>
+<p>  （2）后面的”IP标头”，设置发出方的IP地址和接收方的IP地址。这时，对于这两者，本机都不知道。于是，发出方的IP地址就设为0.0.0.0，接收方的IP地址设为255.255.255.255。</p>
+<p>　（3）最后的”UDP标头”，设置发出方的端口和接收方的端口。这一部分是DHCP协议规定好的，发出方是68端口，接收方是67端口。<br>　<br>　这个数据包构造完成后，就可以发出了。以太网是广播发送，同一个子网络的每台计算机都收到了这个包。因为接收方的MAC地址是FF-FF-FF-FF-FF-FF，看不出是发给谁的，所以每台收到这个包的计算机，还必须分析这个包的IP地址，才能确定是不是发给自己的。当看到发出方IP地址是0.0.0.0，接收方是255.255.255.255，于是DHCP服务器知道”这个包是发给我的”，而其他计算机就可以丢弃这个包。<br>　<br>接下来，DHCP服务器读出这个包的数据内容，分配好IP地址，发送回去一个”DHCP响应”数据包。这个响应包的结构也是类似的，以太网标头的MAC地址是双方的网卡地址，IP标头的IP地址是DHCP服务器的IP地址（发出方）和255.255.255.255（接收方），UDP标头的端口是67（发出方）和68（接收方），分配给请求端的IP地址和本网络的具体参数则包含在Data部分。</p>
+<p>新加入的计算机收到这个响应包，于是就知道了自己的IP地址、子网掩码、网关地址、DNS服务器等等参数。</p>
+<h3 id="8-4-上网设置：小结"><a href="#8-4-上网设置：小结" class="headerlink" title="8.4 上网设置：小结"></a>8.4 上网设置：小结</h3><p>这个部分，需要记住的就是一点：不管是”静态IP地址”还是”动态IP地址”，电脑上网的首要步骤，是确定四个参数。这四个值很重要，值得重复一遍：</p>
 <ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
+<li>本机的IP地址</li>
+<li>子网掩码</li>
+<li>网关的IP地址</li>
+<li>DNS的IP地址</li>
 </ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
+<p>有了这几个数值，电脑就可以上网”冲浪”了。接下来，我们来看一个实例，当用户访问网页的时候，互联网协议是怎么运作的。</p>
+<h2 id="九、一个实例：访问网页"><a href="#九、一个实例：访问网页" class="headerlink" title="九、一个实例：访问网页"></a>九、一个实例：访问网页</h2><h3 id="9-1-本机参数"><a href="#9-1-本机参数" class="headerlink" title="9.1 本机参数"></a>9.1 本机参数</h3><p>我们假定，经过上一节的步骤，用户设置好了自己的网络参数：</p>
 <ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
+<li>本机的IP地址：192.168.1.100</li>
+<li>子网掩码：255.255.255.0</li>
+<li>网关的IP地址：192.168.1.1</li>
+<li>DNS的IP地址：8.8.8.8</li>
 </ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
+<p>然后他打开浏览器，想要访问Google，在地址栏输入了网址：www.google.com。</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816286436708.jpg" alt></p>
+<p>这意味着，浏览器要向Google发送一个网页请求的数据包。</p>
+<h3 id="9-2-DNS协议"><a href="#9-2-DNS协议" class="headerlink" title="9.2 DNS协议"></a>9.2 DNS协议</h3><p>我们知道，发送数据包，必须要知道对方的IP地址。但是，现在，我们只知道网址www.google.com，不知道它的IP地址。</p>
+<p><a href="http://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="noopener">DNS协议</a>可以帮助我们，将这个网址转换成IP地址。已知DNS服务器为8.8.8.8，于是我们向这个地址发送一个DNS数据包（53端口）。</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816287378399.jpg" alt></p>
+<p>然后，DNS服务器做出响应，告诉我们Google的IP地址是172.194.72.105。于是，我们知道了对方的IP地址。</p>
+<h3 id="9-3-子网掩码"><a href="#9-3-子网掩码" class="headerlink" title="9.3 子网掩码"></a>9.3 子网掩码</h3><p>接下来，我们要判断，这个IP地址是不是在同一个子网络，这就要用到子网掩码。</p>
+<p>已知子网掩码是255.255.255.0，本机用它对自己的IP地址192.168.1.100，做一个二进制的AND运算（两个数位都为1，结果为1，否则为0），计算结果为192.168.1.0；然后对Google的IP地址172.194.72.105也做一个AND运算，计算结果为172.194.72.0。这两个结果不相等，所以结论是，Google与本机不在同一个子网络。</p>
+<p>因此，我们要向Google发送数据包，必须通过网关192.168.1.1转发，也就是说，接收方的MAC地址将是网关的MAC地址。</p>
+<h3 id="9-4-应用层协议"><a href="#9-4-应用层协议" class="headerlink" title="9.4 应用层协议"></a>9.4 应用层协议</h3><p>浏览网页用的是HTTP协议，它的整个数据包构造是这样的：</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14816289059177.jpg" alt></p>
+<p>HTTP部分的内容，类似于下面这样：</p>
+<p>```<br>　　GET / HTTP/1.1<br>　　Host: www.google.com<br>　　Connection: keep-alive<br>　　User-Agent: Mozilla/5.0 (Windows NT 6.1) ……<br>　　Accept: text/html,application/xhtml+xml,application/xml;q=0.9,<em>/</em>;q=0.8<br>　　Accept-Encoding: gzip,deflate,sdch<br>　　Accept-Language: zh-CN,zh;q=0.8<br>　　Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3<br>　　Cookie: … …</p>
+<p>```　<br>　<br>我们假定这个部分的长度为4960字节，它会被嵌在TCP数据包之中。</p>
+<h3 id="9-5-TCP协议"><a href="#9-5-TCP协议" class="headerlink" title="9.5 TCP协议"></a>9.5 TCP协议</h3><p>TCP数据包需要设置端口，接收方（Google）的HTTP端口默认是80，发送方（本机）的端口是一个随机生成的1024-65535之间的整数，假定为51775。</p>
+<p>TCP数据包的标头长度为20字节，加上嵌入HTTP的数据包，总长度变为4980字节。</p>
+<h3 id="9-6-IP协议"><a href="#9-6-IP协议" class="headerlink" title="9.6 IP协议"></a>9.6 IP协议</h3><p>然后，TCP数据包再嵌入IP数据包。IP数据包需要设置双方的IP地址，这是已知的，发送方是192.168.1.100（本机），接收方是172.194.72.105（Google）。</p>
+<p>IP数据包的标头长度为20字节，加上嵌入的TCP数据包，总长度变为5000字节。</p>
+<h3 id="9-7-以太网协议"><a href="#9-7-以太网协议" class="headerlink" title="9.7 以太网协议"></a>9.7 以太网协议</h3><p>最后，IP数据包嵌入以太网数据包。以太网数据包需要设置双方的MAC地址，发送方为本机的网卡MAC地址，接收方为网关192.168.1.1的MAC地址（通过ARP协议得到）。</p>
+<p>以太网数据包的数据部分，最大长度为1500字节，而现在的IP数据包长度为5000字节。因此，IP数据包必须分割成四个包。因为每个包都有自己的IP标头（20字节），所以四个包的IP数据包的长度分别为1500、1500、1500、560。</p>
+<p><img src="media/14816259798684/14816290203170.jpg" alt></p>
+<h3 id="9-8-服务器端响应"><a href="#9-8-服务器端响应" class="headerlink" title="9.8 服务器端响应"></a>9.8 服务器端响应</h3><p>经过多个网关的转发，Google的服务器172.194.72.105，收到了这四个以太网数据包。</p>
+<p>根据IP标头的序号，Google将四个包拼起来，取出完整的TCP数据包，然后读出里面的”HTTP请求”，接着做出”HTTP响应”，再用TCP协议发回来。</p>
+<p>本机收到HTTP响应以后，就可以将网页显示出来，完成一次网络通信。</p>
+<p><img src="media/14816259798684/14816290564421.jpg" alt></p>
+<p>这个例子就到此为止，虽然经过了简化，但它大致上反映了互联网协议的整个通信过程。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html" target="_blank" rel="noopener">互联网协议入门（二）</a></p>
 
       
     </div>
@@ -671,7 +603,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/07/02/网络协议入门（二）/" title="网络协议入门（二）">http://haoweiguang.me/2017/07/02/网络协议入门（二）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +616,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/网络协议/" rel="tag"># 网络协议</a>
           
         </div>
       
@@ -697,8 +629,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/07/02/网络协议入门（一）/" rel="next" title="网络协议入门（一）">
+                <i class="fa fa-chevron-left"></i> 网络协议入门（一）
               </a>
             
           </div>
@@ -706,6 +638,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/02/网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路/" rel="prev" title="网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路">
+                网络协议进阶1——HTTP协议入门之HTTP协议的历史演变和设计思路 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +716,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +749,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +836,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +893,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#七、一个小结"><span class="nav-number">1.</span> <span class="nav-text">七、一个小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、用户的上网设置"><span class="nav-number">2.</span> <span class="nav-text">八、用户的上网设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-静态IP地址"><span class="nav-number">2.1.</span> <span class="nav-text">8.1 静态IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-动态IP地址"><span class="nav-number">2.2.</span> <span class="nav-text">8.2 动态IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-DHCP协议"><span class="nav-number">2.3.</span> <span class="nav-text">8.3 DHCP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-上网设置：小结"><span class="nav-number">2.4.</span> <span class="nav-text">8.4 上网设置：小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、一个实例：访问网页"><span class="nav-number">3.</span> <span class="nav-text">九、一个实例：访问网页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-本机参数"><span class="nav-number">3.1.</span> <span class="nav-text">9.1 本机参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-DNS协议"><span class="nav-number">3.2.</span> <span class="nav-text">9.2 DNS协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-子网掩码"><span class="nav-number">3.3.</span> <span class="nav-text">9.3 子网掩码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-应用层协议"><span class="nav-number">3.4.</span> <span class="nav-text">9.4 应用层协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-TCP协议"><span class="nav-number">3.5.</span> <span class="nav-text">9.5 TCP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-IP协议"><span class="nav-number">3.6.</span> <span class="nav-text">9.6 IP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-7-以太网协议"><span class="nav-number">3.7.</span> <span class="nav-text">9.7 以太网协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-8-服务器端响应"><span class="nav-number">3.8.</span> <span class="nav-text">9.8 服务器端响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

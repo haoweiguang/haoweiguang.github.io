@@ -115,20 +115,18 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="什么是反射？JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制. 白话简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。 程序中一般的对象的类型都是在编译期就确定下来的，而Java反射机制可以动态地创建对象并调用其属性">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="java反射基础知识">
+<meta property="og:url" content="http://haoweiguang.me/2017/07/01/java反射基础知识/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="什么是反射？JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制. 白话简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。 程序中一般的对象的类型都是在编译期就确定下来的，而Java反射机制可以动态地创建对象并调用其属性">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:updated_time" content="2017-07-02T03:00:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="java反射基础知识">
+<meta name="twitter:description" content="什么是反射？JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制. 白话简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。 程序中一般的对象的类型都是在编译期就确定下来的，而Java反射机制可以动态地创建对象并调用其属性">
 
 
 
@@ -137,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/07/01/java反射基础知识/">
 
 
 
@@ -147,7 +145,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>java反射基础知识 | 微光的Notes</title>
   
 
 
@@ -358,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/07/01/java反射基础知识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +373,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">java反射基础知识
               
             
           </h1>
@@ -400,30 +398,12 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-07-01 14:50:46" itemprop="dateCreated datePublished" datetime="2017-07-01T14:50:46+08:00">2017-07-01</time>
             
 
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -433,8 +413,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/07/01/java反射基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/01/java反射基础知识/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +442,62 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
+        <h2 id="什么是反射？"><a href="#什么是反射？" class="headerlink" title="什么是反射？"></a>什么是反射？</h2><p><strong>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性</strong>；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制.</p>
+<p>白话<br>简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。</p>
+<p>程序中一般的对象的类型都是在编译期就确定下来的，而Java反射机制可以动态地创建对象并调用其属性，这样的对象的类型在编译期是未知的。所以我们可以通过反射机制直接创建对象，即使这个对象的类型在编译期是未知的。</p>
+<p>反射的核心是JVM在运行时才动态加载类或调用方法/访问属性，它不需要事先（写代码的时候或编译期）知道运行对象是谁。</p>
+<p>Java反射框架主要提供以下功能：</p>
+<p>1.在运行时判断任意一个对象所属的类；<br>2.在运行时构造任意一个类的对象；<br>3.在运行时判断任意一个类所具有的成员变量和方法（通过反射甚至可以调用private方法）；<br>4.在运行时调用任意一个对象的方法</p>
+<p><strong>==重点：是运行时而不是编译时==</strong></p>
+<h2 id="有什么用处？"><a href="#有什么用处？" class="headerlink" title="有什么用处？"></a>有什么用处？</h2><p>==反射最重要的用途就是开发各种通用框架。具有强大的解耦性==</p>
+<p>JUnit的@Test和Spring的@Controller和@RequestMapping是很好的例子。</p>
+<p>当我们在使用IDE(如Eclipse，IDEA)时，当我们输入一个对象或类并想调用它的属性或方法时，一按点号，编译器就会自动列出它的属性或方法，这里就会用到反射。</p>
+<p>很多框架（比如Spring）都是配置化的（比如通过XML文件配置JavaBean,Action之类的），为了保证框架的通用性，它们可能需要根据配置文件加载不同的对象或类，调用不同的方法，这个时候就必须用到反射——运行时动态加载需要加载的对象。</p>
+<p>举一个例子，在运用Struts 2框架的开发中我们一般会在struts.xml里去配置Action，比如：</p>
+<action name="login" class="org.ScZyhSoft.test.action.SimpleLoginAction" method="execute"><br>           <result>/shop/shop-index.jsp</result><br>           <result name="error">login.jsp</result><br>  </action>
+
+<p>配置文件与Action建立了一种映射关系，当View层发出请求时，请求会被StrutsPrepareAndExecuteFilter拦截，然后StrutsPrepareAndExecuteFilter会去动态地创建Action实例。<br>——比如我们请求login.action，那么StrutsPrepareAndExecuteFilter就会去解析struts.xml文件，检索action中name为login的Action，并根据class属性创建SimpleLoginAction实例，并用invoke方法来调用execute方法，这个过程离不开反射。<br>对与框架开发人员来说，反射虽小但作用非常大，它是各种容器实现的核心。而对于一般的开发者来说，不深入框架开发则用反射用的就会少一点，不过了解一下框架的底层机制有助于丰富自己的编程思想，也是很有益的。</p>
+<h2 id="怎么使用？"><a href="#怎么使用？" class="headerlink" title="怎么使用？"></a>怎么使用？</h2><p>JAVA的反射你一定要知道四个类:</p>
+<p>Class，Constructor，Field，Method;<br>Class 代表类的对象<br>Constructor 代表类的构造器对象<br>Field 代表了类的成员变量<br>Method 代表了类的方法对象</p>
+<p>获得Class对象</p>
+<p>方法有三种<br>(1)使用Class类的forName静态方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static Class&lt;?&gt; forName(String className)</span><br><span class="line">Class c1=Class.forName(&quot;me.light.Person&quot;);</span><br></pre></td></tr></table></figure>
+<p>(2)直接获取某一个对象的class，比如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; klass = int.class;</span><br><span class="line">Class&lt;?&gt; classInt = Integer.TYPE;</span><br><span class="line">Class c2=me.light.Person.class;</span><br></pre></td></tr></table></figure>
+<p>(3)调用某个对象的getClass()方法,比如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder str = new StringBuilder(&quot;123&quot;);</span><br><span class="line">Class&lt;?&gt; klass = str.getClass();</span><br><span class="line">Class c3=person.getClass();</span><br></pre></td></tr></table></figure>
+<p>2、判断是否为某个类的实例</p>
+<p>一般地，我们用instanceof关键字来判断是否为某个类的实例。同时我们也可以借助反射中Class对象的<code>isInstance()</code>方法来判断是否为某个类的实例，它是一个Native方法：</p>
+<p><code>public native boolean isInstance(Object obj);</code></p>
+<p>3、创建实例</p>
+<p>通过反射来生成对象主要有两种方式。</p>
+<p>（1）使用Class对象的<code>newInstance()</code>方法来创建Class对象对应类的实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; c = String.class;</span><br><span class="line">Object str = c.newInstance();</span><br></pre></td></tr></table></figure>
+<p>（2）先通过Class对象获取指定的Constructor对象，再调用Constructor对象的newInstance()方法来创建实例。这种方法可以用指定的构造器构造类的实例。</p>
+<p>//获取String所对应的Class对象<br><code>Class&lt;?&gt; c = String.class;</code><br>//获取String类带一个String参数的构造器<br><code>Constructor constructor = c.getConstructor(String.class);</code><br>//根据构造器创建实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object obj = constructor.newInstance(&quot;23333&quot;);</span><br><span class="line">System.out.println(obj);</span><br></pre></td></tr></table></figure>
+<p>4、获取方法</p>
+<p>获取某个Class对象的方法集合，主要有以下几个方法：</p>
+<p>4.1 <code>getDeclaredMethods()</code>方法返回类或接口声明的所有方法，包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。<br><code>public Method[] getDeclaredMethods() throws SecurityException</code></p>
+<p>4.2 <code>getMethods()</code>方法返回某个类的所有公用（public）方法，包括其继承类的公用方法。<br><code>public Method[] getMethods() throws SecurityException</code></p>
+<p>4.3 <code>getMethod()</code>方法返回一个特定的方法，其中第一个参数为方法名称，后面的参数为方法的参数对应Class的对象<br><code>public Method getMethod(String name, Class&lt;?&gt;... parameterTypes)</code></p>
+<p>通过getMethods()获取的方法可以获取到父类的方法,比如java.lang.Object下定义的各个方法。</p>
+<p>5、获取构造器信息<br>获取类构造器的用法与上述获取方法的用法类似。主要是通过Class类的getConstructor方法得到Constructor类的一个实例，而Constructor类有一个newInstance方法可以创建一个对象实例:</p>
+<p><code>public T newInstance(Object ... initargs)</code></p>
+<p>此方法可以根据传入的参数来调用对应的Constructor创建对象实例~</p>
+<p>6、获取类的成员变量（字段）信息<br>主要是这几个方法，在此不再赘述：<br>getFiled: 访问公有的成员变量<br>getDeclaredField：所有已声明的成员变量。但不能得到其父类的成员变量<br>getFileds和getDeclaredFields用法同上（参照Method）</p>
+<p>7、调用方法<br>当我们从类中获取了一个方法后，我们就可以用invoke()方法来调用这个方法。invoke方法的原型为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public Object invoke(Object obj, Object... args)</span><br><span class="line">        throws IllegalAccessException, IllegalArgumentException,</span><br><span class="line">           InvocationTargetException</span><br></pre></td></tr></table></figure>
+<p>下面是一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class test1 &#123;</span><br><span class="line">    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException &#123;</span><br><span class="line">        Class&lt;?&gt; klass = methodClass.class;</span><br><span class="line">        //创建methodClass的实例</span><br><span class="line">        Object obj = klass.newInstance();</span><br><span class="line">        //获取methodClass类的add方法</span><br><span class="line">        Method method = klass.getMethod(&quot;add&quot;,int.class,int.class);</span><br><span class="line">        //调用method对应的方法 =&gt; add(1,4)</span><br><span class="line">        Object result = method.invoke(obj,1,4);</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class methodClass &#123;</span><br><span class="line">    public final int fuck = 3;</span><br><span class="line">    public int add(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">    public int sub(int a,int b) &#123;</span><br><span class="line">        return a+b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于invoke()方法的详解，后面我会专门写一篇文章来深入解析invoke的过程。</p>
+<p>一些注意事项</p>
+<p>由于反射会额外消耗一定的系统资源，因此如果不需要动态地创建一个对象，那么就不需要用反射。<br>另外，反射调用方法时可以忽略权限检查，因此可能会破坏封装性而导致安全问题。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.sczyh30.com/posts/Java/java-reflection-1/#%E4%B8%80%E3%80%81%E5%9B%9E%E9%A1%BE%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%B0%84%EF%BC%9F" target="_blank" rel="noopener">深入解析Java反射（1） - 基础</a></li>
+<li><a href="https://juejin.im/post/58c93ea144d9040069eb72ba" target="_blank" rel="noopener">开发笔记之你弄不懂的JAVA反射机制</a></li>
+<li><a href="https://juejin.im/post/5906f77461ff4b0066cb88f7" target="_blank" rel="noopener">Java 基础与提高干货系列—Java 反射机制 | 掘金技术征文</a></li>
 </ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
-<ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
-</ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
-<ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
-</ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
-<ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
-</ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
-<ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
-</ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
 
       
     </div>
@@ -671,7 +543,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/07/01/java反射基础知识/" title="java反射基础知识">http://haoweiguang.me/2017/07/01/java反射基础知识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +556,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
       
@@ -697,8 +569,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/05/08/Mac下shadowsocks全自动地代理翻墙/" rel="next" title="Mac下shadowsocks全自动地代理翻墙">
+                <i class="fa fa-chevron-left"></i> Mac下shadowsocks全自动地代理翻墙
               </a>
             
           </div>
@@ -706,6 +578,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/02/网络协议入门（一）/" rel="prev" title="网络协议入门（一）">
+                网络协议入门（一） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +656,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +689,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +776,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +833,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是反射？"><span class="nav-number">1.</span> <span class="nav-text">什么是反射？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有什么用处？"><span class="nav-number">2.</span> <span class="nav-text">有什么用处？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么使用？"><span class="nav-number">3.</span> <span class="nav-text">怎么使用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

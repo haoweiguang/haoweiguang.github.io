@@ -115,20 +115,20 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="名词解释：  web.xml = 部署描述符（Deployment Descriptor ） 容器 = Servlet Container/Engine  生命周期主要有四个过程：init-&amp;gt;service-&amp;gt;doGet/doPost-&amp;gt;destory 第一步：加载和实例化  Servlet容器启动时自动装载某些Servlet，实现它只需要在web.XML文件中的&amp;lt;Serv">
+<meta name="keywords" content="java,servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="Servlet生命周期和工作原理">
+<meta property="og:url" content="http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="名词解释：  web.xml = 部署描述符（Deployment Descriptor ） 容器 = Servlet Container/Engine  生命周期主要有四个过程：init-&amp;gt;service-&amp;gt;doGet/doPost-&amp;gt;destory 第一步：加载和实例化  Servlet容器启动时自动装载某些Servlet，实现它只需要在web.XML文件中的&amp;lt;Serv">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/14995681398150.png">
+<meta property="og:updated_time" content="2017-07-09T03:38:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="Servlet生命周期和工作原理">
+<meta name="twitter:description" content="名词解释：  web.xml = 部署描述符（Deployment Descriptor ） 容器 = Servlet Container/Engine  生命周期主要有四个过程：init-&amp;gt;service-&amp;gt;doGet/doPost-&amp;gt;destory 第一步：加载和实例化  Servlet容器启动时自动装载某些Servlet，实现它只需要在web.XML文件中的&amp;lt;Serv">
+<meta name="twitter:image" content="http://oo501cyv7.bkt.clouddn.com/14995681398150.png">
 
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/">
 
 
 
@@ -147,7 +147,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>Servlet生命周期和工作原理 | 微光的Notes</title>
   
 
 
@@ -358,7 +358,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">Servlet生命周期和工作原理
               
             
           </h1>
@@ -400,30 +400,12 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-07-09 11:36:11" itemprop="dateCreated datePublished" datetime="2017-07-09T11:36:11+08:00">2017-07-09</time>
             
 
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -433,8 +415,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/07/09/Servlet生命周期和工作原理/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/09/Servlet生命周期和工作原理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +444,73 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
+        <p>名词解释：</p>
 <ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
+<li>web.xml = 部署描述符（Deployment Descriptor ）</li>
+<li>容器 = Servlet Container/Engine</li>
 </ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
-<ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
-</ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
-<ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
-</ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
-<ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
-</ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>主要有四个过程：init-&gt;service-&gt;doGet/doPost-&gt;destory</p>
+<p>第一步：加载和实例化</p>
+<ol>
+<li>Servlet容器启动时自动装载某些Servlet，实现它只需要在web.XML文件中的<code>&lt;Servlet&gt;&lt;/Servlet&gt;</code>之间添加如下代码：<br><code>&lt;loadon-startup&gt;1&lt;/loadon-startup&gt;</code></li>
+<li>在Servlet容器启动后，客户首次向Servlet发送请求</li>
+<li>Servlet类文件被更新后，重新装载Servlet</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
+<p>Servlet被装载后，Servlet容器创建一个Servlet实例并且调用Servlet的init()方法进行初始化。在Servlet的整个生命周期内，init()方法只被调用一次。</p>
+<p>第二步：初始化 </p>
+<p>实例化后会立马进行初始化，并传递实现ServletConfig接口的对象。也就是执行init方法。在init（）方法中，Servlet可以部署描述符中读取配置参数，或者执行任何其他一次性活动。在Servlet的整个生命周期类，init（）方法只被调用一次。</p>
+<p>第三步：请求处理</p>
+<p>初始化后，Servlet就可以接受请求了。<br>基本方式是执行Servlet接口中的service方法。并把请求和响应对象作为参数传递。当并行的请求到来时，多个service（）方法能够同时运行在独立的线程中。<br>service()方法检查 HTTP 请求类型（GET、POST、PUT、DELETE 等），并在适当的时候调用 doGet()、doPost()、doPut()，doDelete() 等方法。<br>当然，API也提供了HttpServlet抽象类，其中有doGet、doPost等特殊方法。<br>注意：任意的容器按照规范必须实现上述几种方法，所以你的代码写在这几个方法中都可以。</p>
+<p>第四步：终止服务</p>
+<p>容器会在合适的时候销毁某个Servlet对象，这个策略取决于容器的开发者/商。<br>在容器关闭的时候Servlet对象一定会被销毁。<br>当1或2发生时，也就是Servlet对象被销毁时，destroy方法会被调用</p>
+<p><img src="http://oo501cyv7.bkt.clouddn.com/14995681398150.png" alt></p>
+<p>PS:<strong>Servlet的生命（周期）是由容器管理的，换句话说，Servlet程序员不能用代码控制其生命。</strong></p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>首先简单解释一下Servlet接收和响应客户请求的过程，首先客户发送一个请求，Servlet是调用service()方法对请求进行响应的，通过源代码可见，service()方法中对请求的方式进行了匹配，选择调用doGet,doPost等这些方法，然后再进入对应的方法中调用逻辑层的方法，实现对客户的响应。在Servlet接口和GenericServlet中是没有doGet,doPost等等这些方法的，HttpServlet中定义了这些方法，但是都是返回error信息，所以，我们每次定义一个Servlet的时候，都必须实现doGet或doPost等这些方法。</p>
+<p>每一个自定义的Servlet都必须实现Servlet的接口，Servlet接口中定义了五个方法，其中比较重要的三个方法涉及到Servlet的生命周期，分别是上文提到的init(),service(),destroy()方法。GenericServlet是一个通用的，不特定于任何协议的Servlet,它实现了Servlet接口。而HttpServlet继承于GenericServlet，因此HttpServlet也实现了Servlet接口。所以我们定义Servlet的时候只需要继承HttpServlet即可。</p>
+<p>Servlet接口和GenericServlet是不特定于任何协议的，而HttpServlet是特定于HTTP协议的类，所以HttpServlet中实现了service()方法，并将请求ServletRequest,ServletResponse强转为HttpRequest和HttpResponse。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public void service(ServletRequest req,ServletResponse res) </span><br><span class="line">  throws ServletException,IOException</span><br><span class="line">&#123;</span><br><span class="line">      HttpRequest request;</span><br><span class="line">      HttpResponse response;</span><br><span class="line"> </span><br><span class="line">     try</span><br><span class="line">     &#123;</span><br><span class="line">         req = (HttpRequest)request;</span><br><span class="line">         res = (HttpResponse)response;</span><br><span class="line">      &#125;catch(ClassCastException e)</span><br><span class="line">      &#123;</span><br><span class="line">         throw new ServletException(&quot;non-HTTP request response&quot;); </span><br><span class="line">      &#125;</span><br><span class="line">      service(request,response);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码的最后调用了HTTPServlet自己的service(request,response)方法，然后根据请求去调用对应的doXXX方法，因为HttpServlet中的doXXX方法都是返回错误信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">protected void doGet(HttpServletRequest res,HttpServletResponse resp)</span><br><span class="line">  throws ServletException,IOException</span><br><span class="line">&#123;</span><br><span class="line">   String protocol = req.getProtocol();</span><br><span class="line">   String msg = IStrings.getString(&quot;http.method_get_not_supported&quot;);</span><br><span class="line">   if(protocol.equals(&quot;1.1&quot;))</span><br><span class="line">   &#123;</span><br><span class="line">      resp.sendError(HttpServletResponse.SC.METHOD.NOT.ALLOWED,msg);</span><br><span class="line">    &#125;</span><br><span class="line">   esle</span><br><span class="line">    &#123;</span><br><span class="line">      resp.sendError(HttpServletResponse.SC_BAD_REQUEST,msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以需要我们在自定义的Servlet中override这些方法！</p>
+<h3 id="Servlet响应请求阶段"><a href="#Servlet响应请求阶段" class="headerlink" title="Servlet响应请求阶段"></a>Servlet响应请求阶段</h3><p>对于用户到达Servlet的请求，Servlet容器会创建特定于这个请求的ServletRequest对象和ServletResponse对象，然后调用Servlet的service方法。service方法从ServletRequest对象获得客户请求信息，处理该请求，并通过ServletResponse对象向客户返回响应信息。</p>
+<p>对于Tomcat来说，它会将传递过来的参数放在一个Hashtable中，该Hashtable的定义是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private Hashtable&lt;String String[]&gt; paramHashStringArray = new Hashtable&lt;String String[]&gt;();</span><br></pre></td></tr></table></figure>
+<p>这是一个String–&gt;String[]的键值映射。</p>
+<p>HashMap线程不安全的，Hashtable线程安全。</p>
+<h3 id="Servlet终止阶段"><a href="#Servlet终止阶段" class="headerlink" title="Servlet终止阶段"></a>Servlet终止阶段</h3><p>当WEB应用被终止，或Servlet容器终止运行，或Servlet容器重新装载Servlet新实例时，Servlet容器会先调用Servlet的destroy()方法，在destroy()方法中可以释放掉Servlet所占用的资源。</p>
+<h3 id="Servlet何时被创建"><a href="#Servlet何时被创建" class="headerlink" title="Servlet何时被创建"></a>Servlet何时被创建</h3><ol>
+<li><p>默认情况下，当WEB客户第一次请求访问某个Servlet的时候，WEB容器将创建这个Servlet的实例。</p>
+</li>
+<li><p>当web.xml文件中如果<servlet>元素中指定了<load-on-startup>子元素时，Servlet容器在启动web服务器时，将按照顺序创建并初始化Servlet对象。</load-on-startup></servlet></p>
+</li>
+</ol>
+<p>注意：在web.xml文件中，某些Servlet只有<serlvet>元素，没有<servlet-mapping>元素，这样我们无法通过url的方式访问这些Servlet，这种Servlet通常会在<servlet>元素中配置一个<load-on-startup>子元素，让容器在启动的时候自动加载这些Servlet并调用init()方法，完成一些全局性的初始化工作。</load-on-startup></servlet></servlet-mapping></serlvet></p>
+<h3 id="Web应用何时被启动"><a href="#Web应用何时被启动" class="headerlink" title="Web应用何时被启动"></a>Web应用何时被启动</h3><ol>
+<li>当Servlet容器启动的时候，所有的Web应用都会被启动</li>
+<li>控制器启动web应用</li>
+</ol>
+<h2 id="JSP运行原理"><a href="#JSP运行原理" class="headerlink" title="JSP运行原理"></a>JSP运行原理</h2><p>当Web服务器上的JSP页面第一次被请求执行时，JSP引擎先将JSP页面文件转译成一个Java文件，即Servlet，Java Servlet是基于服务器端编程的API，用Java Servlet编写的Java程序称为servlet，servlet通过HTML与客户交互。服务器将前面转译成的Java文件编译成字节码文件，再执行这个字节码文件来响应客户的请求。当这个JSP页面再次被请求时，只要该JSP文件没有被改动，JSP引擎就直接调用已装载的Servlet。</p>
+<p>JSP工作原理<br>所有JSP页面，在执行的时候都会被服务器端的JSP引擎转换为Servelet（.java），然后又由JSP引擎调用Java编译器，将Servelet（.java）编译为Class文件（.class），并由Java虚拟机（JVM）解释执行。下面验证这一点：<br>有一个JSP页面Test.jsp，在浏览器地址栏中输入<a href="http://localhost:8080/Test.jsp" target="_blank" rel="noopener">http://localhost:8080/Test.jsp</a> ,将会出现执行结果。同时在%CATALINA_HOME%/work/Catalina/localhost下多出两个文件：_Test_jsp.java和_Test_jsp.class，他们分别就是Servelet和Class文件</p>
+<h2 id="JSP和servlet的运行原理探讨"><a href="#JSP和servlet的运行原理探讨" class="headerlink" title="JSP和servlet的运行原理探讨"></a>JSP和servlet的运行原理探讨</h2><p>&lt;%page language=”java”%&gt;在服务器端执行.<br>客户端用户填写 HTML 表单，发送请求。将请求发送给 服务器端servlet(tomcat是servlet的容器)。 servlet 将该 HTTP 请求转换成一个 MQSeries 消息，并将其放入一个队列。 后端应用程序处理该消息，然后通过消息队列发回一个应答。 servlet 从队列中检索消息，并将其存放在一个 Java Bean 中。 然后 servlet 调用编译过的 Java Server Page(JSP) 并动态生成结果 HTML 页面。 JSP 从 Java Bean 检索出该页面需要的数据，将其合并到 HTML，然后将结果页面发送给客户端。</p>
+<p>JSP中的html代码和javascrīpt代码不会在服务器端执行，servlet 调用编译过的 Java Server Page(JSP) ，也就是运行由JSP编译成的class文件(运行的代码包括actionBean,formBean,一般的bean 和内嵌在JSP的Java代码).</p>
+<p>一个Web运行程序（网站）可以有多个servlet，一般认为一个action就是一个servlet.</p>
+<p>所谓Servlet是指运行在服务器端的Java小程序。用于响应客户端的请求。在默认情况下，Servlet采用一种无状态的请求-响应处理方式。Servlet代码的主要作用是为了增强Java服务器端的功能，它运行在服务器端，用于接收并且处理浏览器客户端发出的请求，该请求是通过配置文件web.xml的相关配置进行转发。也就是说Servlet是一个标准的Java类，它符合Java类的一般规则。和一般的Java类不同之处只是在于Servlet可以处理Http请求。</p>
+<ol>
+<li>servlet是持久的。servlet只需Web服务器加载一次,后续又用到这个servlet，就不需要再加载。(所谓加载是指servlet加载进JVM运行)</li>
+<li>servlet是与平台无关的。</li>
+<li>servlet是可扩展的。</li>
+</ol>
+<h2 id="Servlet与JSP的比较"><a href="#Servlet与JSP的比较" class="headerlink" title="Servlet与JSP的比较"></a>Servlet与JSP的比较</h2><ul>
+<li>有许多相似之处，都可以生成动态网页。</li>
+<li>JSP的优点是擅长于网页制作，生成动态页面比较直观，缺点是不容易跟踪与排错。</li>
+<li>Servlet是纯Java语言，擅长于处理流程和业务逻辑，缺点是生成动态网页不直观。</li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="http://blog.csdn.net/u010297957/article/details/51498018" target="_blank" rel="noopener">Servlet的历史与规范</a></li>
+<li><a href="http://www.hollischuang.com/archives/849" target="_blank" rel="noopener">Servlet 3.1规范学习笔记（一）——Servlet生命周期和线程安全性问题</a></li>
+<li><a href="http://www.cnblogs.com/cuiliang/archive/2011/10/21/2220671.html" target="_blank" rel="noopener">Servlet生命周期与工作原理</a></li>
+</ul>
 
       
     </div>
@@ -671,7 +556,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/" title="Servlet生命周期和工作原理">http://haoweiguang.me/2017/07/09/Servlet生命周期和工作原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +569,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/servlet/" rel="tag"># servlet</a>
           
         </div>
       
@@ -697,8 +584,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/07/09/Servlet容器详解/" rel="next" title="Servlet容器详解">
+                <i class="fa fa-chevron-left"></i> Servlet容器详解
               </a>
             
           </div>
@@ -706,6 +593,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/09/Servlet开发实战/" rel="prev" title="Servlet开发实战">
+                Servlet开发实战 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +671,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +704,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +791,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">1.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet响应请求阶段"><span class="nav-number">2.1.</span> <span class="nav-text">Servlet响应请求阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet终止阶段"><span class="nav-number">2.2.</span> <span class="nav-text">Servlet终止阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet何时被创建"><span class="nav-number">2.3.</span> <span class="nav-text">Servlet何时被创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web应用何时被启动"><span class="nav-number">2.4.</span> <span class="nav-text">Web应用何时被启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP运行原理"><span class="nav-number">3.</span> <span class="nav-text">JSP运行原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP和servlet的运行原理探讨"><span class="nav-number">4.</span> <span class="nav-text">JSP和servlet的运行原理探讨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet与JSP的比较"><span class="nav-number">5.</span> <span class="nav-text">Servlet与JSP的比较</span></a></li></ol></div>
             
 
           </div>

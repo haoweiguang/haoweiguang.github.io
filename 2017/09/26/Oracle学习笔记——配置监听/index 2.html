@@ -115,20 +115,20 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="什么是监听如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。 在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，">
+<meta name="keywords" content="oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="Oracle学习笔记——配置监听">
+<meta property="og:url" content="http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="什么是监听如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。 在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:image" content="http://oo501cyv7.bkt.clouddn.com/15064117419478.png">
+<meta property="og:updated_time" content="2017-09-26T07:59:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="Oracle学习笔记——配置监听">
+<meta name="twitter:description" content="什么是监听如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。 在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，">
+<meta name="twitter:image" content="http://oo501cyv7.bkt.clouddn.com/15064117419478.png">
 
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/">
 
 
 
@@ -147,7 +147,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>Oracle学习笔记——配置监听 | 微光的Notes</title>
   
 
 
@@ -358,7 +358,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">Oracle学习笔记——配置监听
               
             
           </h1>
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-09-26 15:58:26" itemprop="dateCreated datePublished" datetime="2017-09-26T15:58:26+08:00">2017-09-26</time>
             
 
             
@@ -418,7 +418,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -433,8 +433,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/09/26/Oracle学习笔记——配置监听/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/09/26/Oracle学习笔记——配置监听/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +462,37 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
-<ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
-</ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
-<ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
-</ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
-<ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
-</ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
-<ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
-</ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
+        <h3 id="什么是监听"><a href="#什么是监听" class="headerlink" title="什么是监听"></a>什么是监听</h3><p>如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。</p>
+<p>在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，独立于数据库运行。它负责对客户端传入的连接请求进行监听，并且对服务器端的连接负荷进行调整。当客户端准备建立一个到服务器端的连接时，监听器接收客户端的连接请求， 然后再将这个客户端连接请求交给服务器进行处理，一旦客户端和服务器建立连接，客户端和服务器以后就直接进行通信，而不再需要监听器的参与，这就好比师傅 领进门，修行靠个人。就如下图所示：<br><img src="http://oo501cyv7.bkt.clouddn.com/15064117419478.png" alt></p>
+<ol>
+<li>客户端向服务器端发出连接请求，监听器监听到客户端的连接请求；</li>
+<li>监听器把客户端的连接请求交给数据库服务器进行处理；</li>
+<li>经过监听器建立连接以后，客户端与服务器端就可以直接进行通信，而不再需要监听器的参与了。<br>以上就是监听器干的活，也就是说，你对数据库服务器的第一次，肯定会给监听器，如果监听器没有配好，你就甭想连数据库了。那么，怎么才能配好监听器呢？主要涉及以下三个文件：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
+<p><strong>listener.ora、sqlnet.ora和tnsnames.ora文件</strong></p>
+<h4 id="listener-ora文件"><a href="#listener-ora文件" class="headerlink" title="listener.ora文件"></a>listener.ora文件</h4><p>打开listener.ora文件看看，贴上一部分有代表性的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#这是一个名为LISTENER1的监听器</span><br><span class="line">#监听的协议是TCP协议</span><br><span class="line">#监听的主机IP是127.0.0.1</span><br><span class="line">#监听的端口是1521端口</span><br><span class="line">LISTENER1 =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">#记录了监听器LISTENER1服务的全局数据库名、数据库路径和数据库实例名</span><br><span class="line">SID_LIST_LISTENER1 =</span><br><span class="line">    (SID_LIST =</span><br><span class="line">        (SID_DESC =</span><br><span class="line">            (GLOBAL_DBNAME = ORCL)</span><br><span class="line">            (ORACLE_HOME = C:\Oracle11g\product\11.2.0\dbhome_1)</span><br><span class="line">            (SID_NAME = ORCL)</span><br><span class="line">        )</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<h4 id="sqlnet-ora文件"><a href="#sqlnet-ora文件" class="headerlink" title="sqlnet.ora文件"></a>sqlnet.ora文件</h4><p>打开sqlnet.ora文件看看，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQLNET.AUTHENTICATION_SERVICES= (NTS)</span><br><span class="line">NAMES.DIRECTORY_PATH= (TNSNAMES, EZCONNECT)</span><br></pre></td></tr></table></figure>
+<p>这个sqlnet.ora文件实际上就是一个配置文件，主要是和接下来说的tnsnames.ora配合使用。</p>
+<h4 id="tnsnames-ora文件"><a href="#tnsnames-ora文件" class="headerlink" title="tnsnames.ora文件"></a>tnsnames.ora文件</h4><p>tnsnames.ora文件存放于客户端机器上，和sqlnet.ora文件配合使用。可以简单的看看tnsnames.ora文件中的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#ORCL是个别名</span><br><span class="line">#这条信息记录了我们使用TCP协议，去连接IP地址为127.0.0.1，端口号为1521的数据库主机上服务名为orcl的数据库</span><br><span class="line">ORCL =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">        (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">        (CONNECT_DATA =</span><br><span class="line">            (SERVER = DEDICATED)</span><br><span class="line">            (SERVICE_NAME = orcl)</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">以后，我们还会配置更多的数据库连接信息，比如我要连接192.168.10.2主机上的数据库，我们只需要在tnsnames.ora中继续追加新的连接信息即可，比如：</span><br><span class="line"></span><br><span class="line">STDB =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">        (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.10.2)(PORT = 1521))</span><br><span class="line">        (CONNECT_DATA =</span><br><span class="line">            (SERVER = DEDICATED)</span><br><span class="line">            (SERVICE_NAME = stdb)</span><br><span class="line">        )</span><br><span class="line">     )</span><br></pre></td></tr></table></figure>
+<h3 id="服务器端配置"><a href="#服务器端配置" class="headerlink" title="服务器端配置"></a>服务器端配置</h3><p>直接编辑listener.ora，就像下面这样，配置一个新的监听器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LISTENER =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">SID_LIST_LISTENER =</span><br><span class="line">    (SID_LIST =</span><br><span class="line">        (SID_DESC =</span><br><span class="line">            (GLOBAL_DBNAME = ORCL)</span><br><span class="line">            (ORACLE_HOME = C:\Oracle11g\product\11.2.0\dbhome_1)</span><br><span class="line">            (SID_NAME = ORCL)</span><br><span class="line">        )</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p>你想在哪个数据库上配置一个新的监听，就修改对应的内容即可。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>启动监听器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl start &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 启动名为LISTENER的监听器</span><br><span class="line">lsnrctl start LISTENER</span><br></pre></td></tr></table></figure>
+<p>当我们不指定监听器的名字时，就默认启动LISTENER监听器；</p>
+<p>关闭监听器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl stop &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 关闭名为LISTENER的监听器</span><br><span class="line">lsnrctl stop LISTENER</span><br></pre></td></tr></table></figure>
+<p>当我们不指定监听器的名字时，就默认关闭LISTENER监听器；</p>
+<p>查看监听器的状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl status &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 查看名为LISTENER的监听器的运行状态</span><br><span class="line">lsnrctl status LISTENER</span><br></pre></td></tr></table></figure>
+<p>当我们不指定监听器的名字时，就默认查看LISTENER监听器的状态。</p>
+<p>测试连通性<br>可以使用工具<code>TNSPING</code></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://www.jellythink.com/archives/985" target="_blank" rel="noopener">Oracle学习笔记——配置监听</a></li>
+</ul>
 
       
     </div>
@@ -671,7 +538,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/" title="Oracle学习笔记——配置监听">http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +551,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/oracle/" rel="tag"># oracle</a>
           
         </div>
       
@@ -697,8 +564,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/09/25/Oracle学习笔记——Linux设置Oracle环境变量/" rel="next" title="Oracle学习笔记——Linux设置Oracle环境变量">
+                <i class="fa fa-chevron-left"></i> Oracle学习笔记——Linux设置Oracle环境变量
               </a>
             
           </div>
@@ -706,6 +573,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/04/2018-02-04/" rel="prev" title="《数字黄金》读书笔记">
+                《数字黄金》读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +651,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +684,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +771,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +828,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是监听"><span class="nav-number">1.</span> <span class="nav-text">什么是监听</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#listener-ora文件"><span class="nav-number">1.1.</span> <span class="nav-text">listener.ora文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sqlnet-ora文件"><span class="nav-number">1.2.</span> <span class="nav-text">sqlnet.ora文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tnsnames-ora文件"><span class="nav-number">1.3.</span> <span class="nav-text">tnsnames.ora文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端配置"><span class="nav-number">2.</span> <span class="nav-text">服务器端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">2.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

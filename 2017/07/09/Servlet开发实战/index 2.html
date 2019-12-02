@@ -115,20 +115,18 @@
 
 
 
-  <meta name="description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="keywords" content="架构">
+  <meta name="description" content="Web框架是开发者在使用某种语言编写Web应用服务端时关于架构的最佳实践。很多Web框架是从实际的Web项目抽取出来的，仅和Web的请求和响应处理有关，形成一个基础，在开发别的应用项目的时候则可以从这个剥离出来的基础做起，让开发者更关注更具体的业务问题，而不是Web的请求和响应的控制。  框架很多，但套路基本类似，帮你隐藏很多关于 HTTP 协议细节内容，专注功能开发。  但对一个初学者来说，过早">
+<meta name="keywords" content="servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RESTful API规范">
-<meta property="og:url" content="http://haoweiguang.me/2019/12/02/RESTful-API规范/index.html">
+<meta property="og:title" content="Servlet开发实战">
+<meta property="og:url" content="http://haoweiguang.me/2017/07/09/Servlet开发实战/index.html">
 <meta property="og:site_name" content="微光的Notes">
-<meta property="og:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
+<meta property="og:description" content="Web框架是开发者在使用某种语言编写Web应用服务端时关于架构的最佳实践。很多Web框架是从实际的Web项目抽取出来的，仅和Web的请求和响应处理有关，形成一个基础，在开发别的应用项目的时候则可以从这个剥离出来的基础做起，让开发者更关注更具体的业务问题，而不是Web的请求和响应的控制。  框架很多，但套路基本类似，帮你隐藏很多关于 HTTP 协议细节内容，专注功能开发。  但对一个初学者来说，过早">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
-<meta property="og:updated_time" content="2019-12-02T12:39:49.083Z">
+<meta property="og:updated_time" content="2019-10-16T06:21:32.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API规范">
-<meta name="twitter:description" content="URIURI规范 不要用大写 单词间使用下划线’_’ 不使用动词，资源要使用名词复数形式，如：users、rooms、tickets 层级大于等于三层，则使用’?’带参数1sers/1/address/2/citys (bad) /citys?users=1&amp;amp;address=2; (good)   避免层级过深的URI过深的导航容易导致url膨胀，不易维护，如 GET /zoos/1/ar">
-<meta name="twitter:image" content="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png">
+<meta name="twitter:title" content="Servlet开发实战">
+<meta name="twitter:description" content="Web框架是开发者在使用某种语言编写Web应用服务端时关于架构的最佳实践。很多Web框架是从实际的Web项目抽取出来的，仅和Web的请求和响应处理有关，形成一个基础，在开发别的应用项目的时候则可以从这个剥离出来的基础做起，让开发者更关注更具体的业务问题，而不是Web的请求和响应的控制。  框架很多，但套路基本类似，帮你隐藏很多关于 HTTP 协议细节内容，专注功能开发。  但对一个初学者来说，过早">
 
 
 
@@ -137,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+  <link rel="canonical" href="http://haoweiguang.me/2017/07/09/Servlet开发实战/">
 
 
 
@@ -147,7 +145,7 @@
   };
 </script>
 
-  <title>RESTful API规范 | 微光的Notes</title>
+  <title>Servlet开发实战 | 微光的Notes</title>
   
 
 
@@ -358,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2019/12/02/RESTful-API规范/">
+    <link itemprop="mainEntityOfPage" href="http://haoweiguang.me/2017/07/09/Servlet开发实战/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Light微光">
@@ -375,7 +373,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RESTful API规范
+          <h1 class="post-title" itemprop="name headline">Servlet开发实战
               
             
           </h1>
@@ -400,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-12-02 15:27:35" itemprop="dateCreated datePublished" datetime="2019-12-02T15:27:35+08:00">2019-12-02</time>
+              <time title="创建时间：2017-07-09 11:36:32" itemprop="dateCreated datePublished" datetime="2017-07-09T11:36:32+08:00">2017-07-09</time>
             
 
             
@@ -418,7 +416,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/restful/" itemprop="url" rel="index"><span itemprop="name">restful</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -433,8 +431,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/12/02/RESTful-API规范/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/02/RESTful-API规范/" itemprop="commentCount"></span>
+                <a href="/2017/07/09/Servlet开发实战/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/09/Servlet开发实战/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,170 +460,59 @@
       
 
       
-        <h2 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h2><h3 id="URI规范"><a href="#URI规范" class="headerlink" title="URI规范"></a>URI规范</h3><ul>
-<li>不要用大写</li>
-<li>单词间使用下划线’_’</li>
-<li>不使用动词，资源要使用名词复数形式，如：users、rooms、tickets</li>
-<li>层级大于等于三层，则使用’?’带参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sers/1/address/2/citys (bad) /citys?users=1&amp;address=2; (good)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="避免层级过深的URI"><a href="#避免层级过深的URI" class="headerlink" title="避免层级过深的URI"></a>避免层级过深的URI</h4><p>过深的导航容易导致url膨胀，不易维护，如 <code>GET /zoos/1/areas/3/animals/4</code>，尽量使用查询参数代替路径中的实体导航，如<code>GET /animals?zoo=1&amp;area=3</code>；</p>
-<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><ul>
-<li>GET：查询资源</li>
-<li>POST：创建资源</li>
-<li>PUT：全量更新资源（提供改变后的完整资源）</li>
-<li>PATCH：局部更新资源（仅提供改变的属性）</li>
-<li>DELETE：删除资源</li>
-</ul>
-<p>下面一些例子</p>
+        <p>Web框架是开发者在使用某种语言编写Web应用服务端时关于架构的最佳实践。很多Web框架是从实际的Web项目抽取出来的，仅和Web的请求和响应处理有关，形成一个基础，在开发别的应用项目的时候则可以从这个剥离出来的基础做起，让开发者更关注更具体的业务问题，而不是Web的请求和响应的控制。 </p>
+<p>框架很多，但套路基本类似，帮你隐藏很多关于 HTTP 协议细节内容，专注功能开发。 </p>
+<p>但对一个初学者来说，过早的接触框架往往是事倍功半！同样一个问题，换一种框架你可能需要从头开始研究。 </p>
+<p>下面是针对初学 Java 开发 Web 过程一些个人见解和思路，高手可略过。</p>
+<p>然后将下面 XML 内容替换 Tomcat 下的 conf/server.xml 文件： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&apos;1.0&apos; encoding=&apos;utf-8&apos;?&gt;</span><br><span class="line">Server&quot;8005&quot;shutdown&quot;SHUTDOWN&quot;</span><br><span class="line">  Service&quot;Catalina&quot;</span><br><span class="line">    Connector&quot;8080&quot;protocol&quot;HTTP/1.1&quot;connectionTimeout&quot;20000&quot;redirectPort&quot;8443&quot;URIEncoding&quot;UTF-8&quot;/&gt;</span><br><span class="line">    Engine&quot;Catalina&quot;defaultHost&quot;localhost&quot;</span><br><span class="line">      &quot;localhost&quot;</span><br><span class="line">    ContextdocBase&quot;D:\WORKDIR\ServletDemo\webapp&quot;reloadable&quot;true&quot;/&gt;</span><br><span class="line">      &lt;/</span><br><span class="line">    &lt;/Engine</span><br><span class="line">  &lt;/Service</span><br><span class="line">&lt;/Server</span><br></pre></td></tr></table></figure>
+<p>再次启动 Tomcat 后在浏览器打开 <a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a> 便可看到 Hello World 的输出信息。</p>
+<h2 id="了解-Servlet-和-Filter"><a href="#了解-Servlet-和-Filter" class="headerlink" title="了解 Servlet 和 Filter"></a>了解 Servlet 和 Filter</h2><p>好了，我已经把环境搭起来了，接下来该干嘛呢？</p>
+<p>前面的步骤为的是搭建一个测试的环境，然后让你了解一个最基本的 Java Web 项目的结构。</p>
+<p>一个最基本的 Java Web 项目所需的 jar 包只需要一个 servlet-api.jar ，这个 jar 包中的类大部分都是接口，还有一些工具类，共有 2 个包，分别是 javax.servlet 和 javax.servlet.http。我把这个jar包放到了 webapp 目录外的一个独立 packages 文件夹里，这是因为所有的 Servlet 容器都带有这个包，你无需再放到Web项目里，我们放到这里只不过是编译的需要，运行是不需要的。如果你硬是把 servlet-api.jar 放到 webapp/WEB-INF/lib 目录下，那么 Tomcat 启动时还会报一个警告信息。</p>
+<p>Java Web 项目还需要一个非常重要的配置文件 web.xml ，在这个项目中已经被我最小化了，只保留有用的信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; </span><br><span class="line">	&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;</span><br><span class="line">&lt;web-app&gt;</span><br><span class="line"></span><br><span class="line">	&lt;servlet&gt;</span><br><span class="line">		&lt;servlet-name&gt;hello_world&lt;/servlet-name&gt;</span><br><span class="line">		&lt;servlet-class&gt;demo.HelloServlet&lt;/servlet-class&gt;</span><br><span class="line">		&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</span><br><span class="line">	&lt;/servlet&gt;</span><br><span class="line"></span><br><span class="line">	&lt;servlet-mapping&gt;</span><br><span class="line">		&lt;servlet-name&gt;hello_world&lt;/servlet-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/hello&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/servlet-mapping&gt;</span><br><span class="line"></span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+<p>每个 servlet 都必须在 web.xml 中定义并进行 URL 映射配置，早期 Java 开发 Web 在没有框架满天飞的时候，这个文件会定义了大量的 servlet，或者有人为了省事干脆来一个 /servlet/* 来通过类名直接调用 Servlet。</p>
+<p>Servlet 规范里还有另外一个非常重要而且非常有用的接口那就是 Filter 过滤器。</p>
+<p>下面是一个最简单的 Filter 类以及相应的定义方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package demo;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">import javax.servlet.Filter;</span><br><span class="line">import javax.servlet.FilterChain;</span><br><span class="line">import javax.servlet.FilterConfig;</span><br><span class="line">import javax.servlet.ServletException;</span><br><span class="line">import javax.servlet.ServletRequest;</span><br><span class="line">import javax.servlet.ServletResponse;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line">public class HelloFilter implements Filter &#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void init(FilterConfig arg0) throws ServletException &#123;</span><br><span class="line">		System.out.println(&quot;Filter 初始化&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void doFilter(ServletRequest req, ServletResponse res,</span><br><span class="line">			FilterChain chain) throws IOException, ServletException &#123;</span><br><span class="line">		HttpServletRequest request = (HttpServletRequest)req;</span><br><span class="line">		System.out.println(&quot;拦截 URI=&quot;+request.getRequestURI());</span><br><span class="line">		chain.doFilter(req, res);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void destroy() &#123;</span><br><span class="line">		System.out.println(&quot;Filter 结束&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 web.xml 中的配置必须放在 Servlet 的前面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; </span><br><span class="line">						 &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;</span><br><span class="line">&lt;web-app&gt;</span><br><span class="line"></span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;helloFilter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;demo.HelloFilter&lt;/filter-class&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;helloFilter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;servlet&gt;</span><br><span class="line">		&lt;servlet-name&gt;hello_world&lt;/servlet-name&gt;</span><br><span class="line">		&lt;servlet-class&gt;demo.HelloServlet&lt;/servlet-class&gt;</span><br><span class="line">		&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</span><br><span class="line">	&lt;/servlet&gt;</span><br><span class="line"></span><br><span class="line">	&lt;servlet-mapping&gt;</span><br><span class="line">		&lt;servlet-name&gt;hello_world&lt;/servlet-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/hello&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/servlet-mapping&gt;</span><br><span class="line"></span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
+<p>访问 <a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a> 时看看 Tomcat 控制台有何输出信息。</p>
+<h2 id="Servlet-和-HTTP-的对应关系"><a href="#Servlet-和-HTTP-的对应关系" class="headerlink" title="Servlet 和 HTTP 的对应关系"></a>Servlet 和 HTTP 的对应关系</h2><p>Servlet 是 J2EE 最重要的一部分，有了 Servlet 你就是 J2EE 了，J2EE 的其他方面的内容择需采用。而 Servlet 规范你需要掌握的就是 servlet 和 filter 这两项技术。绝大多数框架不是基于 servlet 就是基于 filter，如果它要在 Servlet 容器上运行，就永远也脱离不开这个模型。</p>
+<p>为什么 Servlet 规范会有两个包，javax.servlet 和 javax.servlet.http ，早先设计该规范的人认为 Servlet 是一种服务模型，不一定是依赖某种网络协议之上，因此就抽象出了一个 javax.servlet ，同时在提供一个基于 HTTP 协议上的接口扩展。但是从实际运行这么多年来看，似乎没有发现有在其他协议上实现的 Servlet 技术。</p>
+<p>javax.servlet 和 javax.servlet.http 这两个包总共加起来也不过是三十四个接口和类。你需要通过 J2EE 的 JavaDoc 文档 熟知每个类和接口的具体意思。特别是下面几个接口必须熟知每个方法的意思和用途：</p>
 <ul>
-<li>GET /zoos：列出所有动物园</li>
-<li>POST /zoos：新建一个动物园</li>
-<li>GET /zoos/ID：获取某个指定动物园的信息</li>
-<li>PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</li>
-<li>PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</li>
-<li>DELETE /zoos/ID：删除某个动物园</li>
-<li>GET /zoos/ID/animals：列出某个指定动物园的所有动物</li>
-<li>DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</li>
+<li>HttpServlet</li>
+<li>ServetConfig</li>
+<li>ServletContext</li>
+<li>Filter</li>
+<li>FilterConfig</li>
+<li>FilterChain</li>
+<li>RequestDispatcher</li>
+<li>HttpServletRequest</li>
+<li>HttpServletResponse</li>
+<li>HttpSession</li>
+<li>一些 Listenser 类</li>
 </ul>
-<h3 id="安全性与幂等性"><a href="#安全性与幂等性" class="headerlink" title="安全性与幂等性"></a>安全性与幂等性</h3><ul>
-<li>安全性：任意多次对同一资源操作，都不会导致资源的状态变化</li>
-<li>幂等性：任意次对同一资源操作，对资源的改变是一样的 </li>
+<p>再次强调 HttpServletRequest 和 HttpServletResponse 这两个接口更应该是烂熟于心。</p>
+<p>如果你从字面上无法理解某个方法的意思，你可以在前面那个项目的基础上做实验看看其输出，再不行你可以到讨论区提问，这样的提问非常明确，很多人都可以帮到你。</p>
+<p>为什么我这么强调 HttpServletRequest 和 HttpServletResponse 这两个接口，因为 Web 开发是离不开 HTTP 协议的，而 Servlet 规范其实就是对 HTTP 协议做面向对象的封装，HTTP协议中的请求和响应就是对应了 HttpServletRequest 和 HttpServletResponse 这两个接口。</p>
+<p>你可以通过 HttpServletRequest 来获取所有请求相关的信息，包括 URI、Cookie、Header、请求参数等等，别无它路。因此当你使用某个框架时，你想获取HTTP请求的相关信息，只要拿到 HttpServletRequest 实例即可。</p>
+<p>而 HttpServletResponse接口是用来生产 HTTP 回应，包含 Cookie、Header 以及回应的内容等等。</p>
+<h2 id="再谈谈-Session"><a href="#再谈谈-Session" class="headerlink" title="再谈谈 Session"></a>再谈谈 Session</h2><p>HTTP 协议里是没有关于 Session 会话的定义，Session 是各种编程语言根据 HTTP 协议的无状态这种特点而产生的。其实现无非就是服务器端的一个哈希表，哈希表的Key就是传递给浏览器的名为 jsessionid 的 Cookie 值。</p>
+<p>当需要将某个值保存到 session 时，容器会执行如下几步：</p>
+<p>a. 获取 jsessionid 值，没有的话就生成一个，也就是 request.getSession() 这个方法<br>b. 拿到的 HttpSession 对象实例就相当于一个哈希表，你可以往哈希表里存放数据(setAttribute)<br>c. 你也可以通过 getAttribute 来获取某个值</p>
+<p>而这个名为 jsessionid 的 Cookie 在浏览器关闭时会自动删除。把 Cookie 的 MaxAge 值设为 -1 就能达到浏览器关闭自动删除的效果。</p>
+<h2 id="关于-JSP"><a href="#关于-JSP" class="headerlink" title="关于 JSP"></a>关于 JSP</h2><p>任何一个 JSP 页面在执行的时候都会编译成一个 Servlet 类文件，如果是 Tomcat 的话，这些生成的 java 文件会放置在 {TOMCAT}/work 目录下对应项目的子目录中，例如 Tomcat 生成的类文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">package org.apache.jsp;</span><br><span class="line"></span><br><span class="line">import javax.servlet.*;</span><br><span class="line">import javax.servlet.http.*;</span><br><span class="line">import javax.servlet.jsp.*;</span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">public final class test_jsp extends org.apache.jasper.runtime.HttpJspBase</span><br><span class="line">    implements org.apache.jasper.runtime.JspSourceDependent &#123;</span><br><span class="line"></span><br><span class="line">  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();</span><br><span class="line"></span><br><span class="line">  private static java.util.List&lt;String&gt; _jspx_dependants;</span><br><span class="line"></span><br><span class="line">  private javax.el.ExpressionFactory _el_expressionfactory;</span><br><span class="line">  private org.apache.tomcat.InstanceManager _jsp_instancemanager;</span><br><span class="line"></span><br><span class="line">  public java.util.List&lt;String&gt; getDependants() &#123;</span><br><span class="line">    return _jspx_dependants;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  public void _jspInit() &#123;</span><br><span class="line">    _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();</span><br><span class="line">    _jsp_instancemanager = org.apache.jasper.runtime.InstanceManagerFactory.getInstanceManager(getServletConfig());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  public void _jspDestroy() &#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  public void _jspService(final HttpServletRequest request, final HttpServletResponse response)</span><br><span class="line">        throws java.io.IOException, ServletException &#123;</span><br><span class="line"></span><br><span class="line">    final PageContext pageContext;</span><br><span class="line">    HttpSession session = null;</span><br><span class="line">    final ServletContext application;</span><br><span class="line">    final ServletConfig config;</span><br><span class="line">    JspWriter out = null;</span><br><span class="line">    final Object page = this;</span><br><span class="line">    JspWriter _jspx_out = null;</span><br><span class="line">    PageContext _jspx_page_context = null;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line">      response.setContentType(&quot;text/html;charset=utf-8&quot;);</span><br><span class="line">      pageContext = _jspxFactory.getPageContext(this, request, response,</span><br><span class="line">      			null, true, 8192, true);</span><br><span class="line">      _jspx_page_context = pageContext;</span><br><span class="line">      application = pageContext.getServletContext();</span><br><span class="line">      config = pageContext.getServletConfig();</span><br><span class="line">      session = pageContext.getSession();</span><br><span class="line">      out = pageContext.getOut();</span><br><span class="line">      _jspx_out = out;</span><br><span class="line"></span><br><span class="line">      out.write(&quot;\r\n&quot;);</span><br><span class="line">      out.write(&quot;&lt;html&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;    &lt;title&gt;Test&lt;/title&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;    &lt;style&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;    &lt;/style&gt; \r\n&quot;);</span><br><span class="line">      out.write(&quot;  &lt;body&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;&lt;h1&gt;Test Demo (oschina)&lt;/h1&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;&lt;table cellspacing=\&quot;1\&quot; cellpadding=\&quot;5\&quot;&gt;\r\n&quot;);</span><br><span class="line"></span><br><span class="line">Enumeration Names=request.getHeaderNames();</span><br><span class="line">while(Names.hasMoreElements())</span><br><span class="line">&#123;String name=(String)Names.nextElement();</span><br><span class="line">String value=request.getHeader(name);</span><br><span class="line"> </span><br><span class="line">      out.write(&quot;\r\n&quot;);</span><br><span class="line">      out.write(&quot; &lt;tr&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot; &lt;td&gt;&quot;);</span><br><span class="line">      out.print(name);</span><br><span class="line">      out.write(&quot;&lt;/td&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;  &lt;td&gt;&quot;);</span><br><span class="line">      out.print(value);</span><br><span class="line">      out.write(&quot;&lt;/td&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot; \r\n&quot;);</span><br><span class="line">      out.write(&quot; &lt;/tr&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot; &quot;);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">  </span><br><span class="line">      out.write(&quot;\r\n&quot;);</span><br><span class="line">      out.write(&quot;&lt;/table&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;  &lt;/body&gt;\r\n&quot;);</span><br><span class="line">      out.write(&quot;&lt;/html&gt;&quot;);</span><br><span class="line">    &#125; catch (Throwable t) &#123;</span><br><span class="line">      if (!(t instanceof SkipPageException))&#123;</span><br><span class="line">        out = _jspx_out;</span><br><span class="line">        if (out != null &amp;&amp; out.getBufferSize() != 0)</span><br><span class="line">          try &#123; out.clearBuffer(); &#125; catch (java.io.IOException e) &#123;&#125;</span><br><span class="line">        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">      _jspxFactory.releasePageContext(_jspx_page_context);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 servlet 中有一个包 javax.servlet.jsp 是跟 JSP 相关的一些接口规范定义。JSP 比 Servlet 方便的地方在于可直接修改立即生效，不像 Servlet 修改后必须重启容器才能生效。</p>
+<p>因此 JSP 适合用来做视图，而 Servlet 则适合做控制层。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>罗哩罗嗦一大堆，归纳一下就是下面几点：</p>
+<p>熟知 Servlet 规范之前，请不要学习任何框架<br>使用最简单的工具，不要任何向导和可视化<br>熟知 HTTP 协议<br>等你真的掌握了 Servlet 规范再去看框架，便会觉得一些都小菜。总之一点：不要被框架牵着鼻子走，框架是你的工具，它应该听你的！</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.oschina.net/question/12_52027" target="_blank" rel="noopener">初学 Java Web 开发，请远离各种框架，从 Servlet 开发</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th style="text-align:center">安全性</th>
-<th style="text-align:center">幂等性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td style="text-align:center">是</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>POST</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">否</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td style="text-align:center">否</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p>非id的参数使用’?’方式传输<br><code>/users/1?state=closed</code></p>
-<h4 id="POST、PATCH、PUT、DELETE"><a href="#POST、PATCH、PUT、DELETE" class="headerlink" title="POST、PATCH、PUT、DELETE"></a>POST、PATCH、PUT、DELETE</h4><p>非id的参数使用body传输，并且应该encode</p>
-<h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p><code>?type=1&amp;state=closed</code></p>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><p><code>?size=10&amp;page=1</code></p>
-<ul>
-<li>size：返回记录数量</li>
-<li>page：第几页</li>
-</ul>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>三种方案：</p>
-<ul>
-<li>在uri中加入版本： /v1/room/1</li>
-<li>Accept Header：Accept: v1</li>
-<li>自定义 Header：X-ProjectName-Media-Type: projectname.v1 (我们使用此方案)</li>
-</ul>
-<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p><strong>成功</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>ALL</td>
-<td>请求成功并返回实体资源</td>
-</tr>
-<tr>
-<td>201</td>
-<td>POST</td>
-<td>创建资源成功</td>
-</tr>
-</tbody>
-</table>
-<p><strong>客户端错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>400</td>
-<td>ALL</td>
-<td>参数错误</td>
-</tr>
-<tr>
-<td>401</td>
-<td>ALL</td>
-<td>用户验证失败（用户名、密码错误等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>ALL</td>
-<td>资源不存在</td>
-</tr>
-</tbody>
-</table>
-<p><strong>服务器错误</strong></p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Method</th>
-<th>Describe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>500</td>
-<td>ALL</td>
-<td>服务器未知错误</td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://images.insuncle.com/mweb/5C699083-6F00-4CCD-ABFD-1FDF4775F610.png" alt="5C699083-6F00-4CCD-ABFD-1FDF4775F610"></p>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><p><strong>不要包装：response的body直接就是数据，不要做多余的包装。</strong><br>错误示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;success&quot;:true,</span><br><span class="line">    &quot;data&quot;:&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>正确示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:1,&quot;name&quot;:&quot;xiaotuan&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>json格式的约定：</strong></p>
-<ul>
-<li>时间用长整形(毫秒数)，客户端自己按需解析（moment.js）</li>
-<li>不传null字段</li>
-</ul>
-<h3 id="分页response"><a href="#分页response" class="headerlink" title="分页response"></a>分页response</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;paging&quot;:&#123;&quot;limit&quot;:10,&quot;offset&quot;:0,&quot;total&quot;:729&#125;,</span><br><span class="line">    &quot;data&quot;:[&#123;&#125;,&#123;&#125;,&#123;&#125;...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
-<li>不要发生了错误但给2xx响应，客户端可能会缓存成功的http请求；</li>
-<li>正确设置http状态码，不要自定义；</li>
-<li>Response body 提供 1) 错误的代码（日志/问题追查）；2) 错误的描述文本（展示给用户）。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;code&quot; : 1234,</span><br><span class="line">  &quot;message&quot; : &quot;Something bad happened :-(&quot;,</span><br><span class="line">  &quot;description&quot; : &quot;More details about the error here&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对PUT,POST,PATCH的输入的校验也应该返回相应的错误信息，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	&quot;status&quot;: 400,</span><br><span class="line">	&quot;developerMessage&quot;: &quot;Verbose, plain language description of the problem. Provide developers suggestions about how to solve their problems here&quot;,</span><br><span class="line">	&quot;userMessage&quot;: &quot;This is a message that can be passed along to end-users, if needed.&quot;,</span><br><span class="line">	&quot;errorCode&quot;: &quot;444444&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://imweb.io/topic/5707561f06f2400432c139a5" target="_blank" rel="noopener">http://imweb.io/topic/5707561f06f2400432c139a5</a><br><a href="https://blog.restcase.com/rest-api-error-codes-101/" target="_blank" rel="noopener">https://blog.restcase.com/rest-api-error-codes-101/</a></p>
 
       
     </div>
@@ -671,7 +558,7 @@
     <strong>本文作者： </strong>Light微光</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://haoweiguang.me/2019/12/02/RESTful-API规范/" title="RESTful API规范">http://haoweiguang.me/2019/12/02/RESTful-API规范/</a>
+    <a href="http://haoweiguang.me/2017/07/09/Servlet开发实战/" title="Servlet开发实战">http://haoweiguang.me/2017/07/09/Servlet开发实战/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -684,7 +571,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag"># 架构</a>
+            <a href="/tags/servlet/" rel="tag"># servlet</a>
           
         </div>
       
@@ -697,8 +584,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/18/Naval-Work-As-Hard-As-You-Can/" rel="next" title="Naval:Work As Hard As You Can（尽自己最大努力工作）">
-                <i class="fa fa-chevron-left"></i> Naval:Work As Hard As You Can（尽自己最大努力工作）
+              <a href="/2017/07/09/Servlet生命周期和工作原理/" rel="next" title="Servlet生命周期和工作原理">
+                <i class="fa fa-chevron-left"></i> Servlet生命周期和工作原理
               </a>
             
           </div>
@@ -706,6 +593,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/09/Servlet的线程安全问题/" rel="prev" title="Servlet的线程安全问题">
+                Servlet的线程安全问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -780,7 +671,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,9 +704,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -902,9 +791,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -961,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#URI"><span class="nav-number">1.</span> <span class="nav-text">URI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#URI规范"><span class="nav-number">1.1.</span> <span class="nav-text">URI规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#避免层级过深的URI"><span class="nav-number">1.1.1.</span> <span class="nav-text">避免层级过深的URI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Request"><span class="nav-number">2.</span> <span class="nav-text">Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Method"><span class="nav-number">2.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性与幂等性"><span class="nav-number">2.2.</span> <span class="nav-text">安全性与幂等性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">2.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method-1"><span class="nav-number">2.4.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GET"><span class="nav-number">2.4.1.</span> <span class="nav-text">GET</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POST、PATCH、PUT、DELETE"><span class="nav-number">2.4.2.</span> <span class="nav-text">POST、PATCH、PUT、DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤"><span class="nav-number">2.4.3.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">2.4.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">2.4.5.</span> <span class="nav-text">分页</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本控制"><span class="nav-number">3.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态码"><span class="nav-number">4.</span> <span class="nav-text">状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">5.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页response"><span class="nav-number">5.1.</span> <span class="nav-text">分页response</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">6.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解-Servlet-和-Filter"><span class="nav-number">1.</span> <span class="nav-text">了解 Servlet 和 Filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-和-HTTP-的对应关系"><span class="nav-number">2.</span> <span class="nav-text">Servlet 和 HTTP 的对应关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再谈谈-Session"><span class="nav-number">3.</span> <span class="nav-text">再谈谈 Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-JSP"><span class="nav-number">4.</span> <span class="nav-text">关于 JSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
