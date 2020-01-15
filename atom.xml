@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://haoweiguang.me/"/>
-  <updated>2019-12-17T01:40:02.495Z</updated>
+  <updated>2020-01-15T06:46:31.804Z</updated>
   <id>http://haoweiguang.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020年计划</title>
+    <link href="http://haoweiguang.me/2020/01/15/2020-plan/"/>
+    <id>http://haoweiguang.me/2020/01/15/2020-plan/</id>
+    <published>2020-01-15T06:38:51.000Z</published>
+    <updated>2020-01-15T06:46:31.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>新的一年开始了，详细的计划就不列了，写下今年的几个目标，因为一年的变数太多，详细的计划往往作废。</p><p>1.让身体更强壮，心灵更健康，身体是革命的本钱。</p><p>运动方面，每周3次健身，总计150次，适当增加有氧运动，体重保持在70-75kg，注意体脂。健身确实可以给我持续的快乐。饮食方面多吃水果蔬菜、优质蛋白质和粗粮。11点前睡，每天保证8小时左右睡眠，早上不用闹钟为准，但也不要多睡。</p><p>平均每天冥想10分钟左右，后期可慢慢加长。给自己适当的压力，但不要太大，做些自己喜欢的事情。</p><p>今年准备开始做基因检测和癌症筛查，早预防。重疾意外险也考虑配置。</p><p>2.让家人能更开心一点，挚友也是。</p><p>其实这个世界上对自己重要的人没几个，家人对于我来说是最重要的。在自己力所能及的前提下，不求回报的帮助、陪伴他们，让他们能按照自己的想法更开心一点。</p><p>19年最突然的是家人生病，这也是一个警钟，告诉我家人相处的宝贵，至亲之人真的在随着时间流失慢慢离我而去，不胜唏嘘。</p><p>有空尽量回家多看看父母、兄弟姐妹，不能回去也多通电话。今年整个大家庭出游一次。多带父母出去旅行。</p><p>对于老婆要多鼓励、多沟通、多体贴。</p><p>3.育儿</p><p>对与阅读习惯、写作习惯、良好的学习习惯的培养不能松懈。把语数英等基础知识给做扎实了。在孩子教育上深度参与，能有些输出更好，像憨爸、刘烁等。</p><p>今年准备学习认知科学的知识，顺便应用到孩子身上，实践、输出、复盘。</p><p>4.财富投资</p><p>建立投资知识框架、打基础，进一步学习经济学（主题阅读），搞清楚其中的概念、体系等等，有输出。</p><p>养成记账习惯</p><p>开源节流，存钱</p><p>5.技术的持续精进</p><p>Java的经典著作，计算机基础，架构，有输出。</p><p>6.学习成长</p><p>保证平均每天1小时以上的阅读时间，尽量大块时间。</p><p>认知科学做主题阅读，有输出。</p><p>写作能力的持续锻炼。</p><p>7.独立产品</p><p>开发的应用目标月收入1000，卖货尝试走起。</p><p>8.让自己更开心</p><p>人生在世，往往都是只争朝夕。但在忙碌的同时也得让自己开心点。但是快乐无止境，就像一本书《娱乐至死》所说。还是努力让自己达到一种平和的心境，减少痛苦。看经典电影动画、阅读（历史书、小说）、音乐、旅行</p><p>有空弹弹吉他，这个确实能给自己很大的愉悦感。</p><p>学习方面主要集中在3大主题，技术、经济学、认知科学，不贪多了，不然也学不完。</p><p>根据目标，再细化每个季度、每个月、每个星期的任务。反正就是挑重要的做。完成比完美重要，持续迭代。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;新的一年开始了，详细的计划就不列了，写下今年的几个目标，因为一年的变数太多，详细的计划往往作废。&lt;/p&gt;
+&lt;p&gt;1.让身体更强壮，心灵更健康，身体是革命的本钱。&lt;/p&gt;
+&lt;p&gt;运动方面，每周3次健身，总计150次，适当增加有氧运动，体重保持在70-75kg，注意体脂。健身确
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://haoweiguang.me/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="年度计划" scheme="http://haoweiguang.me/tags/%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>Naval:人生公式 I</title>
@@ -524,31 +551,6 @@
       <category term="区块链" scheme="http://haoweiguang.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
       <category term="读书笔记" scheme="http://haoweiguang.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle学习笔记——配置监听</title>
-    <link href="http://haoweiguang.me/2017/09/26/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E9%85%8D%E7%BD%AE%E7%9B%91%E5%90%AC/"/>
-    <id>http://haoweiguang.me/2017/09/26/Oracle学习笔记——配置监听/</id>
-    <published>2017-09-26T07:58:26.000Z</published>
-    <updated>2017-09-26T07:59:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="什么是监听"><a href="#什么是监听" class="headerlink" title="什么是监听"></a>什么是监听</h3><p>如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。同理，在Oracle中，监听的意思也和这差不多。</p><p>在Oracle数据库服务器中，通过一个叫“监听器”的组件接收来自客户端的连接请求，它是客户端和 服务器端中间的桥梁。监听器虽然在Oracle服务器端，但是它和Oracle主进程并不绑定，它是一个独立运行在服务器端的后台进程，独立于数据库运行。它负责对客户端传入的连接请求进行监听，并且对服务器端的连接负荷进行调整。当客户端准备建立一个到服务器端的连接时，监听器接收客户端的连接请求， 然后再将这个客户端连接请求交给服务器进行处理，一旦客户端和服务器建立连接，客户端和服务器以后就直接进行通信，而不再需要监听器的参与，这就好比师傅 领进门，修行靠个人。就如下图所示：<br><img src="http://oo501cyv7.bkt.clouddn.com/15064117419478.png" alt></p><ol><li>客户端向服务器端发出连接请求，监听器监听到客户端的连接请求；</li><li>监听器把客户端的连接请求交给数据库服务器进行处理；</li><li>经过监听器建立连接以后，客户端与服务器端就可以直接进行通信，而不再需要监听器的参与了。<br>以上就是监听器干的活，也就是说，你对数据库服务器的第一次，肯定会给监听器，如果监听器没有配好，你就甭想连数据库了。那么，怎么才能配好监听器呢？主要涉及以下三个文件：</li></ol><p><strong>listener.ora、sqlnet.ora和tnsnames.ora文件</strong></p><h4 id="listener-ora文件"><a href="#listener-ora文件" class="headerlink" title="listener.ora文件"></a>listener.ora文件</h4><p>打开listener.ora文件看看，贴上一部分有代表性的内容。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#这是一个名为LISTENER1的监听器</span><br><span class="line">#监听的协议是TCP协议</span><br><span class="line">#监听的主机IP是127.0.0.1</span><br><span class="line">#监听的端口是1521端口</span><br><span class="line">LISTENER1 =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">#记录了监听器LISTENER1服务的全局数据库名、数据库路径和数据库实例名</span><br><span class="line">SID_LIST_LISTENER1 =</span><br><span class="line">    (SID_LIST =</span><br><span class="line">        (SID_DESC =</span><br><span class="line">            (GLOBAL_DBNAME = ORCL)</span><br><span class="line">            (ORACLE_HOME = C:\Oracle11g\product\11.2.0\dbhome_1)</span><br><span class="line">            (SID_NAME = ORCL)</span><br><span class="line">        )</span><br><span class="line">    )</span><br></pre></td></tr></table></figure><h4 id="sqlnet-ora文件"><a href="#sqlnet-ora文件" class="headerlink" title="sqlnet.ora文件"></a>sqlnet.ora文件</h4><p>打开sqlnet.ora文件看看，内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQLNET.AUTHENTICATION_SERVICES= (NTS)</span><br><span class="line">NAMES.DIRECTORY_PATH= (TNSNAMES, EZCONNECT)</span><br></pre></td></tr></table></figure><p>这个sqlnet.ora文件实际上就是一个配置文件，主要是和接下来说的tnsnames.ora配合使用。</p><h4 id="tnsnames-ora文件"><a href="#tnsnames-ora文件" class="headerlink" title="tnsnames.ora文件"></a>tnsnames.ora文件</h4><p>tnsnames.ora文件存放于客户端机器上，和sqlnet.ora文件配合使用。可以简单的看看tnsnames.ora文件中的内容。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#ORCL是个别名</span><br><span class="line">#这条信息记录了我们使用TCP协议，去连接IP地址为127.0.0.1，端口号为1521的数据库主机上服务名为orcl的数据库</span><br><span class="line">ORCL =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">        (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">        (CONNECT_DATA =</span><br><span class="line">            (SERVER = DEDICATED)</span><br><span class="line">            (SERVICE_NAME = orcl)</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">以后，我们还会配置更多的数据库连接信息，比如我要连接192.168.10.2主机上的数据库，我们只需要在tnsnames.ora中继续追加新的连接信息即可，比如：</span><br><span class="line"></span><br><span class="line">STDB =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">        (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.10.2)(PORT = 1521))</span><br><span class="line">        (CONNECT_DATA =</span><br><span class="line">            (SERVER = DEDICATED)</span><br><span class="line">            (SERVICE_NAME = stdb)</span><br><span class="line">        )</span><br><span class="line">     )</span><br></pre></td></tr></table></figure><h3 id="服务器端配置"><a href="#服务器端配置" class="headerlink" title="服务器端配置"></a>服务器端配置</h3><p>直接编辑listener.ora，就像下面这样，配置一个新的监听器：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LISTENER =</span><br><span class="line">    (DESCRIPTION =</span><br><span class="line">    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">SID_LIST_LISTENER =</span><br><span class="line">    (SID_LIST =</span><br><span class="line">        (SID_DESC =</span><br><span class="line">            (GLOBAL_DBNAME = ORCL)</span><br><span class="line">            (ORACLE_HOME = C:\Oracle11g\product\11.2.0\dbhome_1)</span><br><span class="line">            (SID_NAME = ORCL)</span><br><span class="line">        )</span><br><span class="line">    )</span><br></pre></td></tr></table></figure><p>你想在哪个数据库上配置一个新的监听，就修改对应的内容即可。</p><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>启动监听器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl start &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 启动名为LISTENER的监听器</span><br><span class="line">lsnrctl start LISTENER</span><br></pre></td></tr></table></figure><p>当我们不指定监听器的名字时，就默认启动LISTENER监听器；</p><p>关闭监听器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl stop &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 关闭名为LISTENER的监听器</span><br><span class="line">lsnrctl stop LISTENER</span><br></pre></td></tr></table></figure><p>当我们不指定监听器的名字时，就默认关闭LISTENER监听器；</p><p>查看监听器的状态</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsnrctl status &lt;监听器的名字&gt;</span><br><span class="line"></span><br><span class="line">// 查看名为LISTENER的监听器的运行状态</span><br><span class="line">lsnrctl status LISTENER</span><br></pre></td></tr></table></figure><p>当我们不指定监听器的名字时，就默认查看LISTENER监听器的状态。</p><p>测试连通性<br>可以使用工具<code>TNSPING</code></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="http://www.jellythink.com/archives/985" target="_blank" rel="noopener">Oracle学习笔记——配置监听</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;什么是监听&quot;&gt;&lt;a href=&quot;#什么是监听&quot; class=&quot;headerlink&quot; title=&quot;什么是监听&quot;&gt;&lt;/a&gt;什么是监听&lt;/h3&gt;&lt;p&gt;如果你做过网络开发，对于监听listen就比较熟悉了，监听是什么，在网络开发中，就是监听某个端口，等待客户端的连接。
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://haoweiguang.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="oracle" scheme="http://haoweiguang.me/tags/oracle/"/>
     
   </entry>
   
